@@ -24,11 +24,13 @@
 extern uint32_t Processor_Initialization();
 extern void Task_Blink_LED_D1( void *pvParameters );
 extern void Task_Report( void *pvParameters );
-extern void Task_Simple_ADC0_Ch0( void *pvParameters );
-extern void Task_HeaterOn( void *pvParameters );
-extern void Task_UART_0( void *pvParameters );
-extern void Task_Temp( void *pvParameters );
-extern void Task_PID( void *pvParameters );
+
+
+extern void Task_UART_0( void *pvParameters );//UART will give input to PID
+extern void Task_Simple_ADC0_Ch0( void *pvParameters );//ADC will queue values to TempCalc
+extern void Task_Temp( void *pvParameters );//TempCalc will get queue values from ADC to calculate temp, TempCalc will queue values to PID
+extern void Task_PID( void *pvParameters );//PID will get queue values from TempCalc and input from UART to turn on heater
+extern void Task_HeaterOn( void *pvParameters );//Heater will turn on when PID tells it to
 
 int main( void ) {
 
