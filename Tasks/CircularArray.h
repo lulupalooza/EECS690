@@ -1,10 +1,13 @@
 //*****************************************************************************
 //!
-//! CircularArray.c - A circular array data structure.
+//! CircularArray.h - A circular array data structure.
 //!
 //! \addtogroup PID
 //! @{
 //*****************************************************************************
+
+#ifndef CIRCULARARRAY_H
+#define CIRCULARARRAY_H
 
 //*****************************************************************************
 //
@@ -37,22 +40,7 @@ typedef struct
 //!
 //! \return None.
 //*****************************************************************************
-void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum)
-{
-	// retrieve and increment the current index.
-	uint32_t index = (*circle).index + 1;
-	// ensure that the index does not grow too large.
-	// we do not simply take the modulus of the index so that we can track
-	// whether the array has been filled.
-	if(index > 2 * CIRCULAR_ARRAY_SIZE)
-	{
-		index-= CIRCULAR_ARRAY_SIZE;
-	}
-	// update the index in the provided circle.
-	(*circle).index = index;
-	// insert the datum into the array.
-	(*circle).array[index % CIRCULAR_ARRAY_SIZE] = datum;
-}
+void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum);
 
 //*****************************************************************************
 //!
@@ -65,13 +53,8 @@ void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum)
 //!
 //! \return The (offset+1)th most recent datum in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle, uint32_t offset)
-{
-	// retrieve the index, offset as specified.
-	int32_t index = (*circle).index - offset;
-	// retrieve and return the datum at this index.
-	return (*circle).array[index % CIRCULAR_ARRAY_SIZE];
-}
+CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle,
+	uint32_t offset);
 
 //*****************************************************************************
 //!
@@ -83,24 +66,7 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle, uint32_t offs
 //!
 //! \return The sum of all data in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle)
-{
-	// retrieve the number of elements.
-	uint32_t elements = (*circle).index;
-	// ensure that we do not try to access memory outside of the array.
-	if(elements >= CIRCULAR_ARRAY_SIZE)
-	{
-		elements = CIRCULAR_ARRAY_SIZE;
-	}
-	// iterate across the array, summing each element.
-	CIRCULAR_ARRAY_DATATYPE sum = 0;
-	for(uint32_t i = 0; i < elements; i++)
-	{
-		sum+= (*circle).array[i];
-	}
-	// return the sum.
-	return sum;
-}
+CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle);
 
 //*****************************************************************************
 //!
@@ -112,26 +78,7 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle)
 //!
 //! \return The average of all data in the circular array.
 //*****************************************************************************
-float CircularArray_Average(Circular_Array *circle)
-{
-	// retrieve the number of elements.
-	uint32_t elements = (*circle).index;
-	// ensure that we do not try to access memory outside of the array.
-	if(elements >= CIRCULAR_ARRAY_SIZE)
-	{
-		elements = CIRCULAR_ARRAY_SIZE;
-	}
-	// iterate across the array, summing each element.
-	CIRCULAR_ARRAY_DATATYPE sum = 0;
-	for(uint32_t i = 0; i < elements; i++)
-	{
-		sum+= (*circle).array[i];
-	}
-	// divide the sum by the number of elements to produce the average.
-	float average = sum / elements;
-	// return the average.
-	return average;
-}
+float CircularArray_Average(Circular_Array *circle);
 
 //*****************************************************************************
 //
@@ -139,3 +86,4 @@ float CircularArray_Average(Circular_Array *circle)
 //! @}
 //
 //*****************************************************************************
+#endif

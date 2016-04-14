@@ -49,7 +49,7 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 	//	Measured voltage value
 	//
 	uint32_t	ADC_Value;
-	double		Vtemp;
+	float		Vtemp;
 	rqueue_count = 0;
 
 	//
@@ -94,7 +94,7 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		printf( ">>ADC %d", ADC_Value);
 		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
 		rqueue_count += 1;
-		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
+		Vtemp = ( ADC_Value * 3.3) / 4096.0;
 		xQueueSend(Temp_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
 		//
 		//	Print ADC_Value

@@ -6,29 +6,16 @@
 //! @{
 //*****************************************************************************
 
-//*****************************************************************************
-//
-// Default desired temperature of black box.
-//
-//*****************************************************************************
-#define DEFAULT_TEMP (75.0) //!< Default desired temperature of black box.
-#define DEFAULT_WEIGHT_P (0.333);
-#define DEFAULT_WEIGHT_I (0.333);
-#define DEFAULT_WEIGHT_D (0.333);
+#ifndef CIRCULAR_ARRAY_DATATYPE
+	#include "CircularArray.h"
+#endif
 
 //*****************************************************************************
 //
 // Initialize variables used by the PID.
 //
 //*****************************************************************************
-
-CIRCULAR_ARRAY_DATATYPE temperatureTarget = DEFAULT_TEMP;
-
-float weight_P = DEFAULT_WEIGHT_P;
-float weight_I = DEFAULT_WEIGHT_I;
-float weight_D = DEFAULT_WEIGHT_D;
-
-Circular_Array circle = {};
+extern Circular_Array circle;
 
 //*****************************************************************************
 //!
@@ -39,10 +26,7 @@ Circular_Array circle = {};
 //!
 //! \return The current temperature target.
 //*****************************************************************************
-uint32_t getTemperatureTarget()
-{
-	return temperatureTarget;
-}
+uint32_t getTemperatureTarget();
 
 //*****************************************************************************
 //!
@@ -54,10 +38,7 @@ uint32_t getTemperatureTarget()
 //!
 //! \return None.
 //*****************************************************************************
-void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget)
-{
-	temperatureTarget = newTemperatureTarget;
-}
+void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget);
 
 //*****************************************************************************
 //!
@@ -69,11 +50,7 @@ void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget)
 //! \return The current P contribution to the change requested by the PID
 //! controller.
 //*****************************************************************************
-float getPComponent()
-{
-	CIRCULAR_ARRAY_DATATYPE latestError = CircularArray_Peek(&circle, 0);
-	return latestError * weight_P;
-}
+float getPComponent();
 
 //*****************************************************************************
 //!
@@ -85,11 +62,7 @@ float getPComponent()
 //! \return The current I contribution to the change requested by the PID
 //! controller.
 //*****************************************************************************
-float getIComponent()
-{
-	float errorAverage = CircularArray_Average(&circle);
-	return errorAverage * weight_I;
-}
+float getIComponent();
 
 //*****************************************************************************
 //!
@@ -101,14 +74,7 @@ float getIComponent()
 //! \return The current D contribution to the change requested by the PID
 //! controller.
 //*****************************************************************************
-float getDComponent()
-{
-	CIRCULAR_ARRAY_DATATYPE latestError = CircularArray_Peek(&circle, 0);
-	CIRCULAR_ARRAY_DATATYPE nextError = CircularArray_Peek(&circle, 1);
-	CIRCULAR_ARRAY_DATATYPE deltaError = nextError - latestError;
-	float rateOfChange = deltaError / getADCSampleRate();
-	return weight_D * rateOfChange;
-}
+float getDComponent();
 
 //*****************************************************************************
 //!
@@ -119,13 +85,7 @@ float getDComponent()
 //!
 //! \return The current change requested by the PID controller.
 //*****************************************************************************
-float getPIDChange()
-{
-	float P = getPComponent();
-	float I = getIComponent();
-	float D = getDComponent();
-	return P + I + D;
-}
+float getPIDChange();
 
 //*****************************************************************************
 //
