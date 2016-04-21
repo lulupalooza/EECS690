@@ -17,15 +17,19 @@
 #include 	"queue.h"
 #include	"stdio.h"
 
+#include	"Report.h"
 
-extern QueueHandle_t Temp_Queue = NULL;
+
+extern QueueHandle_t TempQueue; // from Task_Simple_ADC.c
+QueueHandle_t ConvertedQueue;
 
 extern void Task_Temp( void *pvParameters ) {
-	double			adc_val;
-	BaseType_t		ReportQueue_Status;
+	BaseType_t		TempQueue_Status;
 
-	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
-	uint32_t int_t;
+	ConvertedQueue = xQueueCreate(10, sizeof(Report));
+	uint32_t ADC_Value;
+	Report temp_report;
+	float temperature;
 
 	//
 	//	No set-up necessary
@@ -35,11 +39,17 @@ extern void Task_Temp( void *pvParameters ) {
 	//	Enter task loop
 	//
 	while ( 1 ) {
-		//printf("again??!");
-		ReportQueue_Status = xQueueReceive( Temp_Queue, &adc_val, 10*portTICK_PERIOD_MS );
-		int_t = (uint32_t) (adc_val*1000) - ((uint32_t)adc_val)*1000;
+		// check for a new report
+		ReportQueue_Status = xQueueReceive( TempQueue, &temp_report, 10 * portTICK_PERIOD_MS );
+		//UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, int_t);
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, int_t);
+			// retrieve raw ADC input from report
+			ADC_Value = temp_report.ADC_input;
+			// convert to degrees fahrenheit
+			temperature = ( ADC_Value * 3.3) / 4096.0;
+			// update the report and send it to the next queue
+			temp_report.temperature = temperature;
+			xQueueSend(ConvertedQueue, &temp_report, 10 * portTICK_PERIOD_MS);
 		}
 		vTaskDelay( 2 * configTICK_RATE_HZ );
 	}

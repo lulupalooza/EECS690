@@ -22,24 +22,24 @@
 #include 	"queue.h"
 #include	"stdio.h"
 
+#include	"Report.h"
+
 //
 //	Reference SysTickCount
 //
 extern volatile uint32_t xPortSysTickCount;
 
-extern QueueHandle_t ReportData_Queue = NULL;
-extern QueueHandle_t Heater_Queue = NULL;
 extern uint32_t UART_Initialization();
-extern uint32_t rqueue_count;
-extern uint32_t hqueue_count;
+extern QueueHandle_t PWMQueue; // from Task_HeaterOn.c
+//QueueHandle_t ReportQueue;
 
 extern void Task_Report( void *pvParameters ) {
-	ReportData_Item report;
+	Report	complete_report;
 	BaseType_t		ReportQueue_Status;
 
 	UART_Initialization();
 
-	ReportData_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
+	//ReportQueue = xQueueCreate( 10, sizeof( ReportData_Item ) );
 
 	//
 	//	No set-up necessary
@@ -50,17 +50,13 @@ extern void Task_Report( void *pvParameters ) {
 	//
 	while ( 1 ) {
 
-//		printf( "SysTickTime: %08X\n", xPortSysTickCount );
-		ReportQueue_Status = xQueueReceive( ReportData_Queue, &report, 10*portTICK_PERIOD_MS );
+		//printf( ">>ADC %d", ADC_Value);
+
+		ReportQueue_Status = xQueueReceive( ReportData_Queue, &complete_report, 10*portTICK_PERIOD_MS );
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", report.timestamp, report.ID, report.value );
+			UARTprintf( "%08d, %02d, %d\n", complete_report.timestamp, complete_report.ID, complete_report.value );
+			//xQueueSend(ReportQueue, &complete_report, 10*portTICK_PERIOD_MS);
 		}
-		rqueue_count -= 1;
 		vTaskDelay( 2 * configTICK_RATE_HZ );
-		/* ReportQueue_Status = xQueueReceive( Heater_Queue, &report, 10*portTICK_PERIOD_MS );
-		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", report.timestamp, report.ID, report.value );
-		} */
-		hqueue_count -= 1;
 	}
 }

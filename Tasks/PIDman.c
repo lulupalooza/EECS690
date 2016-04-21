@@ -32,14 +32,14 @@ Circular_Array circle = {};
 
 //*****************************************************************************
 //!
-//! uint32_t getTemperatureTarget()
+//! CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
 //!
 //! This method is used to retrieve the current target temperature of the PID
 //! controller.
 //!
 //! \return The current temperature target.
 //*****************************************************************************
-uint32_t getTemperatureTarget()
+CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
 {
 	return temperatureTarget;
 }

@@ -31,7 +31,7 @@
 #include "task.h"
 #include "uartstdio.h"
 #include "queue.h"
-#include "Task_Report.h"
+#include "Report.h"
 
 #include "stdio.h"
 
@@ -39,18 +39,15 @@
 //	Gloabal subroutines and variables
 //
 extern volatile uint32_t xPortSysTickCount;
-extern QueueHandle_t ReportData_Queue;
-extern QueueHandle_t Temp_Queue;
-uint32_t	rqueue_count;
+QueueHandle_t TempQueue;
 
 extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
-	ReportData_Item adc_report;
+
+	Report ADC_report;
 	//
 	//	Measured voltage value
 	//
 	uint32_t	ADC_Value;
-	float		Vtemp;
-	rqueue_count = 0;
 
 	//
 	//	Enable (power-on) ADC0
@@ -88,18 +85,15 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		//
 		ADCSequenceDataGet(ADC0_BASE, 0, &ADC_Value);
 		ADCIntClear( ADC0_BASE, 0 );
-		adc_report.timestamp = xPortSysTickCount;
-		adc_report.ID = 0;
-		adc_report.value = ADC_Value;
-		printf( ">>ADC %d", ADC_Value);
-		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
-		rqueue_count += 1;
-		Vtemp = ( ADC_Value * 3.3) / 4096.0;
-		xQueueSend(Temp_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
-		//
-		//	Print ADC_Value
-		//
-//		printf( ">>ADC_Value: %d\n", ADC_Value );
+
+		// create a report with the value from the ADC
+		ADC_report = {
+			.ID = 1;
+			.timestamp = xPortSysTickCount;
+			.ADC_input = &ADC_Value
+		};
+		// send the report to the first queue
+		xQueueSend(TempQueue, &ADC_report, 10*portTICK_PERIOD_MS);
 
 		//
 		//	Delay one (1) second.
