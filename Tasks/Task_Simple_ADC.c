@@ -41,7 +41,7 @@
 extern volatile uint32_t xPortSysTickCount;
 extern QueueHandle_t ReportData_Queue;
 extern QueueHandle_t Temp_Queue;
-uint32_t	rqueue_count;
+//uint32_t	rqueue_count;
 
 extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 	ReportData_Item adc_report;
@@ -49,8 +49,8 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 	//	Measured voltage value
 	//
 	uint32_t	ADC_Value;
-	float		Vtemp;
-	rqueue_count = 0;
+	double		Vtemp;
+	//rqueue_count = 0;
 
 	//
 	//	Enable (power-on) ADC0
@@ -93,8 +93,8 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		adc_report.value = ADC_Value;
 		printf( ">>ADC %d", ADC_Value);
 		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
-		rqueue_count += 1;
-		Vtemp = ( ADC_Value * 3.3) / 4096.0;
+		//rqueue_count += 1;
+		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
 		xQueueSend(Temp_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
 		//
 		//	Print ADC_Value

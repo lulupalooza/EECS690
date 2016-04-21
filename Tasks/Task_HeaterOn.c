@@ -40,7 +40,7 @@
 
 
 extern QueueHandle_t Heater_Queue;
-uint32_t hqueue_count = 0;
+//uint32_t hqueue_count = 0;
 
 extern void Task_HeaterOn( void *pvParameters ) {
 
@@ -103,7 +103,7 @@ extern void Task_HeaterOn( void *pvParameters ) {
 		heater_report.ID = 1;
 		heater_report.value = 25;
 		xQueueSend(Heater_Queue, &heater_report, 10*portTICK_PERIOD_MS);
-		hqueue_count += 1;
+		//hqueue_count += 1;
 		vTaskDelay( (2000 * configTICK_RATE_HZ) / 1000 );
 
 	}

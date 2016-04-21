@@ -40,7 +40,7 @@
 #include "task.h"
 
 #include "stdio.h"
-#include "statuses.h"
+//#include "statuses.h"
 #include "semphr.h"
 #include "uartstdio.h"
 //
@@ -48,10 +48,12 @@
 //
 extern volatile uint32_t xPortSysTickCount;
 
-void UARTMessagePut(uint32_t ui32Base, status_message Data);
+//void UARTMessagePut(uint32_t ui32Base, status_message Data);
 xSemaphoreHandle mutex;
 extern QueueHandle_t Inp_Queue = NULL;
-extern uint32_t iqueue_count;
+//extern uint32_t iqueue_count = 0;
+
+extern volatile int temperatureTarget = 21;//room temperature @ 21C
 
 extern void Task_UART_0( void *pvParameters ) {
 
@@ -59,9 +61,17 @@ extern void Task_UART_0( void *pvParameters ) {
 	//	Measured voltage value
 	//
 	int32_t 	inp_temp;
+	int32_t 	temp_change;
 	uint32_t ui32SysClkFreq;
 
+	//
+	//	Initialize Inp_Queue
+	//
 	Inp_Queue = xQueueCreate( 10, sizeof( uint32_t ) );
+
+	//
+	//	Configure GPIO_A to drive the UART.
+	//
 	ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
 				SYSCTL_OSC_MAIN | SYSCTL_USE_PLL |
 				SYSCTL_CFG_VCO_480), 120000000);
@@ -84,18 +94,38 @@ extern void Task_UART_0( void *pvParameters ) {
 	//UARTFIFOEnable( UART0_BASE );
 	printf( ">>>>UART Initialized.\n");
 	while ( 1 ) {
+
+		//
+		//	Wait for input from user
+		//
 		while(!UARTCharsAvail(UART0_BASE));
-		inp_temp = UARTCharGet( UART0_BASE );
-		inp_temp = inp_temp - '0';
-		UARTprintf( "\nInput temp now %d\n", inp_temp);
+
+		//inp_temp = UARTCharGet( UART0_BASE );
+		//inp_temp = inp_temp - '0';
+		//UARTprintf( "\nInput temp now %d\n", inp_temp);
+		//xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);
+
+		//
+		//	Incremental temperature change
+		//
+		temp_change = UARTCharGet( UART0_BASE );
+
+		if(temp_change == '+')
+			temperatureTarget += 1;
+		else if(temp_change == '-')
+			temperatureTarget -= 1;
+
+		UARTprintf( "\nInput temp now %d\n", temperatureTarget);
+
+		inp_temp = temperatureTarget;
 		xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);
-		iqueue_count += 1;
+		//iqueue_count += 1;
 		vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );
 	}
 
 }
 
-void UARTMessagePut(uint32_t ui32Base, status_message Data)
+/*void UARTMessagePut(uint32_t ui32Base, status_message Data)
 {
 	UARTCharPut(ui32Base, Data.ID);
 	UARTCharPut(ui32Base, (char) Data.val);
@@ -103,7 +133,7 @@ void UARTMessagePut(uint32_t ui32Base, status_message Data)
 	UARTCharPut(ui32Base, (char) xPortSysTickCount<<8 & 0xFF);
 	UARTCharPut(ui32Base, (char) xPortSysTickCount<<16 & 0xFF);
 	UARTCharPut(ui32Base, (char) xPortSysTickCount<<24 & 0xFF);
-}
+}*/
 
 
 

@@ -24,15 +24,15 @@
 #include "queue.h"
 #include "Task_Report.h"
 
-#include "CircularArray.h"
-#include "PIDman.h"
+//#include "Tasks/CircularArray.h"
+//#include "Tasks/PIDman.h"
 
 //
 //	Gloabal subroutines and variables
 //
 extern QueueHandle_t Temp_Queue;
 
-float PID_Change = 0.0;
+//float PID_Change = 0.0;
 
 extern void Task_PID( void *pvParameters )
 {
@@ -47,8 +47,8 @@ extern void Task_PID( void *pvParameters )
 		if( ReportQueue_Status == pdTRUE )
 		{
 			// enqueue data
-			CircularArray_Push(&circle, temperature);
-			PID_Change = getPIDChange();
+			//CircularArray_Push(&circle, temperature);
+			//PID_Change = getPIDChange();
 		}
 	}
 }

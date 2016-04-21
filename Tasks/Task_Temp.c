@@ -24,6 +24,9 @@ extern void Task_Temp( void *pvParameters ) {
 	double			adc_val;
 	BaseType_t		ReportQueue_Status;
 
+	//
+	//	Initialize Temp_Queue
+	//
 	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
 	uint32_t int_t;
 
