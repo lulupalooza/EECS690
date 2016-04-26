@@ -9,7 +9,7 @@
 #ifndef PIDMAN_H
 #define PIDMAN_H
 
-#ifndef CIRCULAR_ARRAY_DATATYPE
+#ifndef float
 	#include "CircularArray.h"
 #endif
 
@@ -22,14 +22,14 @@ extern Circular_Array circle;
 
 //*****************************************************************************
 //!
-//! CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
+//! float getTemperatureTarget()
 //!
 //! This method is used to retrieve the current target temperature of the PID
 //! controller.
 //!
 //! \return The current temperature target.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE getTemperatureTarget();
+float getTemperatureTarget();
 
 //*****************************************************************************
 //!
@@ -41,7 +41,7 @@ CIRCULAR_ARRAY_DATATYPE getTemperatureTarget();
 //!
 //! \return None.
 //*****************************************************************************
-void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget);
+void setTemperatureTarget(float newTemperatureTarget);
 
 //*****************************************************************************
 //!

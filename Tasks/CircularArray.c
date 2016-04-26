@@ -1,3 +1,4 @@
+
 //*****************************************************************************
 //!
 //! CircularArray.c - A circular array data structure.
@@ -5,25 +6,18 @@
 //! \addtogroup PID
 //! @{
 //*****************************************************************************
+#include	<stddef.h>
+#include	<stdbool.h>
+#include	<stdint.h>
+#include	<stdarg.h>
 
+#include "Tasks/CircularArray.h"
 //*****************************************************************************
 //
 // The maximum number of elements to be stored in the circular array at once.
 //
 //*****************************************************************************
-#define CIRCULAR_ARRAY_SIZE (10)
-#define CIRCULAR_ARRAY_DATATYPE (float)
 
-//*****************************************************************************
-//
-// Circular array data structure.
-//
-//*****************************************************************************
-typedef struct
-{
-	CIRCULAR_ARRAY_DATATYPE array[CIRCULAR_ARRAY_SIZE];
-	uint32_t index;
-} Circular_Array;
 
 //*****************************************************************************
 //!
@@ -37,7 +31,7 @@ typedef struct
 //!
 //! \return None.
 //*****************************************************************************
-void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum)
+void CircularArray_Push(Circular_Array *circle, float datum)
 {
 	// retrieve and increment the current index.
 	uint32_t index = (*circle).index + 1;
@@ -65,7 +59,7 @@ void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum)
 //!
 //! \return The (offset+1)th most recent datum in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle, uint32_t offset)
+float CircularArray_Peek(Circular_Array *circle, uint32_t offset)
 {
 	// retrieve the index, offset as specified.
 	int32_t index = (*circle).index - offset;
@@ -83,8 +77,9 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle, uint32_t offs
 //!
 //! \return The sum of all data in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle)
+float CircularArray_Sum(Circular_Array *circle)
 {
+	uint32_t i = 0;
 	// retrieve the number of elements.
 	uint32_t elements = (*circle).index;
 	// ensure that we do not try to access memory outside of the array.
@@ -93,8 +88,8 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle)
 		elements = CIRCULAR_ARRAY_SIZE;
 	}
 	// iterate across the array, summing each element.
-	CIRCULAR_ARRAY_DATATYPE sum = 0;
-	for(uint32_t i = 0; i < elements; i++)
+	float sum = 0;
+	for(i = 0; i < elements; i++)
 	{
 		sum+= (*circle).array[i];
 	}
@@ -115,6 +110,7 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle)
 float CircularArray_Average(Circular_Array *circle)
 {
 	// retrieve the number of elements.
+	uint32_t i = 0;
 	uint32_t elements = (*circle).index;
 	// ensure that we do not try to access memory outside of the array.
 	if(elements >= CIRCULAR_ARRAY_SIZE)
@@ -122,8 +118,8 @@ float CircularArray_Average(Circular_Array *circle)
 		elements = CIRCULAR_ARRAY_SIZE;
 	}
 	// iterate across the array, summing each element.
-	CIRCULAR_ARRAY_DATATYPE sum = 0;
-	for(uint32_t i = 0; i < elements; i++)
+	float sum = 0;
+	for(i = 0; i < elements; i++)
 	{
 		sum+= (*circle).array[i];
 	}

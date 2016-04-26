@@ -5,7 +5,10 @@
 //! \addtogroup PID
 //! @{
 //*****************************************************************************
-
+#include	<stddef.h>
+#include	<stdbool.h>
+#include	<stdint.h>
+#include	<stdarg.h>
 #ifndef CIRCULARARRAY_H
 #define CIRCULARARRAY_H
 
@@ -15,16 +18,15 @@
 //
 //*****************************************************************************
 #define CIRCULAR_ARRAY_SIZE (10)
-#define CIRCULAR_ARRAY_DATATYPE (float)
 
 //*****************************************************************************
 //
 // Circular array data structure.
 //
 //*****************************************************************************
-typedef struct
+typedef struct Circular_Array
 {
-	CIRCULAR_ARRAY_DATATYPE array[CIRCULAR_ARRAY_SIZE];
+	float array[CIRCULAR_ARRAY_SIZE];
 	uint32_t index;
 } Circular_Array;
 
@@ -40,7 +42,7 @@ typedef struct
 //!
 //! \return None.
 //*****************************************************************************
-void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum);
+void CircularArray_Push(Circular_Array *circle, float datum);
 
 //*****************************************************************************
 //!
@@ -53,7 +55,7 @@ void CircularArray_Push(Circular_Array *circle, CIRCULAR_ARRAY_DATATYPE datum);
 //!
 //! \return The (offset+1)th most recent datum in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle,
+float CircularArray_Peek(Circular_Array *circle,
 	uint32_t offset);
 
 //*****************************************************************************
@@ -66,7 +68,7 @@ CIRCULAR_ARRAY_DATATYPE CircularArray_Peek(Circular_Array *circle,
 //!
 //! \return The sum of all data in the circular array.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE CircularArray_Sum(Circular_Array *circle);
+float CircularArray_Sum(Circular_Array *circle);
 
 //*****************************************************************************
 //!

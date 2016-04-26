@@ -5,7 +5,8 @@
 //! \addtogroup PID
 //! @{
 //*****************************************************************************
-
+#include "Tasks/CircularArray.h"
+#include "Tasks/PIDman.h"
 //*****************************************************************************
 //
 // Default desired temperature of black box.
@@ -22,7 +23,7 @@
 //
 //*****************************************************************************
 
-CIRCULAR_ARRAY_DATATYPE temperatureTarget = DEFAULT_TEMP;
+float temperatureTarget = DEFAULT_TEMP;
 
 float weight_P = DEFAULT_WEIGHT_P;
 float weight_I = DEFAULT_WEIGHT_I;
@@ -32,14 +33,14 @@ Circular_Array circle = {};
 
 //*****************************************************************************
 //!
-//! CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
+//! float getTemperatureTarget()
 //!
 //! This method is used to retrieve the current target temperature of the PID
 //! controller.
 //!
 //! \return The current temperature target.
 //*****************************************************************************
-CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
+float getTemperatureTarget()
 {
 	return temperatureTarget;
 }
@@ -54,7 +55,7 @@ CIRCULAR_ARRAY_DATATYPE getTemperatureTarget()
 //!
 //! \return None.
 //*****************************************************************************
-void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget)
+void setTemperatureTarget(float newTemperatureTarget)
 {
 	temperatureTarget = newTemperatureTarget;
 }
@@ -71,7 +72,7 @@ void setTemperatureTarget(CIRCULAR_ARRAY_DATATYPE newTemperatureTarget)
 //*****************************************************************************
 float getPComponent()
 {
-	CIRCULAR_ARRAY_DATATYPE latestError = CircularArray_Peek(&circle, 0);
+	float latestError = CircularArray_Peek(&circle, 0);
 	return latestError * weight_P;
 }
 
@@ -103,10 +104,10 @@ float getIComponent()
 //*****************************************************************************
 float getDComponent()
 {
-	CIRCULAR_ARRAY_DATATYPE latestError = CircularArray_Peek(&circle, 0);
-	CIRCULAR_ARRAY_DATATYPE nextError = CircularArray_Peek(&circle, 1);
-	CIRCULAR_ARRAY_DATATYPE deltaError = nextError - latestError;
-	float rateOfChange = deltaError / getADCSampleRate();
+	float latestError = CircularArray_Peek(&circle, 0);
+	float nextError = CircularArray_Peek(&circle, 1);
+	float deltaError = nextError - latestError;
+	float rateOfChange = deltaError / 1000;
 	return weight_D * rateOfChange;
 }
 

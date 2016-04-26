@@ -22,48 +22,34 @@
 #include "task.h"
 #include "uartstdio.h"
 #include "queue.h"
+#include "Task_Report.h"
 
-#include "CircularArray.h"
-#include "PIDman.h"
-#include "Report.h"
+#include "Tasks/CircularArray.h"
+#include "Tasks/PIDman.h"
 
 //
-//	Global subroutines and variables
+//	Gloabal subroutines and variables
 //
-extern QueueHandle_t ConvertedQueue; // from Task_Temp.c
-extern Circular_Array circle; // from PIDman.c
-QueueHandle_t PIDQueue;
+extern QueueHandle_t Temp_Queue;
 
-extern void Task_PID(void *pvParameters)
+//float PID_Change = 0.0;
+
+extern void Task_PID( void *pvParameters )
 {
-	PIDQueue = xQueueCreate(10, sizeof(Report));
-
-	BaseType_t ConvertedQueue_Status;
-	Report PID_report;
 	float temperature;
-	float P, I, D;
-
+	float PID_Change;
+	BaseType_t		ReportQueue_Status;
+	//
+	//	Measured voltage value
+	//
 	while(1)
 	{
-		// check converted temperature queue for a new report
-		ConvertedQueue_Status = xQueueReceive(ConvertedQueue, &PID_report, 10 * portTICK_PERIOD_MS);
-		if(ConvertedQueue_Status == pdTRUE)
+		ReportQueue_Status = xQueueReceive(Temp_Queue, &temperature, 10*portTICK_PERIOD_MS );
+		if( ReportQueue_Status == pdTRUE )
 		{
-			// retrieve temperature from report
-			temperature = PID_report.temperature;
-			// insert temperature into the circular array
+			// enqueue data
 			CircularArray_Push(&circle, temperature);
-			// retrive P, I, D values
-			P = getPComponent();
-			I = getIComponent();
-			D = getDComponent();
-			// fill out report
-			PID_report.P = P;
-			PID_report.I = I;
-			PID_report.D = D;
-			PID_report.PID = P + I + D;
-			// send report to next queue
-			xQueueSend(PIDQueue, &PID_report, 10 * portTICK_PERIOD_MS);
+			PID_Change = getPIDChange();
 		}
 	}
 }
