@@ -34,6 +34,8 @@ extern QueueHandle_t Temp_Queue;
 
 //float PID_Change = 0.0;
 
+//extern volatile temperatureTarget;
+
 extern void Task_PID( void *pvParameters )
 {
 	float temperature;
@@ -50,6 +52,14 @@ extern void Task_PID( void *pvParameters )
 			// enqueue data
 			CircularArray_Push(&circle, temperature);
 			PID_Change = getPIDChange();
+
+			//PSUEDO CODE:
+			//temperatureTarget += PID_change;
+			//xQueueSend(PWM_Queue, &PID_change_converted_PWM(PID_change), 10*portTICK_PERIOD_MS);
+			//
+			//PID_change_converted_PWM(PID_change):
+			//amount of PWM incr is proportional to amount of PID_change
+
 		}
 	}
 }

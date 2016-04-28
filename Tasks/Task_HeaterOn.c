@@ -31,7 +31,7 @@
 #include	"FreeRTOS.h"
 #include	"task.h"
 #include 	"queue.h"
-#include 	"Report.h"
+#include 	"Task_Report.h"
 #include	"stdio.h"
 
 #define		TimeBase_mS		1000
@@ -39,8 +39,8 @@
 #define		OffTime_mS		( TimeBase_mS - OnTime_mS )
 
 
-extern QueueHandle_t PIDQueue; // from Task_PID.c
-QueueHandle_t PWMQueue;
+extern QueueHandle_t Heater_Queue;
+//uint32_t hqueue_count = 0;
 
 extern void Task_HeaterOn( void *pvParameters ) {
 
@@ -49,9 +49,7 @@ extern void Task_HeaterOn( void *pvParameters ) {
 	//
 	//printf("something wrong...");
 
-	PWMQueue = xQueueCreate(10, sizeof(Report));
-	Report heater_report;
-	float PID_change;
+	ReportData_Item heater_report;
 
 	SysCtlPWMClockSet(SYSCTL_PWMDIV_1);
 	SysCtlPeripheralEnable( SYSCTL_PERIPH_PWM0 );
@@ -93,24 +91,26 @@ extern void Task_HeaterOn( void *pvParameters ) {
 	GPIOPadConfigSet( GPIO_PORTN_BASE,
 						GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD );
 
-	PWMQueue = xQueueCreate( 10, sizeof( Report ) );
+	Heater_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
 	while ( 1 ) {
-		// check queue for new reports
-		ConvertedQueue_Status = xQueueReceive(PIDQueue, &heater_report, 10*portTICK_PERIOD_MS );
-		if( ConvertedQueue_Status == pdTRUE ) {
-			// retrieve requested PID change from report
-			PID_change = heater_report.PID;
-	        //
-	        // Set HeaterOn_H and D2 for OnTime_mS.
-	        //
-	        //GPIOPinWrite( GPIO_PORTG_BASE, GPIO_PIN_0, 0x01 );
-	        GPIOPinWrite( GPIO_PORTN_BASE, GPIO_PIN_0, 0x01 );
 
-	        // update report with PWM output and send it to the next queue
-			heater_report.PWM = PID_change;
-			xQueueSend(PWMQueue, &heater_report, 10*portTICK_PERIOD_MS);
+		//PSEUDO CODE: RECEIVING WHEN: receive when temperatureTarget rises, wait when temperatureTarget falls
+		//ReportQueue_Status = xQueueReceive( PWM_Queue, &PWM_inp, 10*portTICK_PERIOD_MS );
+		//if( ReportQueue_Status == pdTRUE )
+		//	then...
 
-			vTaskDelay( (2000 * configTICK_RATE_HZ) / 1000 );
-		}
+        //
+        // Set HeaterOn_H and D2 for OnTime_mS.
+        //
+        //GPIOPinWrite( GPIO_PORTG_BASE, GPIO_PIN_0, 0x01 );
+        GPIOPinWrite( GPIO_PORTN_BASE, GPIO_PIN_0, 0x01 );
+		heater_report.timestamp = xPortSysTickCount;
+		heater_report.ID = 1;
+		heater_report.value = 25;
+		xQueueSend(Heater_Queue, &heater_report, 10*portTICK_PERIOD_MS);
+		//hqueue_count += 1;
+		vTaskDelay( (2000 * configTICK_RATE_HZ) / 1000 );
+
+
 	}
 }
