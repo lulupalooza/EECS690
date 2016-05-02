@@ -51,7 +51,7 @@ extern volatile uint32_t xPortSysTickCount;
 void UARTMessagePut(uint32_t ui32Base, status_message Data);
 xSemaphoreHandle mutex;
 extern QueueHandle_t Inp_Queue = NULL;
-extern uint32_t iqueue_count;
+extern uint32_t iqueue_count = 0;
 
 extern void Task_UART_0( void *pvParameters ) {
 

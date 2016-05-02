@@ -40,6 +40,7 @@
 //
 extern volatile uint32_t xPortSysTickCount;
 extern QueueHandle_t ReportData_Queue;
+extern QueueHandle_t ADC_Queue;
 extern QueueHandle_t Temp_Queue;
 uint32_t	rqueue_count;
 
@@ -91,11 +92,11 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		adc_report.timestamp = xPortSysTickCount;
 		adc_report.ID = 0;
 		adc_report.value = ADC_Value;
-		printf( ">>ADC %d", ADC_Value);
+		//printf( ">>ADC %d", ADC_Value);
 		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
 		rqueue_count += 1;
 		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
-		xQueueSend(Temp_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
+		xQueueSend(ADC_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
 		//
 		//	Print ADC_Value
 		//

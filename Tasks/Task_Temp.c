@@ -18,14 +18,14 @@
 #include	"stdio.h"
 
 
-extern QueueHandle_t Temp_Queue = NULL;
+extern QueueHandle_t ADC_Queue = NULL;
 
 extern void Task_Temp( void *pvParameters ) {
 	double			adc_val;
 	BaseType_t		ReportQueue_Status;
 
-	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
-	uint32_t int_t;
+	ADC_Queue = xQueueCreate( 10, sizeof( double ) );
+	uint32_t temp_val;
 
 	//
 	//	No set-up necessary
@@ -36,10 +36,12 @@ extern void Task_Temp( void *pvParameters ) {
 	//
 	while ( 1 ) {
 		//printf("again??!");
-		ReportQueue_Status = xQueueReceive( Temp_Queue, &adc_val, 10*portTICK_PERIOD_MS );
-		int_t = (uint32_t) (adc_val*1000) - ((uint32_t)adc_val)*1000;
+		ReportQueue_Status = xQueueReceive( ADC_Queue, &adc_val, 10*portTICK_PERIOD_MS );
+		temp_val = (uint32_t) 91.93 - 30.45*adc_val;
+		printf( "ADC Value = %d\n",adc_val);
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, int_t);
+			//printf( "%d\n",temp_val);
+			//UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, temp_val);
 		}
 		vTaskDelay( 2 * configTICK_RATE_HZ );
 	}

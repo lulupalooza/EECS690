@@ -19,8 +19,7 @@
 #include "task.h"
 #include "queue.h"
 
-static const int32_t R_voltages[1] =
-		{ 1 };
+static const int32_t R_voltages[ 2 ] = { 1, 0 };
 static const int32_t temps[1] =
 		{ 10 };
 

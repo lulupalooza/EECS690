@@ -1,0 +1,1181 @@
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
+       3                    ;* Date/Time created: Mon May 02 13:27:58 2016                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Tasks/PIDman.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v5.2.5 Copyright (c) 1996-2015 Te
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\trilu\workspace_eecs\FreeRTOS823_3_TM4C1294_Base_Te
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("CircularArray_Peek")
+      15                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("CircularArray_Peek")
+      16                            .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$16)
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Te
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x3a)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x07)
+      22                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$24)
+      24                    $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      25                            .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$20)
+      26                            .dwendtag $C$DW$1
+      27                    
+      28                    
+      29                    $C$DW$4 .dwtag  DW_TAG_subprogram, DW_AT_name("CircularArray_Average")
+      30                            .dwattr $C$DW$4, DW_AT_TI_symbol_name("CircularArray_Average")
+      31                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$16)
+      32                            .dwattr $C$DW$4, DW_AT_declaration
+      33                            .dwattr $C$DW$4, DW_AT_external
+      34                            .dwattr $C$DW$4, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Te
+      35                            .dwattr $C$DW$4, DW_AT_decl_line(0x53)
+      36                            .dwattr $C$DW$4, DW_AT_decl_column(0x07)
+      37                    $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      38                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$24)
+      39                            .dwendtag $C$DW$4
+      40                    
+      41                            .global temperatureTarget
+      42 00000000                   .data
+      43                            .align  4
+      44                            .elfsym temperatureTarget,SYM_SIZE(4)
+      45 00000000           temperatureTarget:
+      46 00000000 42960000          .word   042960000h      ; temperatureTarget @ 0 (75)
+      47                    
+      48                    $C$DW$6 .dwtag  DW_TAG_variable, DW_AT_name("temperatureTarget")
+      49                            .dwattr $C$DW$6, DW_AT_TI_symbol_name("temperatureTarget")
+      50                            .dwattr $C$DW$6, DW_AT_location[DW_OP_addr temperatureTarget]
+      51                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$16)
+      52                            .dwattr $C$DW$6, DW_AT_external
+      53                            .dwattr $C$DW$6, DW_AT_decl_file("../Tasks/PIDman.c")
+      54                            .dwattr $C$DW$6, DW_AT_decl_line(0x1a)
+      55                            .dwattr $C$DW$6, DW_AT_decl_column(0x07)
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    2
+
+      56                            .global weight_P
+      57 00000004                   .data
+      58                            .align  4
+      59                            .elfsym weight_P,SYM_SIZE(4)
+      60 00000004           weight_P:
+      61 00000004 3EAA7EFA          .word   03eaa7efah      ; weight_P @ 0 (0.33300000429153442383)
+      62                    
+      63                    $C$DW$7 .dwtag  DW_TAG_variable, DW_AT_name("weight_P")
+      64                            .dwattr $C$DW$7, DW_AT_TI_symbol_name("weight_P")
+      65                            .dwattr $C$DW$7, DW_AT_location[DW_OP_addr weight_P]
+      66                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$16)
+      67                            .dwattr $C$DW$7, DW_AT_external
+      68                            .dwattr $C$DW$7, DW_AT_decl_file("../Tasks/PIDman.c")
+      69                            .dwattr $C$DW$7, DW_AT_decl_line(0x1c)
+      70                            .dwattr $C$DW$7, DW_AT_decl_column(0x07)
+      71                            .global weight_I
+      72 00000008                   .data
+      73                            .align  4
+      74                            .elfsym weight_I,SYM_SIZE(4)
+      75 00000008           weight_I:
+      76 00000008 3EAA7EFA          .word   03eaa7efah      ; weight_I @ 0 (0.33300000429153442383)
+      77                    
+      78                    $C$DW$8 .dwtag  DW_TAG_variable, DW_AT_name("weight_I")
+      79                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("weight_I")
+      80                            .dwattr $C$DW$8, DW_AT_location[DW_OP_addr weight_I]
+      81                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$16)
+      82                            .dwattr $C$DW$8, DW_AT_external
+      83                            .dwattr $C$DW$8, DW_AT_decl_file("../Tasks/PIDman.c")
+      84                            .dwattr $C$DW$8, DW_AT_decl_line(0x1d)
+      85                            .dwattr $C$DW$8, DW_AT_decl_column(0x07)
+      86                            .global weight_D
+      87 0000000c                   .data
+      88                            .align  4
+      89                            .elfsym weight_D,SYM_SIZE(4)
+      90 0000000c           weight_D:
+      91 0000000c 3EAA7EFA          .word   03eaa7efah      ; weight_D @ 0 (0.33300000429153442383)
+      92                    
+      93                    $C$DW$9 .dwtag  DW_TAG_variable, DW_AT_name("weight_D")
+      94                            .dwattr $C$DW$9, DW_AT_TI_symbol_name("weight_D")
+      95                            .dwattr $C$DW$9, DW_AT_location[DW_OP_addr weight_D]
+      96                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$16)
+      97                            .dwattr $C$DW$9, DW_AT_external
+      98                            .dwattr $C$DW$9, DW_AT_decl_file("../Tasks/PIDman.c")
+      99                            .dwattr $C$DW$9, DW_AT_decl_line(0x1e)
+     100                            .dwattr $C$DW$9, DW_AT_decl_column(0x07)
+     101                            .global circle
+     102 00000000           circle: .usect  ".bss:circle",44,4
+     103                    $C$DW$10        .dwtag  DW_TAG_variable, DW_AT_name("circle")
+     104                            .dwattr $C$DW$10, DW_AT_TI_symbol_name("circle")
+     105                            .dwattr $C$DW$10, DW_AT_location[DW_OP_addr circle]
+     106                            .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$23)
+     107                            .dwattr $C$DW$10, DW_AT_external
+     108                            .dwattr $C$DW$10, DW_AT_decl_file("../Tasks/PIDman.c")
+     109                            .dwattr $C$DW$10, DW_AT_decl_line(0x20)
+     110                            .dwattr $C$DW$10, DW_AT_decl_column(0x10)
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    3
+
+     111                    ;       C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Loca
+     112 00000000                   .sect   ".text"
+     113                            .clink
+     114                            .thumbfunc getTemperatureTarget
+     115 00000000                   .thumb
+     116                            .global getTemperatureTarget
+     117                    
+     118                    $C$DW$11        .dwtag  DW_TAG_subprogram, DW_AT_name("getTemperatureTarget")
+     119                            .dwattr $C$DW$11, DW_AT_low_pc(getTemperatureTarget)
+     120                            .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     121                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("getTemperatureTarget")
+     122                            .dwattr $C$DW$11, DW_AT_external
+     123                            .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$16)
+     124                            .dwattr $C$DW$11, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     125                            .dwattr $C$DW$11, DW_AT_TI_begin_line(0x2b)
+     126                            .dwattr $C$DW$11, DW_AT_TI_begin_column(0x07)
+     127                            .dwattr $C$DW$11, DW_AT_decl_file("../Tasks/PIDman.c")
+     128                            .dwattr $C$DW$11, DW_AT_decl_line(0x2b)
+     129                            .dwattr $C$DW$11, DW_AT_decl_column(0x07)
+     130                            .dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x00)
+     131                            .dwpsn  file "../Tasks/PIDman.c",line 44,column 1,is_stmt,address getTemperatureTarget,isa 1
+     132                    
+     133                            .dwfde $C$DW$CIE, getTemperatureTarget
+     134                    
+     135                    ;*****************************************************************************
+     136                    ;* FUNCTION NAME: getTemperatureTarget                                       *
+     137                    ;*                                                                           *
+     138                    ;*   Regs Modified     : A1,D0                                               *
+     139                    ;*   Regs Used         : A1,LR,D0                                            *
+     140                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     141                    ;*****************************************************************************
+     142 00000000           getTemperatureTarget:
+     143                    ;* --------------------------------------------------------------------------*
+     144                            .dwcfi  cfa_offset, 0
+     145                            .dwpsn  file "../Tasks/PIDman.c",line 45,column 2,is_stmt,isa 1
+     146 00000000 4836              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     147 00000002 0A00ED90          VLDR.32   S0, [A1, #0]          ; [DPU_LIN_PIPE] |45|  ; [KEEP 32-BIT INS]
+     148                            .dwpsn  file "../Tasks/PIDman.c",line 46,column 1,is_stmt,isa 1
+     149                    $C$DW$12        .dwtag  DW_TAG_TI_branch
+     150                            .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     151                            .dwattr $C$DW$12, DW_AT_TI_return
+     152 00000006 4770              BX        LR                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     153                            ; BRANCH OCCURS                  ; [] 
+     154                            .dwattr $C$DW$11, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     155                            .dwattr $C$DW$11, DW_AT_TI_end_line(0x2e)
+     156                            .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     157                            .dwendentry
+     158                            .dwendtag $C$DW$11
+     159                    
+     160 00000008                   .sect   ".text"
+     161                            .clink
+     162                            .thumbfunc setTemperatureTarget
+     163 00000008                   .thumb
+     164                            .global setTemperatureTarget
+     165                    
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    4
+
+     166                    $C$DW$13        .dwtag  DW_TAG_subprogram, DW_AT_name("setTemperatureTarget")
+     167                            .dwattr $C$DW$13, DW_AT_low_pc(setTemperatureTarget)
+     168                            .dwattr $C$DW$13, DW_AT_high_pc(0x00)
+     169                            .dwattr $C$DW$13, DW_AT_TI_symbol_name("setTemperatureTarget")
+     170                            .dwattr $C$DW$13, DW_AT_external
+     171                            .dwattr $C$DW$13, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     172                            .dwattr $C$DW$13, DW_AT_TI_begin_line(0x3a)
+     173                            .dwattr $C$DW$13, DW_AT_TI_begin_column(0x06)
+     174                            .dwattr $C$DW$13, DW_AT_decl_file("../Tasks/PIDman.c")
+     175                            .dwattr $C$DW$13, DW_AT_decl_line(0x3a)
+     176                            .dwattr $C$DW$13, DW_AT_decl_column(0x06)
+     177                            .dwattr $C$DW$13, DW_AT_TI_max_frame_size(0x08)
+     178                            .dwpsn  file "../Tasks/PIDman.c",line 59,column 1,is_stmt,address setTemperatureTarget,isa 1
+     179                    
+     180                            .dwfde $C$DW$CIE, setTemperatureTarget
+     181                    $C$DW$14        .dwtag  DW_TAG_formal_parameter, DW_AT_name("newTemperatureTarget")
+     182                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("newTemperatureTarget")
+     183                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$16)
+     184                            .dwattr $C$DW$14, DW_AT_location[DW_OP_regx 0x40]
+     185                    
+     186                    ;*****************************************************************************
+     187                    ;* FUNCTION NAME: setTemperatureTarget                                       *
+     188                    ;*                                                                           *
+     189                    ;*   Regs Modified     : A1,A2,SP                                            *
+     190                    ;*   Regs Used         : A1,A2,SP,LR,D0                                      *
+     191                    ;*   Local Frame Size  : 0 Args + 4 Auto + 0 Save = 4 byte                   *
+     192                    ;*****************************************************************************
+     193 00000008           setTemperatureTarget:
+     194                    ;* --------------------------------------------------------------------------*
+     195                            .dwcfi  cfa_offset, 0
+     196 00000008 0D08F1AD          SUB       SP, SP, #8            ; [DPU_3_PIPE]  ; [KEEP 32-BIT INS]
+     197                            .dwcfi  cfa_offset, 8
+     198                    $C$DW$15        .dwtag  DW_TAG_variable, DW_AT_name("newTemperatureTarget")
+     199                            .dwattr $C$DW$15, DW_AT_TI_symbol_name("newTemperatureTarget")
+     200                            .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$16)
+     201                            .dwattr $C$DW$15, DW_AT_location[DW_OP_breg13 0]
+     202 0000000c 0A00ED8D          VSTR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |59|  ; [KEEP 32-BIT INS]
+     203                            .dwpsn  file "../Tasks/PIDman.c",line 60,column 2,is_stmt,isa 1
+     204 00000010 4932              LDR       A2, $C$CON1           ; [DPU_3_PIPE] |60|  ; [ORIG 16-BIT INS]
+     205 00000012 9800              LDR       A1, [SP, #0]          ; [DPU_3_PIPE] |60|  ; [ORIG 16-BIT INS]
+     206 00000014 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |60|  ; [ORIG 16-BIT INS]
+     207                            .dwpsn  file "../Tasks/PIDman.c",line 61,column 1,is_stmt,isa 1
+     208 00000016 B002              ADD       SP, SP, #8            ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     209                            .dwcfi  cfa_offset, 0
+     210                    $C$DW$16        .dwtag  DW_TAG_TI_branch
+     211                            .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     212                            .dwattr $C$DW$16, DW_AT_TI_return
+     213 00000018 4770              BX        LR                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     214                            ; BRANCH OCCURS                  ; [] 
+     215                            .dwattr $C$DW$13, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     216                            .dwattr $C$DW$13, DW_AT_TI_end_line(0x3d)
+     217                            .dwattr $C$DW$13, DW_AT_TI_end_column(0x01)
+     218                            .dwendentry
+     219                            .dwendtag $C$DW$13
+     220                    
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    5
+
+     221 0000001a                   .sect   ".text"
+     222                            .clink
+     223                            .thumbfunc getPComponent
+     224 0000001a                   .thumb
+     225                            .global getPComponent
+     226                    
+     227                    $C$DW$17        .dwtag  DW_TAG_subprogram, DW_AT_name("getPComponent")
+     228                            .dwattr $C$DW$17, DW_AT_low_pc(getPComponent)
+     229                            .dwattr $C$DW$17, DW_AT_high_pc(0x00)
+     230                            .dwattr $C$DW$17, DW_AT_TI_symbol_name("getPComponent")
+     231                            .dwattr $C$DW$17, DW_AT_external
+     232                            .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$16)
+     233                            .dwattr $C$DW$17, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     234                            .dwattr $C$DW$17, DW_AT_TI_begin_line(0x49)
+     235                            .dwattr $C$DW$17, DW_AT_TI_begin_column(0x07)
+     236                            .dwattr $C$DW$17, DW_AT_decl_file("../Tasks/PIDman.c")
+     237                            .dwattr $C$DW$17, DW_AT_decl_line(0x49)
+     238                            .dwattr $C$DW$17, DW_AT_decl_column(0x07)
+     239                            .dwattr $C$DW$17, DW_AT_TI_max_frame_size(0x08)
+     240                            .dwpsn  file "../Tasks/PIDman.c",line 74,column 1,is_stmt,address getPComponent,isa 1
+     241                    
+     242                            .dwfde $C$DW$CIE, getPComponent
+     243                    
+     244                    ;*****************************************************************************
+     245                    ;* FUNCTION NAME: getPComponent                                              *
+     246                    ;*                                                                           *
+     247                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     248                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     249                    ;*                           FPEXC,FPSCR                                     *
+     250                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     251                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     252                    ;*                           FPEXC,FPSCR                                     *
+     253                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     254                    ;*****************************************************************************
+     255 0000001a           getPComponent:
+     256                    ;* --------------------------------------------------------------------------*
+     257                            .dwcfi  cfa_offset, 0
+     258 0000001a B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     259                            .dwcfi  cfa_offset, 8
+     260                            .dwcfi  save_reg_to_mem, 14, -4
+     261                            .dwcfi  save_reg_to_mem, 3, -8
+     262                    $C$DW$18        .dwtag  DW_TAG_variable, DW_AT_name("latestError")
+     263                            .dwattr $C$DW$18, DW_AT_TI_symbol_name("latestError")
+     264                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$16)
+     265                            .dwattr $C$DW$18, DW_AT_location[DW_OP_breg13 0]
+     266                            .dwpsn  file "../Tasks/PIDman.c",line 75,column 20,is_stmt,isa 1
+     267 0000001c 4830              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     268 0000001e 2100              MOVS      A2, #0                ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     269                    $C$DW$19        .dwtag  DW_TAG_TI_branch
+     270                            .dwattr $C$DW$19, DW_AT_low_pc(0x00)
+     271                            .dwattr $C$DW$19, DW_AT_name("CircularArray_Peek")
+     272                            .dwattr $C$DW$19, DW_AT_TI_call
+     273 00000020 FFFEF7FF!         BL        CircularArray_Peek    ; [DPU_3_PIPE] |75|  ; [KEEP 32-BIT INS]
+     274                            ; CALL OCCURS {CircularArray_Peek }  ; [] |75| 
+     275 00000024 0A00ED8D          VSTR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |75|  ; [KEEP 32-BIT INS]
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    6
+
+     276                            .dwpsn  file "../Tasks/PIDman.c",line 76,column 2,is_stmt,isa 1
+     277 00000028 0A00ED9D          VLDR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |76|  ; [KEEP 32-BIT INS]
+     278 0000002c 482D              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     279 0000002e 0A00EDD0          VLDR.32   S1, [A1, #0]          ; [DPU_LIN_PIPE] |76|  ; [KEEP 32-BIT INS]
+     280 00000032 0A80EE20          VMUL.F32  S0, S1, S0            ; [DPU_LIN_PIPE] |76|  ; [KEEP 32-BIT INS]
+     281                            .dwpsn  file "../Tasks/PIDman.c",line 77,column 1,is_stmt,isa 1
+     282                    $C$DW$20        .dwtag  DW_TAG_TI_branch
+     283                            .dwattr $C$DW$20, DW_AT_low_pc(0x00)
+     284                            .dwattr $C$DW$20, DW_AT_TI_return
+     285 00000036 BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     286                            .dwcfi  cfa_offset, 0
+     287                            ; BRANCH OCCURS                  ; [] 
+     288                            .dwattr $C$DW$17, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     289                            .dwattr $C$DW$17, DW_AT_TI_end_line(0x4d)
+     290                            .dwattr $C$DW$17, DW_AT_TI_end_column(0x01)
+     291                            .dwendentry
+     292                            .dwendtag $C$DW$17
+     293                    
+     294 00000038                   .sect   ".text"
+     295                            .clink
+     296                            .thumbfunc getIComponent
+     297 00000038                   .thumb
+     298                            .global getIComponent
+     299                    
+     300                    $C$DW$21        .dwtag  DW_TAG_subprogram, DW_AT_name("getIComponent")
+     301                            .dwattr $C$DW$21, DW_AT_low_pc(getIComponent)
+     302                            .dwattr $C$DW$21, DW_AT_high_pc(0x00)
+     303                            .dwattr $C$DW$21, DW_AT_TI_symbol_name("getIComponent")
+     304                            .dwattr $C$DW$21, DW_AT_external
+     305                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$16)
+     306                            .dwattr $C$DW$21, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     307                            .dwattr $C$DW$21, DW_AT_TI_begin_line(0x59)
+     308                            .dwattr $C$DW$21, DW_AT_TI_begin_column(0x07)
+     309                            .dwattr $C$DW$21, DW_AT_decl_file("../Tasks/PIDman.c")
+     310                            .dwattr $C$DW$21, DW_AT_decl_line(0x59)
+     311                            .dwattr $C$DW$21, DW_AT_decl_column(0x07)
+     312                            .dwattr $C$DW$21, DW_AT_TI_max_frame_size(0x08)
+     313                            .dwpsn  file "../Tasks/PIDman.c",line 90,column 1,is_stmt,address getIComponent,isa 1
+     314                    
+     315                            .dwfde $C$DW$CIE, getIComponent
+     316                    
+     317                    ;*****************************************************************************
+     318                    ;* FUNCTION NAME: getIComponent                                              *
+     319                    ;*                                                                           *
+     320                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     321                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     322                    ;*                           FPEXC,FPSCR                                     *
+     323                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     324                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     325                    ;*                           FPEXC,FPSCR                                     *
+     326                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     327                    ;*****************************************************************************
+     328 00000038           getIComponent:
+     329                    ;* --------------------------------------------------------------------------*
+     330                            .dwcfi  cfa_offset, 0
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    7
+
+     331 00000038 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     332                            .dwcfi  cfa_offset, 8
+     333                            .dwcfi  save_reg_to_mem, 14, -4
+     334                            .dwcfi  save_reg_to_mem, 3, -8
+     335                    $C$DW$22        .dwtag  DW_TAG_variable, DW_AT_name("errorAverage")
+     336                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("errorAverage")
+     337                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$16)
+     338                            .dwattr $C$DW$22, DW_AT_location[DW_OP_breg13 0]
+     339                            .dwpsn  file "../Tasks/PIDman.c",line 91,column 21,is_stmt,isa 1
+     340 0000003a 4829              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     341                    $C$DW$23        .dwtag  DW_TAG_TI_branch
+     342                            .dwattr $C$DW$23, DW_AT_low_pc(0x00)
+     343                            .dwattr $C$DW$23, DW_AT_name("CircularArray_Average")
+     344                            .dwattr $C$DW$23, DW_AT_TI_call
+     345 0000003c FFFEF7FF!         BL        CircularArray_Average ; [DPU_3_PIPE] |91|  ; [KEEP 32-BIT INS]
+     346                            ; CALL OCCURS {CircularArray_Average }  ; [] |91| 
+     347 00000040 0A00ED8D          VSTR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |91|  ; [KEEP 32-BIT INS]
+     348                            .dwpsn  file "../Tasks/PIDman.c",line 92,column 2,is_stmt,isa 1
+     349 00000044 0A00ED9D          VLDR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |92|  ; [KEEP 32-BIT INS]
+     350 00000048 4827              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |92|  ; [ORIG 16-BIT INS]
+     351 0000004a 0A00EDD0          VLDR.32   S1, [A1, #0]          ; [DPU_LIN_PIPE] |92|  ; [KEEP 32-BIT INS]
+     352 0000004e 0A80EE20          VMUL.F32  S0, S1, S0            ; [DPU_LIN_PIPE] |92|  ; [KEEP 32-BIT INS]
+     353                            .dwpsn  file "../Tasks/PIDman.c",line 93,column 1,is_stmt,isa 1
+     354                    $C$DW$24        .dwtag  DW_TAG_TI_branch
+     355                            .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     356                            .dwattr $C$DW$24, DW_AT_TI_return
+     357 00000052 BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     358                            .dwcfi  cfa_offset, 0
+     359                            ; BRANCH OCCURS                  ; [] 
+     360                            .dwattr $C$DW$21, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     361                            .dwattr $C$DW$21, DW_AT_TI_end_line(0x5d)
+     362                            .dwattr $C$DW$21, DW_AT_TI_end_column(0x01)
+     363                            .dwendentry
+     364                            .dwendtag $C$DW$21
+     365                    
+     366 00000054                   .sect   ".text"
+     367                            .clink
+     368                            .thumbfunc getDComponent
+     369 00000054                   .thumb
+     370                            .global getDComponent
+     371                    
+     372                    $C$DW$25        .dwtag  DW_TAG_subprogram, DW_AT_name("getDComponent")
+     373                            .dwattr $C$DW$25, DW_AT_low_pc(getDComponent)
+     374                            .dwattr $C$DW$25, DW_AT_high_pc(0x00)
+     375                            .dwattr $C$DW$25, DW_AT_TI_symbol_name("getDComponent")
+     376                            .dwattr $C$DW$25, DW_AT_external
+     377                            .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$16)
+     378                            .dwattr $C$DW$25, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     379                            .dwattr $C$DW$25, DW_AT_TI_begin_line(0x69)
+     380                            .dwattr $C$DW$25, DW_AT_TI_begin_column(0x07)
+     381                            .dwattr $C$DW$25, DW_AT_decl_file("../Tasks/PIDman.c")
+     382                            .dwattr $C$DW$25, DW_AT_decl_line(0x69)
+     383                            .dwattr $C$DW$25, DW_AT_decl_column(0x07)
+     384                            .dwattr $C$DW$25, DW_AT_TI_max_frame_size(0x18)
+     385                            .dwpsn  file "../Tasks/PIDman.c",line 106,column 1,is_stmt,address getDComponent,isa 1
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    8
+
+     386                    
+     387                            .dwfde $C$DW$CIE, getDComponent
+     388                    
+     389                    ;*****************************************************************************
+     390                    ;* FUNCTION NAME: getDComponent                                              *
+     391                    ;*                                                                           *
+     392                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     393                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     394                    ;*                           FPEXC,FPSCR                                     *
+     395                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     396                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     397                    ;*                           FPEXC,FPSCR                                     *
+     398                    ;*   Local Frame Size  : 0 Args + 16 Auto + 4 Save = 20 byte                 *
+     399                    ;*****************************************************************************
+     400 00000054           getDComponent:
+     401                    ;* --------------------------------------------------------------------------*
+     402                            .dwcfi  cfa_offset, 0
+     403 00000054 B500              PUSH      {LR}                  ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     404                            .dwcfi  cfa_offset, 4
+     405                            .dwcfi  save_reg_to_mem, 14, -4
+     406 00000056 0D14F1AD          SUB       SP, SP, #20           ; [DPU_3_PIPE]  ; [KEEP 32-BIT INS]
+     407                            .dwcfi  cfa_offset, 24
+     408                    $C$DW$26        .dwtag  DW_TAG_variable, DW_AT_name("latestError")
+     409                            .dwattr $C$DW$26, DW_AT_TI_symbol_name("latestError")
+     410                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$16)
+     411                            .dwattr $C$DW$26, DW_AT_location[DW_OP_breg13 0]
+     412                    $C$DW$27        .dwtag  DW_TAG_variable, DW_AT_name("nextError")
+     413                            .dwattr $C$DW$27, DW_AT_TI_symbol_name("nextError")
+     414                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$16)
+     415                            .dwattr $C$DW$27, DW_AT_location[DW_OP_breg13 4]
+     416                    $C$DW$28        .dwtag  DW_TAG_variable, DW_AT_name("deltaError")
+     417                            .dwattr $C$DW$28, DW_AT_TI_symbol_name("deltaError")
+     418                            .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$16)
+     419                            .dwattr $C$DW$28, DW_AT_location[DW_OP_breg13 8]
+     420                    $C$DW$29        .dwtag  DW_TAG_variable, DW_AT_name("rateOfChange")
+     421                            .dwattr $C$DW$29, DW_AT_TI_symbol_name("rateOfChange")
+     422                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$16)
+     423                            .dwattr $C$DW$29, DW_AT_location[DW_OP_breg13 12]
+     424                            .dwpsn  file "../Tasks/PIDman.c",line 107,column 20,is_stmt,isa 1
+     425 0000005a 4821              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     426 0000005c 2100              MOVS      A2, #0                ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     427                    $C$DW$30        .dwtag  DW_TAG_TI_branch
+     428                            .dwattr $C$DW$30, DW_AT_low_pc(0x00)
+     429                            .dwattr $C$DW$30, DW_AT_name("CircularArray_Peek")
+     430                            .dwattr $C$DW$30, DW_AT_TI_call
+     431 0000005e FFFEF7FF!         BL        CircularArray_Peek    ; [DPU_3_PIPE] |107|  ; [KEEP 32-BIT INS]
+     432                            ; CALL OCCURS {CircularArray_Peek }  ; [] |107| 
+     433 00000062 0A00ED8D          VSTR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |107|  ; [KEEP 32-BIT INS]
+     434                            .dwpsn  file "../Tasks/PIDman.c",line 108,column 18,is_stmt,isa 1
+     435 00000066 481E              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     436 00000068 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     437                    $C$DW$31        .dwtag  DW_TAG_TI_branch
+     438                            .dwattr $C$DW$31, DW_AT_low_pc(0x00)
+     439                            .dwattr $C$DW$31, DW_AT_name("CircularArray_Peek")
+     440                            .dwattr $C$DW$31, DW_AT_TI_call
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE    9
+
+     441 0000006a FFFEF7FF!         BL        CircularArray_Peek    ; [DPU_3_PIPE] |108|  ; [KEEP 32-BIT INS]
+     442                            ; CALL OCCURS {CircularArray_Peek }  ; [] |108| 
+     443 0000006e 0A01ED8D          VSTR.32   S0, [SP, #4]          ; [DPU_LIN_PIPE] |108|  ; [KEEP 32-BIT INS]
+     444                            .dwpsn  file "../Tasks/PIDman.c",line 109,column 19,is_stmt,isa 1
+     445 00000072 0A00ED9D          VLDR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |109|  ; [KEEP 32-BIT INS]
+     446 00000076 0A01EDDD          VLDR.32   S1, [SP, #4]          ; [DPU_LIN_PIPE] |109|  ; [KEEP 32-BIT INS]
+     447 0000007a 0AC0EE30          VSUB.F32  S0, S1, S0            ; [DPU_LIN_PIPE] |109|  ; [KEEP 32-BIT INS]
+     448 0000007e 0A02ED8D          VSTR.32   S0, [SP, #8]          ; [DPU_LIN_PIPE] |109|  ; [KEEP 32-BIT INS]
+     449                            .dwpsn  file "../Tasks/PIDman.c",line 110,column 21,is_stmt,isa 1
+     450 00000082 0A02ED9D          VLDR.32   S0, [SP, #8]          ; [DPU_LIN_PIPE] |110|  ; [KEEP 32-BIT INS]
+     451 00000086 4814              LDR       A1, $C$FL1            ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     452 00000088 0A90EE00          VMOV      S1, A1                ; [DPU_LIN_PIPE] |110|  ; [KEEP 32-BIT INS]
+     453 0000008c 0A20EE80          VDIV.F32  S0, S0, S1            ; [DPU_LIN_PIPE] |110|  ; [KEEP 32-BIT INS]
+     454 00000090 0A03ED8D          VSTR.32   S0, [SP, #12]         ; [DPU_LIN_PIPE] |110|  ; [KEEP 32-BIT INS]
+     455                            .dwpsn  file "../Tasks/PIDman.c",line 111,column 2,is_stmt,isa 1
+     456 00000094 4815              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     457 00000096 0A00EDD0          VLDR.32   S1, [A1, #0]          ; [DPU_LIN_PIPE] |111|  ; [KEEP 32-BIT INS]
+     458 0000009a 0A03ED9D          VLDR.32   S0, [SP, #12]         ; [DPU_LIN_PIPE] |111|  ; [KEEP 32-BIT INS]
+     459 0000009e 0A20EE20          VMUL.F32  S0, S0, S1            ; [DPU_LIN_PIPE] |111|  ; [KEEP 32-BIT INS]
+     460                            .dwpsn  file "../Tasks/PIDman.c",line 112,column 1,is_stmt,isa 1
+     461 000000a2 B005              ADD       SP, SP, #20           ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     462                            .dwcfi  cfa_offset, 4
+     463                    $C$DW$32        .dwtag  DW_TAG_TI_branch
+     464                            .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+     465                            .dwattr $C$DW$32, DW_AT_TI_return
+     466 000000a4 BD00              POP       {PC}                  ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     467                            .dwcfi  cfa_offset, 0
+     468                            ; BRANCH OCCURS                  ; [] 
+     469                            .dwattr $C$DW$25, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     470                            .dwattr $C$DW$25, DW_AT_TI_end_line(0x70)
+     471                            .dwattr $C$DW$25, DW_AT_TI_end_column(0x01)
+     472                            .dwendentry
+     473                            .dwendtag $C$DW$25
+     474                    
+     475 000000a6                   .sect   ".text"
+     476                            .clink
+     477                            .thumbfunc getPIDChange
+     478 000000a6                   .thumb
+     479                            .global getPIDChange
+     480                    
+     481                    $C$DW$33        .dwtag  DW_TAG_subprogram, DW_AT_name("getPIDChange")
+     482                            .dwattr $C$DW$33, DW_AT_low_pc(getPIDChange)
+     483                            .dwattr $C$DW$33, DW_AT_high_pc(0x00)
+     484                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("getPIDChange")
+     485                            .dwattr $C$DW$33, DW_AT_external
+     486                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$16)
+     487                            .dwattr $C$DW$33, DW_AT_TI_begin_file("../Tasks/PIDman.c")
+     488                            .dwattr $C$DW$33, DW_AT_TI_begin_line(0x7b)
+     489                            .dwattr $C$DW$33, DW_AT_TI_begin_column(0x07)
+     490                            .dwattr $C$DW$33, DW_AT_decl_file("../Tasks/PIDman.c")
+     491                            .dwattr $C$DW$33, DW_AT_decl_line(0x7b)
+     492                            .dwattr $C$DW$33, DW_AT_decl_column(0x07)
+     493                            .dwattr $C$DW$33, DW_AT_TI_max_frame_size(0x10)
+     494                            .dwpsn  file "../Tasks/PIDman.c",line 124,column 1,is_stmt,address getPIDChange,isa 1
+     495                    
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   10
+
+     496                            .dwfde $C$DW$CIE, getPIDChange
+     497                    
+     498                    ;*****************************************************************************
+     499                    ;* FUNCTION NAME: getPIDChange                                               *
+     500                    ;*                                                                           *
+     501                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     502                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     503                    ;*                           FPEXC,FPSCR                                     *
+     504                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
+     505                    ;*                           D3,D3_hi,D4,D4_hi,D5,D5_hi,D6,D6_hi,D7,D7_hi,   *
+     506                    ;*                           FPEXC,FPSCR                                     *
+     507                    ;*   Local Frame Size  : 0 Args + 12 Auto + 4 Save = 16 byte                 *
+     508                    ;*****************************************************************************
+     509 000000a6           getPIDChange:
+     510                    ;* --------------------------------------------------------------------------*
+     511                            .dwcfi  cfa_offset, 0
+     512 000000a6 B50E              PUSH      {A2, A3, A4, LR}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     513                            .dwcfi  cfa_offset, 16
+     514                            .dwcfi  save_reg_to_mem, 14, -4
+     515                            .dwcfi  save_reg_to_mem, 3, -8
+     516                            .dwcfi  save_reg_to_mem, 2, -12
+     517                            .dwcfi  save_reg_to_mem, 1, -16
+     518                    $C$DW$34        .dwtag  DW_TAG_variable, DW_AT_name("P")
+     519                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("P")
+     520                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$16)
+     521                            .dwattr $C$DW$34, DW_AT_location[DW_OP_breg13 0]
+     522                    $C$DW$35        .dwtag  DW_TAG_variable, DW_AT_name("I")
+     523                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("I")
+     524                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$16)
+     525                            .dwattr $C$DW$35, DW_AT_location[DW_OP_breg13 4]
+     526                    $C$DW$36        .dwtag  DW_TAG_variable, DW_AT_name("D")
+     527                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("D")
+     528                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$16)
+     529                            .dwattr $C$DW$36, DW_AT_location[DW_OP_breg13 8]
+     530                            .dwpsn  file "../Tasks/PIDman.c",line 125,column 10,is_stmt,isa 1
+     531                    $C$DW$37        .dwtag  DW_TAG_TI_branch
+     532                            .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     533                            .dwattr $C$DW$37, DW_AT_name("getPComponent")
+     534                            .dwattr $C$DW$37, DW_AT_TI_call
+     535 000000a8 FFB7F7FF          BL        getPComponent         ; [DPU_3_PIPE] |125|  ; [KEEP 32-BIT INS]
+     536                            ; CALL OCCURS {getPComponent }   ; [] |125| 
+     537 000000ac 0A00ED8D          VSTR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |125|  ; [KEEP 32-BIT INS]
+     538                            .dwpsn  file "../Tasks/PIDman.c",line 126,column 10,is_stmt,isa 1
+     539                    $C$DW$38        .dwtag  DW_TAG_TI_branch
+     540                            .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     541                            .dwattr $C$DW$38, DW_AT_name("getIComponent")
+     542                            .dwattr $C$DW$38, DW_AT_TI_call
+     543 000000b0 FFC2F7FF          BL        getIComponent         ; [DPU_3_PIPE] |126|  ; [KEEP 32-BIT INS]
+     544                            ; CALL OCCURS {getIComponent }   ; [] |126| 
+     545 000000b4 0A01ED8D          VSTR.32   S0, [SP, #4]          ; [DPU_LIN_PIPE] |126|  ; [KEEP 32-BIT INS]
+     546                            .dwpsn  file "../Tasks/PIDman.c",line 127,column 10,is_stmt,isa 1
+     547                    $C$DW$39        .dwtag  DW_TAG_TI_branch
+     548                            .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     549                            .dwattr $C$DW$39, DW_AT_name("getDComponent")
+     550                            .dwattr $C$DW$39, DW_AT_TI_call
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   11
+
+     551 000000b8 FFCCF7FF          BL        getDComponent         ; [DPU_3_PIPE] |127|  ; [KEEP 32-BIT INS]
+     552                            ; CALL OCCURS {getDComponent }   ; [] |127| 
+     553 000000bc 0A02ED8D          VSTR.32   S0, [SP, #8]          ; [DPU_LIN_PIPE] |127|  ; [KEEP 32-BIT INS]
+     554                            .dwpsn  file "../Tasks/PIDman.c",line 128,column 2,is_stmt,isa 1
+     555 000000c0 0A01EDDD          VLDR.32   S1, [SP, #4]          ; [DPU_LIN_PIPE] |128|  ; [KEEP 32-BIT INS]
+     556 000000c4 0A00ED9D          VLDR.32   S0, [SP, #0]          ; [DPU_LIN_PIPE] |128|  ; [KEEP 32-BIT INS]
+     557 000000c8 1A02ED9D          VLDR.32   S2, [SP, #8]          ; [DPU_LIN_PIPE] |128|  ; [KEEP 32-BIT INS]
+     558 000000cc 0A80EE30          VADD.F32  S0, S1, S0            ; [DPU_LIN_PIPE] |128|  ; [KEEP 32-BIT INS]
+     559 000000d0 0A00EE31          VADD.F32  S0, S2, S0            ; [DPU_LIN_PIPE] |128|  ; [KEEP 32-BIT INS]
+     560                            .dwpsn  file "../Tasks/PIDman.c",line 129,column 1,is_stmt,isa 1
+     561                    $C$DW$40        .dwtag  DW_TAG_TI_branch
+     562                            .dwattr $C$DW$40, DW_AT_low_pc(0x00)
+     563                            .dwattr $C$DW$40, DW_AT_TI_return
+     564 000000d4 BD0E              POP       {A2, A3, A4, PC}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     565                            .dwcfi  cfa_offset, 0
+     566                            ; BRANCH OCCURS                  ; [] 
+     567                            .dwattr $C$DW$33, DW_AT_TI_end_file("../Tasks/PIDman.c")
+     568                            .dwattr $C$DW$33, DW_AT_TI_end_line(0x81)
+     569                            .dwattr $C$DW$33, DW_AT_TI_end_column(0x01)
+     570                            .dwendentry
+     571                            .dwendtag $C$DW$33
+     572                    
+     573                    ;******************************************************************************
+     574                    ;* FLOATING-POINT CONSTANTS                                                   *
+     575                    ;******************************************************************************
+     576 000000d6                   .sect   ".text"
+     577                            .align  4
+     578 000000d8 447A0000  ||$C$FL1||:     .word   0447a0000h      ; 1000
+     579                    ;******************************************************************************
+     580                    ;* CONSTANT TABLE                                                             *
+     581                    ;******************************************************************************
+     582 000000dc                   .sect   ".text"
+     583                            .align  4
+     584 000000da 0000447A! ||$C$CON1||:    .bits   temperatureTarget,32
+         000000de 00000000 
+     585                            .align  4
+     586 000000de 00000000! ||$C$CON2||:    .bits   circle,32
+         000000e2 00000000 
+     587                            .align  4
+     588 000000e2 00000000! ||$C$CON3||:    .bits   weight_P,32
+         000000e6 00000000 
+     589                            .align  4
+     590 000000e6 00000000! ||$C$CON4||:    .bits   weight_I,32
+         000000ea 00000000 
+     591                            .align  4
+     592 000000ea 00000000! ||$C$CON5||:    .bits   weight_D,32
+         000000ee 00000000 
+     593                    ;*****************************************************************************
+     594                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     595                    ;*****************************************************************************
+     596                            .global CircularArray_Peek
+     597                            .global CircularArray_Average
+     598                    
+     599                    ;******************************************************************************
+     600                    ;* BUILD ATTRIBUTES                                                           *
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   12
+
+     601                    ;******************************************************************************
+     602                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     603                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     604                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     605                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     606                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     607                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(0)
+     608                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+     609                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     610                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     611                            .battr "TI", Tag_File, 1, Tag_FP_interface(0)
+     612                    
+     613                    ;******************************************************************************
+     614                    ;* TYPE INFORMATION                                                           *
+     615                    ;******************************************************************************
+     616                    
+     617                    $C$DW$T$21      .dwtag  DW_TAG_structure_type
+     618                            .dwattr $C$DW$T$21, DW_AT_name("Circular_Array")
+     619                            .dwattr $C$DW$T$21, DW_AT_byte_size(0x2c)
+     620                    $C$DW$41        .dwtag  DW_TAG_member
+     621                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$19)
+     622                            .dwattr $C$DW$41, DW_AT_name("array")
+     623                            .dwattr $C$DW$41, DW_AT_TI_symbol_name("array")
+     624                            .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     625                            .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
+     626                            .dwattr $C$DW$41, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_T
+     627                            .dwattr $C$DW$41, DW_AT_decl_line(0x1d)
+     628                            .dwattr $C$DW$41, DW_AT_decl_column(0x08)
+     629                    $C$DW$42        .dwtag  DW_TAG_member
+     630                            .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$20)
+     631                            .dwattr $C$DW$42, DW_AT_name("index")
+     632                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("index")
+     633                            .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x28]
+     634                            .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
+     635                            .dwattr $C$DW$42, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_T
+     636                            .dwattr $C$DW$42, DW_AT_decl_line(0x1e)
+     637                            .dwattr $C$DW$42, DW_AT_decl_column(0x0b)
+     638                            .dwendtag $C$DW$T$21
+     639                    
+     640                            .dwattr $C$DW$T$21, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base
+     641                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x1b)
+     642                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x10)
+     643                    $C$DW$T$23      .dwtag  DW_TAG_typedef, DW_AT_name("Circular_Array")
+     644                            .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$21)
+     645                            .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+     646                            .dwattr $C$DW$T$23, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base
+     647                            .dwattr $C$DW$T$23, DW_AT_decl_line(0x1f)
+     648                            .dwattr $C$DW$T$23, DW_AT_decl_column(0x03)
+     649                    $C$DW$T$24      .dwtag  DW_TAG_pointer_type
+     650                            .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+     651                            .dwattr $C$DW$T$24, DW_AT_address_class(0x20)
+     652                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     653                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     654                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     655                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   13
+
+     656                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     657                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     658                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     659                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     660                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     661                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     662                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     663                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     664                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     665                    $C$DW$T$26      .dwtag  DW_TAG_typedef, DW_AT_name("int8_t")
+     666                            .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$5)
+     667                            .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+     668                            .dwattr $C$DW$T$26, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     669                            .dwattr $C$DW$T$26, DW_AT_decl_line(0x2a)
+     670                            .dwattr $C$DW$T$26, DW_AT_decl_column(0x1d)
+     671                    $C$DW$T$27      .dwtag  DW_TAG_typedef, DW_AT_name("int_least8_t")
+     672                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$26)
+     673                            .dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+     674                            .dwattr $C$DW$T$27, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     675                            .dwattr $C$DW$T$27, DW_AT_decl_line(0x37)
+     676                            .dwattr $C$DW$T$27, DW_AT_decl_column(0x17)
+     677                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     678                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     679                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     680                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     681                    $C$DW$T$28      .dwtag  DW_TAG_typedef, DW_AT_name("uint8_t")
+     682                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$6)
+     683                            .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+     684                            .dwattr $C$DW$T$28, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     685                            .dwattr $C$DW$T$28, DW_AT_decl_line(0x2b)
+     686                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x1c)
+     687                    $C$DW$T$29      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least8_t")
+     688                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+     689                            .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+     690                            .dwattr $C$DW$T$29, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     691                            .dwattr $C$DW$T$29, DW_AT_decl_line(0x38)
+     692                            .dwattr $C$DW$T$29, DW_AT_decl_column(0x16)
+     693                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     694                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     695                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     696                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     697                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     698                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     699                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     700                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     701                    $C$DW$T$30      .dwtag  DW_TAG_typedef, DW_AT_name("int16_t")
+     702                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$8)
+     703                            .dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+     704                            .dwattr $C$DW$T$30, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     705                            .dwattr $C$DW$T$30, DW_AT_decl_line(0x2c)
+     706                            .dwattr $C$DW$T$30, DW_AT_decl_column(0x1d)
+     707                    $C$DW$T$31      .dwtag  DW_TAG_typedef, DW_AT_name("int_least16_t")
+     708                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
+     709                            .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+     710                            .dwattr $C$DW$T$31, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   14
+
+     711                            .dwattr $C$DW$T$31, DW_AT_decl_line(0x3a)
+     712                            .dwattr $C$DW$T$31, DW_AT_decl_column(0x17)
+     713                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     714                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     715                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     716                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     717                    $C$DW$T$32      .dwtag  DW_TAG_typedef, DW_AT_name("_Wchart")
+     718                            .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$9)
+     719                            .dwattr $C$DW$T$32, DW_AT_language(DW_LANG_C)
+     720                            .dwattr $C$DW$T$32, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     721                            .dwattr $C$DW$T$32, DW_AT_decl_line(0x1e5)
+     722                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x21)
+     723                    $C$DW$T$33      .dwtag  DW_TAG_typedef, DW_AT_name("_Wintt")
+     724                            .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$9)
+     725                            .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+     726                            .dwattr $C$DW$T$33, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     727                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x1e6)
+     728                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x21)
+     729                    $C$DW$T$34      .dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
+     730                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$9)
+     731                            .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+     732                            .dwattr $C$DW$T$34, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     733                            .dwattr $C$DW$T$34, DW_AT_decl_line(0x2d)
+     734                            .dwattr $C$DW$T$34, DW_AT_decl_column(0x1c)
+     735                    $C$DW$T$35      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least16_t")
+     736                            .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$34)
+     737                            .dwattr $C$DW$T$35, DW_AT_language(DW_LANG_C)
+     738                            .dwattr $C$DW$T$35, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     739                            .dwattr $C$DW$T$35, DW_AT_decl_line(0x3b)
+     740                            .dwattr $C$DW$T$35, DW_AT_decl_column(0x16)
+     741                    $C$DW$T$36      .dwtag  DW_TAG_typedef, DW_AT_name("wchar_t")
+     742                            .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$9)
+     743                            .dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+     744                            .dwattr $C$DW$T$36, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+     745                            .dwattr $C$DW$T$36, DW_AT_decl_line(0x41)
+     746                            .dwattr $C$DW$T$36, DW_AT_decl_column(0x1a)
+     747                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     748                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     749                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     750                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     751                    $C$DW$T$37      .dwtag  DW_TAG_typedef, DW_AT_name("_Ptrdifft")
+     752                            .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$10)
+     753                            .dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+     754                            .dwattr $C$DW$T$37, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     755                            .dwattr $C$DW$T$37, DW_AT_decl_line(0xa9)
+     756                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x1e)
+     757                    $C$DW$T$38      .dwtag  DW_TAG_typedef, DW_AT_name("int32_t")
+     758                            .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$10)
+     759                            .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+     760                            .dwattr $C$DW$T$38, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     761                            .dwattr $C$DW$T$38, DW_AT_decl_line(0x2e)
+     762                            .dwattr $C$DW$T$38, DW_AT_decl_column(0x1d)
+     763                    $C$DW$T$39      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast16_t")
+     764                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
+     765                            .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   15
+
+     766                            .dwattr $C$DW$T$39, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     767                            .dwattr $C$DW$T$39, DW_AT_decl_line(0x47)
+     768                            .dwattr $C$DW$T$39, DW_AT_decl_column(0x17)
+     769                    $C$DW$T$40      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast32_t")
+     770                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$38)
+     771                            .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+     772                            .dwattr $C$DW$T$40, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     773                            .dwattr $C$DW$T$40, DW_AT_decl_line(0x4a)
+     774                            .dwattr $C$DW$T$40, DW_AT_decl_column(0x17)
+     775                    $C$DW$T$41      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast8_t")
+     776                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$38)
+     777                            .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+     778                            .dwattr $C$DW$T$41, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     779                            .dwattr $C$DW$T$41, DW_AT_decl_line(0x45)
+     780                            .dwattr $C$DW$T$41, DW_AT_decl_column(0x17)
+     781                    $C$DW$T$42      .dwtag  DW_TAG_typedef, DW_AT_name("int_least32_t")
+     782                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$38)
+     783                            .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+     784                            .dwattr $C$DW$T$42, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     785                            .dwattr $C$DW$T$42, DW_AT_decl_line(0x3c)
+     786                            .dwattr $C$DW$T$42, DW_AT_decl_column(0x17)
+     787                    $C$DW$T$43      .dwtag  DW_TAG_typedef, DW_AT_name("intptr_t")
+     788                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$10)
+     789                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+     790                            .dwattr $C$DW$T$43, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     791                            .dwattr $C$DW$T$43, DW_AT_decl_line(0x52)
+     792                            .dwattr $C$DW$T$43, DW_AT_decl_column(0x1a)
+     793                    $C$DW$T$44      .dwtag  DW_TAG_typedef, DW_AT_name("ptrdiff_t")
+     794                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$10)
+     795                            .dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+     796                            .dwattr $C$DW$T$44, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+     797                            .dwattr $C$DW$T$44, DW_AT_decl_line(0x36)
+     798                            .dwattr $C$DW$T$44, DW_AT_decl_column(0x1c)
+     799                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     800                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     801                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     802                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     803                    $C$DW$T$45      .dwtag  DW_TAG_typedef, DW_AT_name("_Sizet")
+     804                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$11)
+     805                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+     806                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     807                            .dwattr $C$DW$T$45, DW_AT_decl_line(0xab)
+     808                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x1a)
+     809                    $C$DW$T$46      .dwtag  DW_TAG_typedef, DW_AT_name("size_t")
+     810                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$11)
+     811                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+     812                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+     813                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x3a)
+     814                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x19)
+     815                    $C$DW$T$20      .dwtag  DW_TAG_typedef, DW_AT_name("uint32_t")
+     816                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$11)
+     817                            .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     818                            .dwattr $C$DW$T$20, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     819                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x2f)
+     820                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x1c)
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   16
+
+     821                    $C$DW$T$47      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast16_t")
+     822                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$20)
+     823                            .dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+     824                            .dwattr $C$DW$T$47, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     825                            .dwattr $C$DW$T$47, DW_AT_decl_line(0x48)
+     826                            .dwattr $C$DW$T$47, DW_AT_decl_column(0x16)
+     827                    $C$DW$T$48      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast32_t")
+     828                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$20)
+     829                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+     830                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     831                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x4b)
+     832                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x16)
+     833                    $C$DW$T$49      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast8_t")
+     834                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$20)
+     835                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+     836                            .dwattr $C$DW$T$49, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     837                            .dwattr $C$DW$T$49, DW_AT_decl_line(0x46)
+     838                            .dwattr $C$DW$T$49, DW_AT_decl_column(0x16)
+     839                    $C$DW$T$50      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least32_t")
+     840                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$20)
+     841                            .dwattr $C$DW$T$50, DW_AT_language(DW_LANG_C)
+     842                            .dwattr $C$DW$T$50, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     843                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x3d)
+     844                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x16)
+     845                    $C$DW$T$51      .dwtag  DW_TAG_typedef, DW_AT_name("uintptr_t")
+     846                            .dwattr $C$DW$T$51, DW_AT_type(*$C$DW$T$11)
+     847                            .dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
+     848                            .dwattr $C$DW$T$51, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     849                            .dwattr $C$DW$T$51, DW_AT_decl_line(0x53)
+     850                            .dwattr $C$DW$T$51, DW_AT_decl_column(0x1a)
+     851                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+     852                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     853                            .dwattr $C$DW$T$12, DW_AT_name("long")
+     854                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+     855                    $C$DW$T$52      .dwtag  DW_TAG_typedef, DW_AT_name("_Int32t")
+     856                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$12)
+     857                            .dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
+     858                            .dwattr $C$DW$T$52, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     859                            .dwattr $C$DW$T$52, DW_AT_decl_line(0xa6)
+     860                            .dwattr $C$DW$T$52, DW_AT_decl_column(0x0e)
+     861                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+     862                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     863                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     864                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+     865                    $C$DW$T$53      .dwtag  DW_TAG_typedef, DW_AT_name("_Uint32t")
+     866                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$13)
+     867                            .dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+     868                            .dwattr $C$DW$T$53, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     869                            .dwattr $C$DW$T$53, DW_AT_decl_line(0xa7)
+     870                            .dwattr $C$DW$T$53, DW_AT_decl_column(0x17)
+     871                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+     872                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     873                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+     874                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     875                    $C$DW$T$54      .dwtag  DW_TAG_typedef, DW_AT_name("_Longlong")
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   17
+
+     876                            .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$14)
+     877                            .dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+     878                            .dwattr $C$DW$T$54, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     879                            .dwattr $C$DW$T$54, DW_AT_decl_line(0x1b5)
+     880                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x13)
+     881                    $C$DW$T$55      .dwtag  DW_TAG_typedef, DW_AT_name("int64_t")
+     882                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$14)
+     883                            .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+     884                            .dwattr $C$DW$T$55, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     885                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x32)
+     886                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x21)
+     887                    $C$DW$T$56      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast64_t")
+     888                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+     889                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+     890                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     891                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x4e)
+     892                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x17)
+     893                    $C$DW$T$57      .dwtag  DW_TAG_typedef, DW_AT_name("int_least64_t")
+     894                            .dwattr $C$DW$T$57, DW_AT_type(*$C$DW$T$55)
+     895                            .dwattr $C$DW$T$57, DW_AT_language(DW_LANG_C)
+     896                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     897                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x40)
+     898                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x17)
+     899                    $C$DW$T$58      .dwtag  DW_TAG_typedef, DW_AT_name("intmax_t")
+     900                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$14)
+     901                            .dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
+     902                            .dwattr $C$DW$T$58, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     903                            .dwattr $C$DW$T$58, DW_AT_decl_line(0x56)
+     904                            .dwattr $C$DW$T$58, DW_AT_decl_column(0x20)
+     905                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+     906                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     907                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     908                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+     909                    $C$DW$T$59      .dwtag  DW_TAG_typedef, DW_AT_name("_ULonglong")
+     910                            .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$15)
+     911                            .dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+     912                            .dwattr $C$DW$T$59, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     913                            .dwattr $C$DW$T$59, DW_AT_decl_line(0x1b6)
+     914                            .dwattr $C$DW$T$59, DW_AT_decl_column(0x14)
+     915                    $C$DW$T$60      .dwtag  DW_TAG_typedef, DW_AT_name("uint64_t")
+     916                            .dwattr $C$DW$T$60, DW_AT_type(*$C$DW$T$15)
+     917                            .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+     918                            .dwattr $C$DW$T$60, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     919                            .dwattr $C$DW$T$60, DW_AT_decl_line(0x33)
+     920                            .dwattr $C$DW$T$60, DW_AT_decl_column(0x20)
+     921                    $C$DW$T$61      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast64_t")
+     922                            .dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+     923                            .dwattr $C$DW$T$61, DW_AT_language(DW_LANG_C)
+     924                            .dwattr $C$DW$T$61, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     925                            .dwattr $C$DW$T$61, DW_AT_decl_line(0x4f)
+     926                            .dwattr $C$DW$T$61, DW_AT_decl_column(0x16)
+     927                    $C$DW$T$62      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least64_t")
+     928                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$60)
+     929                            .dwattr $C$DW$T$62, DW_AT_language(DW_LANG_C)
+     930                            .dwattr $C$DW$T$62, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   18
+
+     931                            .dwattr $C$DW$T$62, DW_AT_decl_line(0x41)
+     932                            .dwattr $C$DW$T$62, DW_AT_decl_column(0x16)
+     933                    $C$DW$T$63      .dwtag  DW_TAG_typedef, DW_AT_name("uintmax_t")
+     934                            .dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$15)
+     935                            .dwattr $C$DW$T$63, DW_AT_language(DW_LANG_C)
+     936                            .dwattr $C$DW$T$63, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     937                            .dwattr $C$DW$T$63, DW_AT_decl_line(0x57)
+     938                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x20)
+     939                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+     940                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     941                            .dwattr $C$DW$T$16, DW_AT_name("float")
+     942                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+     943                    
+     944                    $C$DW$T$19      .dwtag  DW_TAG_array_type
+     945                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$16)
+     946                            .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     947                            .dwattr $C$DW$T$19, DW_AT_byte_size(0x28)
+     948                    $C$DW$43        .dwtag  DW_TAG_subrange_type
+     949                            .dwattr $C$DW$43, DW_AT_upper_bound(0x09)
+     950                            .dwendtag $C$DW$T$19
+     951                    
+     952                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+     953                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     954                            .dwattr $C$DW$T$17, DW_AT_name("double")
+     955                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+     956                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+     957                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     958                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+     959                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+     960                    $C$DW$T$71      .dwtag  DW_TAG_typedef, DW_AT_name("_Sysch_t")
+     961                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$6)
+     962                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+     963                            .dwattr $C$DW$T$71, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     964                            .dwattr $C$DW$T$71, DW_AT_decl_line(0x218)
+     965                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x0e)
+     966                    $C$DW$T$72      .dwtag  DW_TAG_pointer_type
+     967                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$6)
+     968                            .dwattr $C$DW$T$72, DW_AT_address_class(0x20)
+     969                    $C$DW$T$73      .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
+     970                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$72)
+     971                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+     972                            .dwattr $C$DW$T$73, DW_AT_decl_file("../Tasks/PIDman.c")
+     973                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x81)
+     974                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x01)
+     975                    
+     976                    $C$DW$T$22      .dwtag  DW_TAG_structure_type
+     977                            .dwattr $C$DW$T$22, DW_AT_name("__va_list")
+     978                            .dwattr $C$DW$T$22, DW_AT_byte_size(0x04)
+     979                    $C$DW$44        .dwtag  DW_TAG_member
+     980                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$3)
+     981                            .dwattr $C$DW$44, DW_AT_name("__ap")
+     982                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("__ap")
+     983                            .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     984                            .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+     985                            .dwattr $C$DW$44, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   19
+
+     986                            .dwattr $C$DW$44, DW_AT_decl_line(0x36)
+     987                            .dwattr $C$DW$44, DW_AT_decl_column(0x0c)
+     988                            .dwendtag $C$DW$T$22
+     989                    
+     990                            .dwattr $C$DW$T$22, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdar
+     991                            .dwattr $C$DW$T$22, DW_AT_decl_line(0x35)
+     992                            .dwattr $C$DW$T$22, DW_AT_decl_column(0x10)
+     993                    $C$DW$T$74      .dwtag  DW_TAG_typedef, DW_AT_name("va_list")
+     994                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$22)
+     995                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+     996                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdar
+     997                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x37)
+     998                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x03)
+     999                    $C$DW$T$75      .dwtag  DW_TAG_typedef, DW_AT_name("_Va_list")
+    1000                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$74)
+    1001                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+    1002                            .dwattr $C$DW$T$75, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+    1003                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x1f6)
+    1004                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x17)
+    1005                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1006                    
+    1007                    ;***************************************************************
+    1008                    ;* DWARF CIE ENTRIES                                           *
+    1009                    ;***************************************************************
+    1010                    
+    1011                    $C$DW$CIE       .dwcie 14
+    1012                            .dwcfi  cfa_register, 13
+    1013                            .dwcfi  cfa_offset, 0
+    1014                            .dwcfi  undefined, 0
+    1015                            .dwcfi  undefined, 1
+    1016                            .dwcfi  undefined, 2
+    1017                            .dwcfi  undefined, 3
+    1018                            .dwcfi  same_value, 4
+    1019                            .dwcfi  same_value, 5
+    1020                            .dwcfi  same_value, 6
+    1021                            .dwcfi  same_value, 7
+    1022                            .dwcfi  same_value, 8
+    1023                            .dwcfi  same_value, 9
+    1024                            .dwcfi  same_value, 10
+    1025                            .dwcfi  same_value, 11
+    1026                            .dwcfi  undefined, 12
+    1027                            .dwcfi  undefined, 13
+    1028                            .dwcfi  undefined, 14
+    1029                            .dwcfi  undefined, 14
+    1030                            .dwcfi  undefined, 7
+    1031                            .dwcfi  undefined, 64
+    1032                            .dwcfi  undefined, 65
+    1033                            .dwcfi  undefined, 66
+    1034                            .dwcfi  undefined, 67
+    1035                            .dwcfi  undefined, 68
+    1036                            .dwcfi  undefined, 69
+    1037                            .dwcfi  undefined, 70
+    1038                            .dwcfi  undefined, 71
+    1039                            .dwcfi  undefined, 72
+    1040                            .dwcfi  undefined, 73
+TI ARM Assembler PC v5.2.5 Mon May 02 13:27:58 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+PIDman.asm                                                           PAGE   20
+
+    1041                            .dwcfi  undefined, 74
+    1042                            .dwcfi  undefined, 75
+    1043                            .dwcfi  undefined, 76
+    1044                            .dwcfi  undefined, 77
+    1045                            .dwcfi  undefined, 78
+    1046                            .dwcfi  undefined, 79
+    1047                            .dwcfi  same_value, 80
+    1048                            .dwcfi  same_value, 81
+    1049                            .dwcfi  same_value, 82
+    1050                            .dwcfi  same_value, 83
+    1051                            .dwcfi  same_value, 84
+    1052                            .dwcfi  same_value, 85
+    1053                            .dwcfi  same_value, 86
+    1054                            .dwcfi  same_value, 87
+    1055                            .dwcfi  same_value, 88
+    1056                            .dwcfi  same_value, 89
+    1057                            .dwcfi  same_value, 90
+    1058                            .dwcfi  same_value, 91
+    1059                            .dwcfi  same_value, 92
+    1060                            .dwcfi  same_value, 93
+    1061                            .dwcfi  same_value, 94
+    1062                            .dwcfi  same_value, 95
+    1063                            .dwendentry
+    1064                            .dwendtag $C$DW$CU
+    1065                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 33 (45%)
+Number of Thumb2 ins encoded as Thumb2 = 40 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 3
+
+
+No Assembly Errors, No Assembly Warnings

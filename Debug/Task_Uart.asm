@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-;* Date/Time created: Tue Apr 12 16:14:21 2016                                *
+;* Date/Time created: Mon May 02 13:51:55 2016                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disable_dual_state --embedded_constants=on --endian=little --float_support=FPv4SPD16 --hll_source=on --object_format=elf --quiet --silicon_version=7M4 --symdebug:dwarf --symdebug:dwarf_version=3 --unaligned_access=on 
 	.thumb
@@ -229,15 +229,22 @@ $C$DW$42	.dwtag  DW_TAG_variable, DW_AT_name("Inp_Queue")
 	.dwattr $C$DW$42, DW_AT_decl_file("../Tasks/Task_Uart.c")
 	.dwattr $C$DW$42, DW_AT_decl_line(0x35)
 	.dwattr $C$DW$42, DW_AT_decl_column(0x16)
+	.global	iqueue_count
+	.data
+	.align	4
+	.elfsym	iqueue_count,SYM_SIZE(4)
+iqueue_count:
+	.bits	0,32			; iqueue_count @ 0
+
 $C$DW$43	.dwtag  DW_TAG_variable, DW_AT_name("iqueue_count")
 	.dwattr $C$DW$43, DW_AT_TI_symbol_name("iqueue_count")
+	.dwattr $C$DW$43, DW_AT_location[DW_OP_addr iqueue_count]
 	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$29)
-	.dwattr $C$DW$43, DW_AT_declaration
 	.dwattr $C$DW$43, DW_AT_external
 	.dwattr $C$DW$43, DW_AT_decl_file("../Tasks/Task_Uart.c")
 	.dwattr $C$DW$43, DW_AT_decl_line(0x36)
 	.dwattr $C$DW$43, DW_AT_decl_column(0x11)
-;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\0625612 
+;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\0612012 
 	.sect	".text"
 	.clink
 	.thumbfunc Task_UART_0
@@ -654,7 +661,6 @@ $C$DW$73	.dwtag  DW_TAG_TI_branch
 	.global	xQueueGenericCreate
 	.global	UARTprintf
 	.global	xPortSysTickCount
-	.global	iqueue_count
 
 ;******************************************************************************
 ;* BUILD ATTRIBUTES                                                           *

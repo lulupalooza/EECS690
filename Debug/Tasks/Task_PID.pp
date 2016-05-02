@@ -37,7 +37,12 @@ Tasks/Task_PID.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/
 Tasks/Task_PID.obj: ../Tasks/Task_Report.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
-Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h
+Tasks/Task_PID.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/CircularArray.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Tasks/Task_PID.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/PIDman.h
+Tasks/Task_PID.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/CircularArray.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
 
 ../Tasks/Task_PID.c: 
@@ -77,5 +82,10 @@ C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects
 ../Tasks/Task_Report.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
-C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/CircularArray.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/PIDman.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/CircularArray.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 

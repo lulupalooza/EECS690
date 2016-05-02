@@ -1,11 +1,11 @@
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    1
 
        1                    ;******************************************************************************
        2                    ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-       3                    ;* Date/Time created: Tue Apr 12 16:14:18 2016                                *
+       3                    ;* Date/Time created: Mon May 02 13:16:54 2016                                *
        4                    ;******************************************************************************
        5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
        6 00000000                   .thumb
@@ -58,7 +58,7 @@ Main_Base_Test.asm                                                   PAGE    1
       53                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$77)
       54                    $C$DW$8 .dwtag  DW_TAG_formal_parameter
       55                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$65)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    2
@@ -118,7 +118,7 @@ Main_Base_Test.asm                                                   PAGE    2
      108                            .dwattr $C$DW$19, DW_AT_decl_line(0x1c)
      109                            .dwattr $C$DW$19, DW_AT_decl_column(0x0d)
      110                    $C$DW$20        .dwtag  DW_TAG_formal_parameter
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    3
@@ -178,7 +178,7 @@ Main_Base_Test.asm                                                   PAGE    3
      163                            .dwattr $C$DW$27, DW_AT_TI_begin_file("../Main_Base_Test.c")
      164                            .dwattr $C$DW$27, DW_AT_TI_begin_line(0x21)
      165                            .dwattr $C$DW$27, DW_AT_TI_begin_column(0x05)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    4
@@ -238,7 +238,7 @@ Main_Base_Test.asm                                                   PAGE    4
      218 0000001a 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |43|  ; [ORIG 16-BIT INS]
      219 0000001c 9002              STR       A1, [SP, #8]          ; [DPU_3_PIPE] |43|  ; [ORIG 16-BIT INS]
      220 0000001e 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |43|  ; [ORIG 16-BIT INS]
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    5
@@ -298,7 +298,7 @@ Main_Base_Test.asm                                                   PAGE    5
      273 0000006e 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
      274 00000070 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
      275 00000072 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    6
@@ -358,7 +358,7 @@ Main_Base_Test.asm                                                   PAGE    6
      328 000000c4 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |64|  ; [ORIG 16-BIT INS]
      329 000000c6 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |64|  ; [ORIG 16-BIT INS]
      330 000000c8 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |64|  ; [ORIG 16-BIT INS]
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    7
@@ -418,7 +418,7 @@ Main_Base_Test.asm                                                   PAGE    7
          000000ed 79       
          000000ee 00       
      379                            .align  4
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    8
@@ -478,7 +478,7 @@ Main_Base_Test.asm                                                   PAGE    8
      394 00000128                   .sect   ".text"
      395                            .align  4
      396 00000128 00000000! ||$C$CON1||:    .bits   Task_Blink_LED_D1,32
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE    9
@@ -538,7 +538,7 @@ Main_Base_Test.asm                                                   PAGE    9
      449                            .dwattr $C$DW$40, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
      450                            .dwattr $C$DW$40, DW_AT_decl_line(0x73)
      451                            .dwattr $C$DW$40, DW_AT_decl_column(0x02)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   10
@@ -598,7 +598,7 @@ Main_Base_Test.asm                                                   PAGE   10
      504                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$57)
      505                            .dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
      506                            .dwattr $C$DW$T$58, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   11
@@ -658,7 +658,7 @@ Main_Base_Test.asm                                                   PAGE   11
      559                            .dwattr $C$DW$54, DW_AT_TI_symbol_name("pos")
      560                            .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
      561                            .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   12
@@ -718,7 +718,7 @@ Main_Base_Test.asm                                                   PAGE   12
      614                            .dwattr $C$DW$58, DW_AT_decl_line(0x96)
      615                            .dwattr $C$DW$58, DW_AT_decl_column(0x0b)
      616                    $C$DW$59        .dwtag  DW_TAG_member
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   13
@@ -778,7 +778,7 @@ Main_Base_Test.asm                                                   PAGE   13
      669                            .dwattr $C$DW$T$39, DW_AT_decl_column(0x10)
      670                    $C$DW$T$4       .dwtag  DW_TAG_base_type
      671                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   14
@@ -838,7 +838,7 @@ Main_Base_Test.asm                                                   PAGE   14
      724                            .dwattr $C$DW$T$8, DW_AT_name("short")
      725                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
      726                    $C$DW$T$72      .dwtag  DW_TAG_typedef, DW_AT_name("int16_t")
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   15
@@ -898,7 +898,7 @@ Main_Base_Test.asm                                                   PAGE   15
      779                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x1a)
      780                    $C$DW$T$10      .dwtag  DW_TAG_base_type
      781                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   16
@@ -958,7 +958,7 @@ Main_Base_Test.asm                                                   PAGE   16
      834                            .dwattr $C$DW$T$93, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
      835                            .dwattr $C$DW$T$93, DW_AT_decl_line(0x45)
      836                            .dwattr $C$DW$T$93, DW_AT_decl_column(0x17)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   17
@@ -1018,7 +1018,7 @@ Main_Base_Test.asm                                                   PAGE   17
      889                    $C$DW$T$45      .dwtag  DW_TAG_typedef, DW_AT_name("StackType_t")
      890                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$26)
      891                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   18
@@ -1078,7 +1078,7 @@ Main_Base_Test.asm                                                   PAGE   18
      944                            .dwattr $C$DW$T$107, DW_AT_language(DW_LANG_C)
      945                            .dwattr $C$DW$T$107, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
      946                            .dwattr $C$DW$T$107, DW_AT_decl_line(0x53)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   19
@@ -1138,7 +1138,7 @@ Main_Base_Test.asm                                                   PAGE   19
      999                            .dwattr $C$DW$T$114, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
     1000                            .dwattr $C$DW$T$114, DW_AT_decl_line(0x40)
     1001                            .dwattr $C$DW$T$114, DW_AT_decl_column(0x17)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   20
@@ -1198,7 +1198,7 @@ Main_Base_Test.asm                                                   PAGE   20
     1054                            .dwattr $C$DW$T$122, DW_AT_language(DW_LANG_C)
     1055                            .dwattr $C$DW$T$122, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
     1056                            .dwattr $C$DW$T$122, DW_AT_decl_line(0x61)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   21
@@ -1258,7 +1258,7 @@ Main_Base_Test.asm                                                   PAGE   21
     1109                            .dwattr $C$DW$T$126, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stda
     1110                            .dwattr $C$DW$T$126, DW_AT_decl_line(0x37)
     1111                            .dwattr $C$DW$T$126, DW_AT_decl_column(0x03)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   22
@@ -1318,7 +1318,7 @@ Main_Base_Test.asm                                                   PAGE   22
     1164                    $C$DW$66        .dwtag  DW_TAG_member
     1165                            .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$32)
     1166                            .dwattr $C$DW$66, DW_AT_name("xItemValue")
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   23
@@ -1378,7 +1378,7 @@ Main_Base_Test.asm                                                   PAGE   23
     1219                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x1b)
     1220                    $C$DW$T$29      .dwtag  DW_TAG_pointer_type
     1221                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   24
@@ -1438,7 +1438,7 @@ Main_Base_Test.asm                                                   PAGE   24
     1274                            .dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$84)
     1275                    
     1276                    $C$DW$T$48      .dwtag  DW_TAG_array_type
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   25
@@ -1498,7 +1498,7 @@ Main_Base_Test.asm                                                   PAGE   25
     1329                            .dwattr $C$DW$T$49, DW_AT_byte_size(0x24)
     1330                    $C$DW$78        .dwtag  DW_TAG_member
     1331                            .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$39)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   26
@@ -1558,7 +1558,7 @@ Main_Base_Test.asm                                                   PAGE   26
     1384                    $C$DW$84        .dwtag  DW_TAG_member
     1385                            .dwattr $C$DW$84, DW_AT_type(*$C$DW$T$48)
     1386                            .dwattr $C$DW$84, DW_AT_name("xRegions")
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   27
@@ -1618,7 +1618,7 @@ Main_Base_Test.asm                                                   PAGE   27
     1439                            .dwattr $C$DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
     1440                            .dwattr $C$DW$88, DW_AT_accessibility(DW_ACCESS_public)
     1441                            .dwattr $C$DW$88, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   28
@@ -1678,7 +1678,7 @@ Main_Base_Test.asm                                                   PAGE   28
     1494                            .dwattr $C$DW$T$56, DW_AT_byte_size(0x08)
     1495                    $C$DW$93        .dwtag  DW_TAG_member
     1496                            .dwattr $C$DW$93, DW_AT_type(*$C$DW$T$55)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   29
@@ -1738,7 +1738,7 @@ Main_Base_Test.asm                                                   PAGE   29
     1549                            .dwcfi  undefined, 7
     1550                            .dwcfi  undefined, 64
     1551                            .dwcfi  undefined, 65
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:18 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:54 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Main_Base_Test.asm                                                   PAGE   30

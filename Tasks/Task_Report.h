@@ -32,4 +32,17 @@ typedef struct ReportData_Item
 	uint32_t	value;
 } ReportData_Item;
 
+typedef struct Report_Item
+{
+	uint32_t	timestamp;
+	uint32_t	ID;
+	uint32_t	ADC_input;
+	float	temperature;
+	//float	P;
+	//float	I;
+	//float	D;
+	float	PID;
+	float	PWM;
+} Report_Item;
+
 #endif /* TASKS_TASK_REPORT_H_ */

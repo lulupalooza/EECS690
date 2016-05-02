@@ -34,12 +34,12 @@ extern uint32_t rqueue_count;
 extern uint32_t hqueue_count;
 
 extern void Task_Report( void *pvParameters ) {
-	ReportData_Item report;
+	Report_Item		report;
 	BaseType_t		ReportQueue_Status;
 
 	UART_Initialization();
 
-	ReportData_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
+	ReportData_Queue = xQueueCreate( 10, sizeof( Report_Item ) );
 
 	//
 	//	No set-up necessary
@@ -53,7 +53,7 @@ extern void Task_Report( void *pvParameters ) {
 //		printf( "SysTickTime: %08X\n", xPortSysTickCount );
 		ReportQueue_Status = xQueueReceive( ReportData_Queue, &report, 10*portTICK_PERIOD_MS );
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", report.timestamp, report.ID, report.value );
+			UARTprintf( "%08d, %02d, %d, %d, %d, %d\n", report.timestamp, report.ID, report.ADC_input, report.temperature, report.PID, report.PWM );
 		}
 		rqueue_count -= 1;
 		vTaskDelay( 2 * configTICK_RATE_HZ );

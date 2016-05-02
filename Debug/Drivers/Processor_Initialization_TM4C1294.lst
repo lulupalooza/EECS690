@@ -1,11 +1,11 @@
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    1
 
        1                    ;******************************************************************************
        2                    ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-       3                    ;* Date/Time created: Tue Apr 12 16:14:21 2016                                *
+       3                    ;* Date/Time created: Mon May 02 13:16:57 2016                                *
        4                    ;******************************************************************************
        5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
        6 00000000                   .thumb
@@ -58,7 +58,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    1
       53                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("SysCtlClockFreqSet")
       54                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$20)
       55                            .dwattr $C$DW$8, DW_AT_declaration
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    2
@@ -118,7 +118,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    2
      108                            .dwendtag $C$DW$18
      109                    
      110                    
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    3
@@ -178,7 +178,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    3
      163                            .global UARTStdioInitFlag
      164 00000008                   .data
      165                            .align  4
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    4
@@ -238,7 +238,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    4
      218                    ;* FUNCTION NAME: Processor_Initialization                                   *
      219                    ;*                                                                           *
      220                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR,D0,D0_hi,D1,D1_hi,D2,D2_hi, *
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    5
@@ -298,7 +298,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    5
      273                            .dwattr $C$DW$29, DW_AT_TI_end_column(0x02)
      274                            .dwendentry
      275                            .dwendtag $C$DW$29
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    6
@@ -358,7 +358,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    6
      328                            .dwattr $C$DW$33, DW_AT_name("SysCtlPeripheralEnable")
      329                            .dwattr $C$DW$33, DW_AT_TI_call
      330 0000002e FFFEF7FF!         BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |93|  ; [KEEP 32-BIT INS]
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    7
@@ -418,7 +418,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    7
      383                            .dwattr $C$DW$39, DW_AT_TI_call
      384 00000064 FFFEF7FF!         BL        UARTConfigSetExpClk   ; [DPU_3_PIPE] |104|  ; [KEEP 32-BIT INS]
      385                            ; CALL OCCURS {UARTConfigSetExpClk }  ; [] |104| 
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    8
@@ -478,7 +478,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    8
      438                            ; BRANCH OCCURS                  ; [] 
      439                            .dwattr $C$DW$32, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
      440                            .dwattr $C$DW$32, DW_AT_TI_end_line(0x7f)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE    9
@@ -538,7 +538,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE    9
      484                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
      485                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
      486                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   10
@@ -598,7 +598,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   10
      539                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
      540                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
      541                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   11
@@ -658,7 +658,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   11
      594                            .dwattr $C$DW$T$10, DW_AT_name("int")
      595                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
      596                    $C$DW$T$42      .dwtag  DW_TAG_typedef, DW_AT_name("_Ptrdifft")
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   12
@@ -718,7 +718,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   12
      649                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$11)
      650                            .dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
      651                            .dwattr $C$DW$T$52, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   13
@@ -778,7 +778,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   13
      704                            .dwattr $C$DW$T$62, DW_AT_decl_line(0xa6)
      705                            .dwattr $C$DW$T$62, DW_AT_decl_column(0x0e)
      706                    $C$DW$T$13      .dwtag  DW_TAG_base_type
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   14
@@ -838,7 +838,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   14
      759                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x14)
      760                    $C$DW$T$70      .dwtag  DW_TAG_typedef, DW_AT_name("uint64_t")
      761                            .dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$15)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   15
@@ -898,7 +898,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   15
      814                            .dwattr $C$DW$T$19, DW_AT_byte_size(0x04)
      815                    $C$DW$45        .dwtag  DW_TAG_member
      816                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$3)
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   16
@@ -958,7 +958,7 @@ Processor_Initialization_TM4C1294.asm                                PAGE   16
      869                            .dwcfi  undefined, 66
      870                            .dwcfi  undefined, 67
      871                            .dwcfi  undefined, 68
-TI ARM Assembler PC v5.2.5 Tue Apr 12 16:14:21 2016
+TI ARM Assembler PC v5.2.5 Mon May 02 13:16:57 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Processor_Initialization_TM4C1294.asm                                PAGE   17
