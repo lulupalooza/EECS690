@@ -36,6 +36,7 @@
 //
 
 QueueHandle_t ReportData_Queue = NULL; 	// queue used for reporting via UART to PC
+QueueHandle_t ADC_Queue = NULL; 	// queue used for reporting via UART to PC
 QueueHandle_t Heater_Queue = NULL;		// queue used to pass calculated temp to control module
 QueueHandle_t Temp_Queue = NULL;		// queue used to pass ADC converted voltage value to temp calc module
 QueueHandle_t Inp_Queue = NULL;			// queue used to pass input temp value to control module
@@ -149,6 +150,7 @@ extern uint32_t Queue_Initialization() {
 	// Initialize the queues.
 	//
 	ReportData_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
+	ADC_Queue = xQueueCreate( 10, sizeof( double ) );
 	Heater_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
 	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
 	Inp_Queue = xQueueCreate( 10, sizeof( uint32_t ) );

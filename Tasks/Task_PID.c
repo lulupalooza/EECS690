@@ -23,6 +23,7 @@
 #include "uartstdio.h"
 #include "queue.h"
 #include "Task_Report.h"
+#include "Task_HeaterOn.h"
 
 #include "stdio.h"
 
@@ -36,24 +37,29 @@ uint32_t	iqueue_count;
 
 extern void Task_PID( void *pvParameters ) {
 	uint32_t inp_temp;
+	int32_t error;
 	double meas_temp;
 	uint32_t int_t;
-	BaseType_t		ReportQueue_Status;
+	BaseType_t InpQueue_Status;
+	BaseType_t TempQueue_Status;
+
 	//
 	//	Measured voltage value
 	//
 	iqueue_count = 0;
 	while(1)
 	{
-		ReportQueue_Status = xQueueReceive( Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS );
-		/* if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", xPortSysTickCount, 2, inp_temp );
-		}
-		ReportQueue_Status = xQueueReceive( Temp_Queue, &meas_temp, 10*portTICK_PERIOD_MS );
-		int_t = (uint32_t) meas_temp;
-		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "Measured voltage received!: %f\n", meas_temp );
-		} */
+		//InpQueue_Status = xQueueReceive( Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS );
+		//if( InpQueue_Status == pdTRUE ){
+		//	target_temp = inp_temp;
+			//UARTprintf( "%08d, %02d, %d\n", xPortSysTickCount, 2, inp_temp );
+		//}
+		//TempQueue_Status = xQueueReceive( Temp_Queue, &meas_temp, 10*portTICK_PERIOD_MS );
+		//error = target_temp - (uint32_t) meas_temp;
+
+		//if( ReportQueue_Status == pdTRUE ){
+		//	UARTprintf( "Measured voltage received!: %f\n", meas_temp );
+		//}
 		iqueue_count -= 1;
 	}
 }

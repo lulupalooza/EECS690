@@ -33,6 +33,7 @@
 #include 	"queue.h"
 #include 	"Task_Report.h"
 #include	"stdio.h"
+#include	"Task_HeaterOn.h"
 
 #define		TimeBase_mS		1000
 #define		OnTime_mS		500
@@ -40,14 +41,19 @@
 
 
 extern QueueHandle_t Heater_Queue;
+extern QueueHandle_t Inp_Queue;
 extern QueueHandle_t Temp_Queue;
 uint32_t hqueue_count = 0;
+uint32_t target_temp = 30;
 
 extern void Task_HeaterOn( void *pvParameters ) {
 	// Instantiate report and queue items.
 	ReportData_Item heater_report;
 	BaseType_t		TempQueue_Status;
-	double			temp = 0;
+	BaseType_t		InpQueue_Status;
+	double			meas_temp = 0;
+	int32_t			error;
+	uint32_t inp_temp;
 
 	//
 	//	Enable (power-on) PortG
@@ -89,14 +95,37 @@ extern void Task_HeaterOn( void *pvParameters ) {
         //
         // Set HeaterOn_H and D2 for OnTime_mS.
 		//
-		TempQueue_Status = xQueueReceive( Temp_Queue, &temp, 10*portTICK_PERIOD_MS );
-		if( TempQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", heater_report.timestamp, heater_report.ID, heater_report.value );
-		}
+		//TempQueue_Status = xQueueReceive( Temp_Queue, &temp, 10*portTICK_PERIOD_MS );
+		//if( TempQueue_Status == pdTRUE ){
+		//	UARTprintf( "%08d, %02d, %d\n", heater_report.timestamp, heater_report.ID, heater_report.value );
+		//}
         GPIOPinWrite( GPIO_PORTN_BASE, GPIO_PIN_0, 0x01 );
 		heater_report.timestamp = xPortSysTickCount;
 		heater_report.ID = 1;
-		heater_report.value = 25;
+		heater_report.value = 100;
+
+		InpQueue_Status = xQueueReceive( Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS );
+		if( InpQueue_Status == pdTRUE ){
+			target_temp = inp_temp;
+			//UARTprintf( "%08d, %02d, %d\n", xPortSysTickCount, 2, inp_temp );
+		}
+		TempQueue_Status = xQueueReceive( Temp_Queue, &meas_temp, 10*portTICK_PERIOD_MS );
+		if( TempQueue_Status == pdTRUE ){
+			error = target_temp - (uint32_t) meas_temp;
+			{
+			if( error > 1)
+			{
+				PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4,
+										 PWMGenPeriodGet(PWM0_BASE, PWM_GEN_2)/2);
+				heater_report.value = 50;
+			}
+			else if( error < -1 )
+			{
+				PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4,
+										 0);
+				heater_report.value = 0;
+			}
+		}
 		xQueueSend(Heater_Queue, &heater_report, 10*portTICK_PERIOD_MS);
 		hqueue_count += 1;
 		vTaskDelay( (2000 * configTICK_RATE_HZ) / 1000 );

@@ -41,6 +41,7 @@ int main( void ) {
 
 	Status = Processor_Initialization();
 	Status = UART_Initialization();
+	Status = Queue_Initialization();
 
 	//
 	//	Create a task to blink LED
@@ -66,7 +67,7 @@ int main( void ) {
 
 	xTaskCreate( Task_UART_0, "UART0", 512, NULL, 1, NULL);
 
-	xTaskCreate( Task_PID, "PID", 512, NULL, 1, NULL);
+	//xTaskCreate( Task_PID, "PID", 512, NULL, 1, NULL);
 
 //	puts  ("Hello, world!" );
 

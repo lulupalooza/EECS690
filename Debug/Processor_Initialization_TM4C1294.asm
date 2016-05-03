@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-;* Date/Time created: Tue May 03 06:24:58 2016                                *
+;* Date/Time created: Tue May 03 10:24:58 2016                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disable_dual_state --embedded_constants=on --endian=little --float_support=FPv4SPD16 --hll_source=on --object_format=elf --quiet --silicon_version=7M4 --symdebug:dwarf --symdebug:dwarf_version=3 --unaligned_access=on 
 	.thumb
@@ -169,6 +169,21 @@ $C$DW$32	.dwtag  DW_TAG_variable, DW_AT_name("ReportData_Queue")
 	.dwattr $C$DW$32, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
 	.dwattr $C$DW$32, DW_AT_decl_line(0x26)
 	.dwattr $C$DW$32, DW_AT_decl_column(0x0f)
+	.global	ADC_Queue
+	.data
+	.align	4
+	.elfsym	ADC_Queue,SYM_SIZE(4)
+ADC_Queue:
+	.bits	0,32			; ADC_Queue @ 0
+
+$C$DW$33	.dwtag  DW_TAG_variable, DW_AT_name("ADC_Queue")
+	.dwattr $C$DW$33, DW_AT_TI_symbol_name("ADC_Queue")
+	.dwattr $C$DW$33, DW_AT_location[DW_OP_addr ADC_Queue]
+	.dwattr $C$DW$33, DW_AT_type(*$C$DW$T$62)
+	.dwattr $C$DW$33, DW_AT_external
+	.dwattr $C$DW$33, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$33, DW_AT_decl_line(0x27)
+	.dwattr $C$DW$33, DW_AT_decl_column(0x0f)
 	.global	Heater_Queue
 	.data
 	.align	4
@@ -176,14 +191,14 @@ $C$DW$32	.dwtag  DW_TAG_variable, DW_AT_name("ReportData_Queue")
 Heater_Queue:
 	.bits	0,32			; Heater_Queue @ 0
 
-$C$DW$33	.dwtag  DW_TAG_variable, DW_AT_name("Heater_Queue")
-	.dwattr $C$DW$33, DW_AT_TI_symbol_name("Heater_Queue")
-	.dwattr $C$DW$33, DW_AT_location[DW_OP_addr Heater_Queue]
-	.dwattr $C$DW$33, DW_AT_type(*$C$DW$T$62)
-	.dwattr $C$DW$33, DW_AT_external
-	.dwattr $C$DW$33, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$33, DW_AT_decl_line(0x27)
-	.dwattr $C$DW$33, DW_AT_decl_column(0x0f)
+$C$DW$34	.dwtag  DW_TAG_variable, DW_AT_name("Heater_Queue")
+	.dwattr $C$DW$34, DW_AT_TI_symbol_name("Heater_Queue")
+	.dwattr $C$DW$34, DW_AT_location[DW_OP_addr Heater_Queue]
+	.dwattr $C$DW$34, DW_AT_type(*$C$DW$T$62)
+	.dwattr $C$DW$34, DW_AT_external
+	.dwattr $C$DW$34, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$34, DW_AT_decl_line(0x28)
+	.dwattr $C$DW$34, DW_AT_decl_column(0x0f)
 	.global	Temp_Queue
 	.data
 	.align	4
@@ -191,14 +206,14 @@ $C$DW$33	.dwtag  DW_TAG_variable, DW_AT_name("Heater_Queue")
 Temp_Queue:
 	.bits	0,32			; Temp_Queue @ 0
 
-$C$DW$34	.dwtag  DW_TAG_variable, DW_AT_name("Temp_Queue")
-	.dwattr $C$DW$34, DW_AT_TI_symbol_name("Temp_Queue")
-	.dwattr $C$DW$34, DW_AT_location[DW_OP_addr Temp_Queue]
-	.dwattr $C$DW$34, DW_AT_type(*$C$DW$T$62)
-	.dwattr $C$DW$34, DW_AT_external
-	.dwattr $C$DW$34, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$34, DW_AT_decl_line(0x28)
-	.dwattr $C$DW$34, DW_AT_decl_column(0x0f)
+$C$DW$35	.dwtag  DW_TAG_variable, DW_AT_name("Temp_Queue")
+	.dwattr $C$DW$35, DW_AT_TI_symbol_name("Temp_Queue")
+	.dwattr $C$DW$35, DW_AT_location[DW_OP_addr Temp_Queue]
+	.dwattr $C$DW$35, DW_AT_type(*$C$DW$T$62)
+	.dwattr $C$DW$35, DW_AT_external
+	.dwattr $C$DW$35, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$35, DW_AT_decl_line(0x29)
+	.dwattr $C$DW$35, DW_AT_decl_column(0x0f)
 	.global	Inp_Queue
 	.data
 	.align	4
@@ -206,14 +221,14 @@ $C$DW$34	.dwtag  DW_TAG_variable, DW_AT_name("Temp_Queue")
 Inp_Queue:
 	.bits	0,32			; Inp_Queue @ 0
 
-$C$DW$35	.dwtag  DW_TAG_variable, DW_AT_name("Inp_Queue")
-	.dwattr $C$DW$35, DW_AT_TI_symbol_name("Inp_Queue")
-	.dwattr $C$DW$35, DW_AT_location[DW_OP_addr Inp_Queue]
-	.dwattr $C$DW$35, DW_AT_type(*$C$DW$T$62)
-	.dwattr $C$DW$35, DW_AT_external
-	.dwattr $C$DW$35, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$35, DW_AT_decl_line(0x29)
-	.dwattr $C$DW$35, DW_AT_decl_column(0x0f)
+$C$DW$36	.dwtag  DW_TAG_variable, DW_AT_name("Inp_Queue")
+	.dwattr $C$DW$36, DW_AT_TI_symbol_name("Inp_Queue")
+	.dwattr $C$DW$36, DW_AT_location[DW_OP_addr Inp_Queue]
+	.dwattr $C$DW$36, DW_AT_type(*$C$DW$T$62)
+	.dwattr $C$DW$36, DW_AT_external
+	.dwattr $C$DW$36, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$36, DW_AT_decl_line(0x2a)
+	.dwattr $C$DW$36, DW_AT_decl_column(0x0f)
 	.global	g_ulSystemClock
 	.data
 	.align	4
@@ -221,14 +236,14 @@ $C$DW$35	.dwtag  DW_TAG_variable, DW_AT_name("Inp_Queue")
 g_ulSystemClock:
 	.bits	0,32			; g_ulSystemClock @ 0
 
-$C$DW$36	.dwtag  DW_TAG_variable, DW_AT_name("g_ulSystemClock")
-	.dwattr $C$DW$36, DW_AT_TI_symbol_name("g_ulSystemClock")
-	.dwattr $C$DW$36, DW_AT_location[DW_OP_addr g_ulSystemClock]
-	.dwattr $C$DW$36, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$36, DW_AT_external
-	.dwattr $C$DW$36, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$36, DW_AT_decl_line(0x31)
-	.dwattr $C$DW$36, DW_AT_decl_column(0x13)
+$C$DW$37	.dwtag  DW_TAG_variable, DW_AT_name("g_ulSystemClock")
+	.dwattr $C$DW$37, DW_AT_TI_symbol_name("g_ulSystemClock")
+	.dwattr $C$DW$37, DW_AT_location[DW_OP_addr g_ulSystemClock]
+	.dwattr $C$DW$37, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$37, DW_AT_external
+	.dwattr $C$DW$37, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$37, DW_AT_decl_line(0x32)
+	.dwattr $C$DW$37, DW_AT_decl_column(0x13)
 	.global	ProcessorInitFlag
 	.data
 	.align	4
@@ -236,14 +251,14 @@ $C$DW$36	.dwtag  DW_TAG_variable, DW_AT_name("g_ulSystemClock")
 ProcessorInitFlag:
 	.bits	0,32			; ProcessorInitFlag @ 0
 
-$C$DW$37	.dwtag  DW_TAG_variable, DW_AT_name("ProcessorInitFlag")
-	.dwattr $C$DW$37, DW_AT_TI_symbol_name("ProcessorInitFlag")
-	.dwattr $C$DW$37, DW_AT_location[DW_OP_addr ProcessorInitFlag]
-	.dwattr $C$DW$37, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$37, DW_AT_external
-	.dwattr $C$DW$37, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$37, DW_AT_decl_line(0x33)
-	.dwattr $C$DW$37, DW_AT_decl_column(0x0e)
+$C$DW$38	.dwtag  DW_TAG_variable, DW_AT_name("ProcessorInitFlag")
+	.dwattr $C$DW$38, DW_AT_TI_symbol_name("ProcessorInitFlag")
+	.dwattr $C$DW$38, DW_AT_location[DW_OP_addr ProcessorInitFlag]
+	.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$38, DW_AT_external
+	.dwattr $C$DW$38, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$38, DW_AT_decl_line(0x34)
+	.dwattr $C$DW$38, DW_AT_decl_column(0x0e)
 	.global	UARTStdioInitFlag
 	.data
 	.align	4
@@ -251,14 +266,14 @@ $C$DW$37	.dwtag  DW_TAG_variable, DW_AT_name("ProcessorInitFlag")
 UARTStdioInitFlag:
 	.bits	0,32			; UARTStdioInitFlag @ 0
 
-$C$DW$38	.dwtag  DW_TAG_variable, DW_AT_name("UARTStdioInitFlag")
-	.dwattr $C$DW$38, DW_AT_TI_symbol_name("UARTStdioInitFlag")
-	.dwattr $C$DW$38, DW_AT_location[DW_OP_addr UARTStdioInitFlag]
-	.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$38, DW_AT_external
-	.dwattr $C$DW$38, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$38, DW_AT_decl_line(0x34)
-	.dwattr $C$DW$38, DW_AT_decl_column(0x0e)
+$C$DW$39	.dwtag  DW_TAG_variable, DW_AT_name("UARTStdioInitFlag")
+	.dwattr $C$DW$39, DW_AT_TI_symbol_name("UARTStdioInitFlag")
+	.dwattr $C$DW$39, DW_AT_location[DW_OP_addr UARTStdioInitFlag]
+	.dwattr $C$DW$39, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$39, DW_AT_external
+	.dwattr $C$DW$39, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$39, DW_AT_decl_line(0x35)
+	.dwattr $C$DW$39, DW_AT_decl_column(0x0e)
 	.global	FPUInitFlag
 	.data
 	.align	4
@@ -266,35 +281,35 @@ $C$DW$38	.dwtag  DW_TAG_variable, DW_AT_name("UARTStdioInitFlag")
 FPUInitFlag:
 	.bits	0,32			; FPUInitFlag @ 0
 
-$C$DW$39	.dwtag  DW_TAG_variable, DW_AT_name("FPUInitFlag")
-	.dwattr $C$DW$39, DW_AT_TI_symbol_name("FPUInitFlag")
-	.dwattr $C$DW$39, DW_AT_location[DW_OP_addr FPUInitFlag]
-	.dwattr $C$DW$39, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$39, DW_AT_external
-	.dwattr $C$DW$39, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$39, DW_AT_decl_line(0x35)
-	.dwattr $C$DW$39, DW_AT_decl_column(0x0e)
-;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\0346412 
+$C$DW$40	.dwtag  DW_TAG_variable, DW_AT_name("FPUInitFlag")
+	.dwattr $C$DW$40, DW_AT_TI_symbol_name("FPUInitFlag")
+	.dwattr $C$DW$40, DW_AT_location[DW_OP_addr FPUInitFlag]
+	.dwattr $C$DW$40, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$40, DW_AT_external
+	.dwattr $C$DW$40, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$40, DW_AT_decl_line(0x36)
+	.dwattr $C$DW$40, DW_AT_decl_column(0x0e)
+;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\1130812 
 	.sect	".text"
 	.clink
 	.thumbfunc Processor_Initialization
 	.thumb
 	.global	Processor_Initialization
 
-$C$DW$40	.dwtag  DW_TAG_subprogram, DW_AT_name("Processor_Initialization")
-	.dwattr $C$DW$40, DW_AT_low_pc(Processor_Initialization)
-	.dwattr $C$DW$40, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$40, DW_AT_TI_symbol_name("Processor_Initialization")
-	.dwattr $C$DW$40, DW_AT_external
-	.dwattr $C$DW$40, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$40, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$40, DW_AT_TI_begin_line(0x3b)
-	.dwattr $C$DW$40, DW_AT_TI_begin_column(0x11)
-	.dwattr $C$DW$40, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$40, DW_AT_decl_line(0x3b)
-	.dwattr $C$DW$40, DW_AT_decl_column(0x11)
-	.dwattr $C$DW$40, DW_AT_TI_max_frame_size(0x08)
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 59,column 44,is_stmt,address Processor_Initialization,isa 1
+$C$DW$41	.dwtag  DW_TAG_subprogram, DW_AT_name("Processor_Initialization")
+	.dwattr $C$DW$41, DW_AT_low_pc(Processor_Initialization)
+	.dwattr $C$DW$41, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$41, DW_AT_TI_symbol_name("Processor_Initialization")
+	.dwattr $C$DW$41, DW_AT_external
+	.dwattr $C$DW$41, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$41, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$41, DW_AT_TI_begin_line(0x3c)
+	.dwattr $C$DW$41, DW_AT_TI_begin_column(0x11)
+	.dwattr $C$DW$41, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$41, DW_AT_decl_line(0x3c)
+	.dwattr $C$DW$41, DW_AT_decl_column(0x11)
+	.dwattr $C$DW$41, DW_AT_TI_max_frame_size(0x08)
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 60,column 44,is_stmt,address Processor_Initialization,isa 1
 
 	.dwfde $C$DW$CIE, Processor_Initialization
 
@@ -316,47 +331,47 @@ Processor_Initialization:
 	.dwcfi	cfa_offset, 8
 	.dwcfi	save_reg_to_mem, 14, -4
 	.dwcfi	save_reg_to_mem, 3, -8
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 61,column 2,is_stmt,isa 1
-        LDR       A1, $C$CON1           ; [DPU_3_PIPE] |61| 
-        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |61| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 62,column 2,is_stmt,isa 1
+        LDR       A1, $C$CON1           ; [DPU_3_PIPE] |62| 
+        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |62| 
         CBNZ      A1, ||$C$L1||         ; [] 
-        ; BRANCHCC OCCURS {||$C$L1||}    ; [] |61| 
+        ; BRANCHCC OCCURS {||$C$L1||}    ; [] |62| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 65,column 3,is_stmt,isa 1
-        LDR       A1, $C$CON3           ; [DPU_3_PIPE] |65| 
-        LDR       A2, $C$CON4           ; [DPU_3_PIPE] |65| 
-$C$DW$41	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$41, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$41, DW_AT_name("SysCtlClockFreqSet")
-	.dwattr $C$DW$41, DW_AT_TI_call
-        BL        SysCtlClockFreqSet    ; [DPU_3_PIPE] |65| 
-        ; CALL OCCURS {SysCtlClockFreqSet }  ; [] |65| 
-        LDR       A2, $C$CON2           ; [DPU_3_PIPE] |65| 
-        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |65| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 84,column 3,is_stmt,isa 1
-        LDR       A2, $C$CON1           ; [DPU_3_PIPE] |84| 
-        MOVS      A1, #1                ; [DPU_3_PIPE] |84| 
-        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |84| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 85,column 3,is_stmt,isa 1
-        LDR       A2, $C$CON5           ; [DPU_3_PIPE] |85| 
-        MOVS      A1, #0                ; [DPU_3_PIPE] |85| 
-        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |85| 
-;* --------------------------------------------------------------------------*
-||$C$L1||:    
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 88,column 5,is_stmt,isa 1
-        MOVS      A1, #1                ; [DPU_3_PIPE] |88| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 90,column 2,is_stmt,isa 1
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 66,column 3,is_stmt,isa 1
+        LDR       A1, $C$CON3           ; [DPU_3_PIPE] |66| 
+        LDR       A2, $C$CON4           ; [DPU_3_PIPE] |66| 
 $C$DW$42	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$42, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$42, DW_AT_TI_return
+	.dwattr $C$DW$42, DW_AT_name("SysCtlClockFreqSet")
+	.dwattr $C$DW$42, DW_AT_TI_call
+        BL        SysCtlClockFreqSet    ; [DPU_3_PIPE] |66| 
+        ; CALL OCCURS {SysCtlClockFreqSet }  ; [] |66| 
+        LDR       A2, $C$CON2           ; [DPU_3_PIPE] |66| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |66| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 85,column 3,is_stmt,isa 1
+        LDR       A2, $C$CON1           ; [DPU_3_PIPE] |85| 
+        MOVS      A1, #1                ; [DPU_3_PIPE] |85| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |85| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 86,column 3,is_stmt,isa 1
+        LDR       A2, $C$CON5           ; [DPU_3_PIPE] |86| 
+        MOVS      A1, #0                ; [DPU_3_PIPE] |86| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |86| 
+;* --------------------------------------------------------------------------*
+||$C$L1||:    
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 89,column 5,is_stmt,isa 1
+        MOVS      A1, #1                ; [DPU_3_PIPE] |89| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 91,column 2,is_stmt,isa 1
+$C$DW$43	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$43, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$43, DW_AT_TI_return
         POP       {A4, PC}              ; [DPU_3_PIPE] 
 	.dwcfi	cfa_offset, 0
         ; BRANCH OCCURS                  ; [] 
-	.dwattr $C$DW$40, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$40, DW_AT_TI_end_line(0x5a)
-	.dwattr $C$DW$40, DW_AT_TI_end_column(0x02)
+	.dwattr $C$DW$41, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$41, DW_AT_TI_end_line(0x5b)
+	.dwattr $C$DW$41, DW_AT_TI_end_column(0x02)
 	.dwendentry
-	.dwendtag $C$DW$40
+	.dwendtag $C$DW$41
 
 	.sect	".text"
 	.clink
@@ -364,20 +379,20 @@ $C$DW$42	.dwtag  DW_TAG_TI_branch
 	.thumb
 	.global	UART_Initialization
 
-$C$DW$43	.dwtag  DW_TAG_subprogram, DW_AT_name("UART_Initialization")
-	.dwattr $C$DW$43, DW_AT_low_pc(UART_Initialization)
-	.dwattr $C$DW$43, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$43, DW_AT_TI_symbol_name("UART_Initialization")
-	.dwattr $C$DW$43, DW_AT_external
-	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$43, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$43, DW_AT_TI_begin_line(0x63)
-	.dwattr $C$DW$43, DW_AT_TI_begin_column(0x11)
-	.dwattr $C$DW$43, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$43, DW_AT_decl_line(0x63)
-	.dwattr $C$DW$43, DW_AT_decl_column(0x11)
-	.dwattr $C$DW$43, DW_AT_TI_max_frame_size(0x08)
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 99,column 39,is_stmt,address UART_Initialization,isa 1
+$C$DW$44	.dwtag  DW_TAG_subprogram, DW_AT_name("UART_Initialization")
+	.dwattr $C$DW$44, DW_AT_low_pc(UART_Initialization)
+	.dwattr $C$DW$44, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$44, DW_AT_TI_symbol_name("UART_Initialization")
+	.dwattr $C$DW$44, DW_AT_external
+	.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$44, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$44, DW_AT_TI_begin_line(0x64)
+	.dwattr $C$DW$44, DW_AT_TI_begin_column(0x11)
+	.dwattr $C$DW$44, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$44, DW_AT_decl_line(0x64)
+	.dwattr $C$DW$44, DW_AT_decl_column(0x11)
+	.dwattr $C$DW$44, DW_AT_TI_max_frame_size(0x08)
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 100,column 39,is_stmt,address UART_Initialization,isa 1
 
 	.dwfde $C$DW$CIE, UART_Initialization
 
@@ -399,38 +414,30 @@ UART_Initialization:
 	.dwcfi	cfa_offset, 8
 	.dwcfi	save_reg_to_mem, 14, -4
 	.dwcfi	save_reg_to_mem, 3, -8
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 101,column 2,is_stmt,isa 1
-        LDR       A1, $C$CON6           ; [DPU_3_PIPE] |101| 
-        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |101| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 102,column 2,is_stmt,isa 1
+        LDR       A1, $C$CON6           ; [DPU_3_PIPE] |102| 
+        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |102| 
         CBNZ      A1, ||$C$L2||         ; [] 
-        ; BRANCHCC OCCURS {||$C$L2||}    ; [] |101| 
+        ; BRANCHCC OCCURS {||$C$L2||}    ; [] |102| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 106,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON7           ; [DPU_3_PIPE] |106| 
-$C$DW$44	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$44, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$44, DW_AT_name("SysCtlPeripheralEnable")
-	.dwattr $C$DW$44, DW_AT_TI_call
-        BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |106| 
-        ; CALL OCCURS {SysCtlPeripheralEnable }  ; [] |106| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 107,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON8           ; [DPU_3_PIPE] |107| 
+        LDR       A1, $C$CON7           ; [DPU_3_PIPE] |107| 
 $C$DW$45	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$45, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$45, DW_AT_name("SysCtlPeripheralEnable")
 	.dwattr $C$DW$45, DW_AT_TI_call
         BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |107| 
         ; CALL OCCURS {SysCtlPeripheralEnable }  ; [] |107| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 109,column 6,is_stmt,isa 1
-        MOVS      A1, #1                ; [DPU_3_PIPE] |109| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 108,column 6,is_stmt,isa 1
+        LDR       A1, $C$CON8           ; [DPU_3_PIPE] |108| 
 $C$DW$46	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$46, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$46, DW_AT_name("GPIOPinConfigure")
+	.dwattr $C$DW$46, DW_AT_name("SysCtlPeripheralEnable")
 	.dwattr $C$DW$46, DW_AT_TI_call
-        BL        GPIOPinConfigure      ; [DPU_3_PIPE] |109| 
-        ; CALL OCCURS {GPIOPinConfigure }  ; [] |109| 
+        BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |108| 
+        ; CALL OCCURS {SysCtlPeripheralEnable }  ; [] |108| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 110,column 6,is_stmt,isa 1
-        MOV       A1, #1025             ; [DPU_3_PIPE] |110| 
+        MOVS      A1, #1                ; [DPU_3_PIPE] |110| 
 $C$DW$47	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$47, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$47, DW_AT_name("GPIOPinConfigure")
@@ -438,52 +445,51 @@ $C$DW$47	.dwtag  DW_TAG_TI_branch
         BL        GPIOPinConfigure      ; [DPU_3_PIPE] |110| 
         ; CALL OCCURS {GPIOPinConfigure }  ; [] |110| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 111,column 6,is_stmt,isa 1
-        MOV       A1, #1073758208       ; [DPU_3_PIPE] |111| 
-        MOVS      A2, #3                ; [DPU_3_PIPE] |111| 
+        MOV       A1, #1025             ; [DPU_3_PIPE] |111| 
 $C$DW$48	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$48, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$48, DW_AT_name("GPIOPinTypeUART")
+	.dwattr $C$DW$48, DW_AT_name("GPIOPinConfigure")
 	.dwattr $C$DW$48, DW_AT_TI_call
-        BL        GPIOPinTypeUART       ; [DPU_3_PIPE] |111| 
-        ; CALL OCCURS {GPIOPinTypeUART }  ; [] |111| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 116,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |116| 
-        MOVS      A2, #0                ; [DPU_3_PIPE] |116| 
+        BL        GPIOPinConfigure      ; [DPU_3_PIPE] |111| 
+        ; CALL OCCURS {GPIOPinConfigure }  ; [] |111| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 112,column 6,is_stmt,isa 1
+        MOV       A1, #1073758208       ; [DPU_3_PIPE] |112| 
+        MOVS      A2, #3                ; [DPU_3_PIPE] |112| 
 $C$DW$49	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$49, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$49, DW_AT_name("UARTClockSourceSet")
+	.dwattr $C$DW$49, DW_AT_name("GPIOPinTypeUART")
 	.dwattr $C$DW$49, DW_AT_TI_call
-        BL        UARTClockSourceSet    ; [DPU_3_PIPE] |116| 
-        ; CALL OCCURS {UARTClockSourceSet }  ; [] |116| 
+        BL        GPIOPinTypeUART       ; [DPU_3_PIPE] |112| 
+        ; CALL OCCURS {GPIOPinTypeUART }  ; [] |112| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 117,column 6,is_stmt,isa 1
-        LDR       A2, $C$CON2           ; [DPU_3_PIPE] |117| 
         LDR       A1, $C$CON9           ; [DPU_3_PIPE] |117| 
-        LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |117| 
-        MOV       A3, #115200           ; [DPU_3_PIPE] |117| 
-        MOVS      A4, #96               ; [DPU_3_PIPE] |117| 
+        MOVS      A2, #0                ; [DPU_3_PIPE] |117| 
 $C$DW$50	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$50, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$50, DW_AT_name("UARTConfigSetExpClk")
+	.dwattr $C$DW$50, DW_AT_name("UARTClockSourceSet")
 	.dwattr $C$DW$50, DW_AT_TI_call
-        BL        UARTConfigSetExpClk   ; [DPU_3_PIPE] |117| 
-        ; CALL OCCURS {UARTConfigSetExpClk }  ; [] |117| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 125,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |125| 
+        BL        UARTClockSourceSet    ; [DPU_3_PIPE] |117| 
+        ; CALL OCCURS {UARTClockSourceSet }  ; [] |117| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 118,column 6,is_stmt,isa 1
+        LDR       A2, $C$CON2           ; [DPU_3_PIPE] |118| 
+        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |118| 
+        LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |118| 
+        MOV       A3, #115200           ; [DPU_3_PIPE] |118| 
+        MOVS      A4, #96               ; [DPU_3_PIPE] |118| 
 $C$DW$51	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$51, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$51, DW_AT_name("UARTEnable")
+	.dwattr $C$DW$51, DW_AT_name("UARTConfigSetExpClk")
 	.dwattr $C$DW$51, DW_AT_TI_call
-        BL        UARTEnable            ; [DPU_3_PIPE] |125| 
-        ; CALL OCCURS {UARTEnable }      ; [] |125| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 127,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |127| 
-        MOVS      A2, #62               ; [DPU_3_PIPE] |127| 
+        BL        UARTConfigSetExpClk   ; [DPU_3_PIPE] |118| 
+        ; CALL OCCURS {UARTConfigSetExpClk }  ; [] |118| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 126,column 6,is_stmt,isa 1
+        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |126| 
 $C$DW$52	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$52, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$52, DW_AT_name("UARTCharPut")
+	.dwattr $C$DW$52, DW_AT_name("UARTEnable")
 	.dwattr $C$DW$52, DW_AT_TI_call
-        BL        UARTCharPut           ; [DPU_3_PIPE] |127| 
-        ; CALL OCCURS {UARTCharPut }     ; [] |127| 
+        BL        UARTEnable            ; [DPU_3_PIPE] |126| 
+        ; CALL OCCURS {UARTEnable }      ; [] |126| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 128,column 6,is_stmt,isa 1
         LDR       A1, $C$CON9           ; [DPU_3_PIPE] |128| 
         MOVS      A2, #62               ; [DPU_3_PIPE] |128| 
@@ -493,38 +499,47 @@ $C$DW$53	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$53, DW_AT_TI_call
         BL        UARTCharPut           ; [DPU_3_PIPE] |128| 
         ; CALL OCCURS {UARTCharPut }     ; [] |128| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 133,column 6,is_stmt,isa 1
-        LDR       A1, $C$CON2           ; [DPU_3_PIPE] |133| 
-        LDR       A3, [A1, #0]          ; [DPU_3_PIPE] |133| 
-        MOV       A2, #115200           ; [DPU_3_PIPE] |133| 
-        MOVS      A1, #0                ; [DPU_3_PIPE] |133| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 129,column 6,is_stmt,isa 1
+        LDR       A1, $C$CON9           ; [DPU_3_PIPE] |129| 
+        MOVS      A2, #62               ; [DPU_3_PIPE] |129| 
 $C$DW$54	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$54, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$54, DW_AT_name("UARTStdioConfig")
+	.dwattr $C$DW$54, DW_AT_name("UARTCharPut")
 	.dwattr $C$DW$54, DW_AT_TI_call
-        BL        UARTStdioConfig       ; [DPU_3_PIPE] |133| 
-        ; CALL OCCURS {UARTStdioConfig }  ; [] |133| 
-;* --------------------------------------------------------------------------*
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 135,column 3,is_stmt,isa 1
-        LDR       A2, $C$CON6           ; [DPU_3_PIPE] |135| 
-        MOVS      A1, #1                ; [DPU_3_PIPE] |135| 
-        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |135| 
-;* --------------------------------------------------------------------------*
-||$C$L2||:    
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 138,column 5,is_stmt,isa 1
-        MOVS      A1, #1                ; [DPU_3_PIPE] |138| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 140,column 2,is_stmt,isa 1
+        BL        UARTCharPut           ; [DPU_3_PIPE] |129| 
+        ; CALL OCCURS {UARTCharPut }     ; [] |129| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 134,column 6,is_stmt,isa 1
+        LDR       A1, $C$CON2           ; [DPU_3_PIPE] |134| 
+        LDR       A3, [A1, #0]          ; [DPU_3_PIPE] |134| 
+        MOV       A2, #115200           ; [DPU_3_PIPE] |134| 
+        MOVS      A1, #0                ; [DPU_3_PIPE] |134| 
 $C$DW$55	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$55, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$55, DW_AT_TI_return
+	.dwattr $C$DW$55, DW_AT_name("UARTStdioConfig")
+	.dwattr $C$DW$55, DW_AT_TI_call
+        BL        UARTStdioConfig       ; [DPU_3_PIPE] |134| 
+        ; CALL OCCURS {UARTStdioConfig }  ; [] |134| 
+;* --------------------------------------------------------------------------*
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 136,column 3,is_stmt,isa 1
+        LDR       A2, $C$CON6           ; [DPU_3_PIPE] |136| 
+        MOVS      A1, #1                ; [DPU_3_PIPE] |136| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |136| 
+;* --------------------------------------------------------------------------*
+||$C$L2||:    
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 139,column 5,is_stmt,isa 1
+        MOVS      A1, #1                ; [DPU_3_PIPE] |139| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 141,column 2,is_stmt,isa 1
+$C$DW$56	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$56, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$56, DW_AT_TI_return
         POP       {A4, PC}              ; [DPU_3_PIPE] 
 	.dwcfi	cfa_offset, 0
         ; BRANCH OCCURS                  ; [] 
-	.dwattr $C$DW$43, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$43, DW_AT_TI_end_line(0x8c)
-	.dwattr $C$DW$43, DW_AT_TI_end_column(0x02)
+	.dwattr $C$DW$44, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$44, DW_AT_TI_end_line(0x8d)
+	.dwattr $C$DW$44, DW_AT_TI_end_column(0x02)
 	.dwendentry
-	.dwendtag $C$DW$43
+	.dwendtag $C$DW$44
 
 	.sect	".text"
 	.clink
@@ -532,20 +547,20 @@ $C$DW$55	.dwtag  DW_TAG_TI_branch
 	.thumb
 	.global	Queue_Initialization
 
-$C$DW$56	.dwtag  DW_TAG_subprogram, DW_AT_name("Queue_Initialization")
-	.dwattr $C$DW$56, DW_AT_low_pc(Queue_Initialization)
-	.dwattr $C$DW$56, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$56, DW_AT_TI_symbol_name("Queue_Initialization")
-	.dwattr $C$DW$56, DW_AT_external
-	.dwattr $C$DW$56, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$56, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$56, DW_AT_TI_begin_line(0x93)
-	.dwattr $C$DW$56, DW_AT_TI_begin_column(0x11)
-	.dwattr $C$DW$56, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$56, DW_AT_decl_line(0x93)
-	.dwattr $C$DW$56, DW_AT_decl_column(0x11)
-	.dwattr $C$DW$56, DW_AT_TI_max_frame_size(0x08)
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 147,column 40,is_stmt,address Queue_Initialization,isa 1
+$C$DW$57	.dwtag  DW_TAG_subprogram, DW_AT_name("Queue_Initialization")
+	.dwattr $C$DW$57, DW_AT_low_pc(Queue_Initialization)
+	.dwattr $C$DW$57, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$57, DW_AT_TI_symbol_name("Queue_Initialization")
+	.dwattr $C$DW$57, DW_AT_external
+	.dwattr $C$DW$57, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$57, DW_AT_TI_begin_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$57, DW_AT_TI_begin_line(0x94)
+	.dwattr $C$DW$57, DW_AT_TI_begin_column(0x11)
+	.dwattr $C$DW$57, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$57, DW_AT_decl_line(0x94)
+	.dwattr $C$DW$57, DW_AT_decl_column(0x11)
+	.dwattr $C$DW$57, DW_AT_TI_max_frame_size(0x08)
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 148,column 40,is_stmt,address Queue_Initialization,isa 1
 
 	.dwfde $C$DW$CIE, Queue_Initialization
 
@@ -567,29 +582,17 @@ Queue_Initialization:
 	.dwcfi	cfa_offset, 8
 	.dwcfi	save_reg_to_mem, 14, -4
 	.dwcfi	save_reg_to_mem, 3, -8
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 151,column 2,is_stmt,isa 1
-        MOVS      A1, #10               ; [DPU_3_PIPE] |151| 
-        MOVS      A2, #12               ; [DPU_3_PIPE] |151| 
-        MOVS      A3, #0                ; [DPU_3_PIPE] |151| 
-$C$DW$57	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$57, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$57, DW_AT_name("xQueueGenericCreate")
-	.dwattr $C$DW$57, DW_AT_TI_call
-        BL        xQueueGenericCreate   ; [DPU_3_PIPE] |151| 
-        ; CALL OCCURS {xQueueGenericCreate }  ; [] |151| 
-        LDR       A2, $C$CON10          ; [DPU_3_PIPE] |151| 
-        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |151| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 152,column 2,is_stmt,isa 1
-        MOVS      A3, #0                ; [DPU_3_PIPE] |152| 
         MOVS      A1, #10               ; [DPU_3_PIPE] |152| 
         MOVS      A2, #12               ; [DPU_3_PIPE] |152| 
+        MOVS      A3, #0                ; [DPU_3_PIPE] |152| 
 $C$DW$58	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$58, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$58, DW_AT_name("xQueueGenericCreate")
 	.dwattr $C$DW$58, DW_AT_TI_call
         BL        xQueueGenericCreate   ; [DPU_3_PIPE] |152| 
         ; CALL OCCURS {xQueueGenericCreate }  ; [] |152| 
-        LDR       A2, $C$CON11          ; [DPU_3_PIPE] |152| 
+        LDR       A2, $C$CON10          ; [DPU_3_PIPE] |152| 
         STR       A1, [A2, #0]          ; [DPU_3_PIPE] |152| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 153,column 2,is_stmt,isa 1
         MOVS      A3, #0                ; [DPU_3_PIPE] |153| 
@@ -601,34 +604,58 @@ $C$DW$59	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$59, DW_AT_TI_call
         BL        xQueueGenericCreate   ; [DPU_3_PIPE] |153| 
         ; CALL OCCURS {xQueueGenericCreate }  ; [] |153| 
-        LDR       A2, $C$CON12          ; [DPU_3_PIPE] |153| 
+        LDR       A2, $C$CON11          ; [DPU_3_PIPE] |153| 
         STR       A1, [A2, #0]          ; [DPU_3_PIPE] |153| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 154,column 2,is_stmt,isa 1
         MOVS      A3, #0                ; [DPU_3_PIPE] |154| 
         MOVS      A1, #10               ; [DPU_3_PIPE] |154| 
-        MOVS      A2, #4                ; [DPU_3_PIPE] |154| 
+        MOVS      A2, #12               ; [DPU_3_PIPE] |154| 
 $C$DW$60	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$60, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$60, DW_AT_name("xQueueGenericCreate")
 	.dwattr $C$DW$60, DW_AT_TI_call
         BL        xQueueGenericCreate   ; [DPU_3_PIPE] |154| 
         ; CALL OCCURS {xQueueGenericCreate }  ; [] |154| 
-        LDR       A2, $C$CON13          ; [DPU_3_PIPE] |154| 
+        LDR       A2, $C$CON12          ; [DPU_3_PIPE] |154| 
         STR       A1, [A2, #0]          ; [DPU_3_PIPE] |154| 
 	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 155,column 2,is_stmt,isa 1
-        MOVS      A1, #1                ; [DPU_3_PIPE] |155| 
-	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 156,column 1,is_stmt,isa 1
+        MOVS      A3, #0                ; [DPU_3_PIPE] |155| 
+        MOVS      A1, #10               ; [DPU_3_PIPE] |155| 
+        MOVS      A2, #8                ; [DPU_3_PIPE] |155| 
 $C$DW$61	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$61, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$61, DW_AT_TI_return
+	.dwattr $C$DW$61, DW_AT_name("xQueueGenericCreate")
+	.dwattr $C$DW$61, DW_AT_TI_call
+        BL        xQueueGenericCreate   ; [DPU_3_PIPE] |155| 
+        ; CALL OCCURS {xQueueGenericCreate }  ; [] |155| 
+        LDR       A2, $C$CON13          ; [DPU_3_PIPE] |155| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |155| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 156,column 2,is_stmt,isa 1
+        MOVS      A3, #0                ; [DPU_3_PIPE] |156| 
+        MOVS      A1, #10               ; [DPU_3_PIPE] |156| 
+        MOVS      A2, #4                ; [DPU_3_PIPE] |156| 
+$C$DW$62	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$62, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$62, DW_AT_name("xQueueGenericCreate")
+	.dwattr $C$DW$62, DW_AT_TI_call
+        BL        xQueueGenericCreate   ; [DPU_3_PIPE] |156| 
+        ; CALL OCCURS {xQueueGenericCreate }  ; [] |156| 
+        LDR       A2, $C$CON14          ; [DPU_3_PIPE] |156| 
+        STR       A1, [A2, #0]          ; [DPU_3_PIPE] |156| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 157,column 2,is_stmt,isa 1
+        MOVS      A1, #1                ; [DPU_3_PIPE] |157| 
+	.dwpsn	file "../Drivers/Processor_Initialization_TM4C1294.c",line 158,column 1,is_stmt,isa 1
+$C$DW$63	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$63, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$63, DW_AT_TI_return
         POP       {A4, PC}              ; [DPU_3_PIPE] 
 	.dwcfi	cfa_offset, 0
         ; BRANCH OCCURS                  ; [] 
-	.dwattr $C$DW$56, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$56, DW_AT_TI_end_line(0x9c)
-	.dwattr $C$DW$56, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$57, DW_AT_TI_end_file("../Drivers/Processor_Initialization_TM4C1294.c")
+	.dwattr $C$DW$57, DW_AT_TI_end_line(0x9e)
+	.dwattr $C$DW$57, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$56
+	.dwendtag $C$DW$57
 
 ;******************************************************************************
 ;* CONSTANT TABLE                                                             *
@@ -655,11 +682,13 @@ $C$DW$61	.dwtag  DW_TAG_TI_branch
 	.align	4
 ||$C$CON10||:	.bits	ReportData_Queue,32
 	.align	4
-||$C$CON11||:	.bits	Heater_Queue,32
+||$C$CON11||:	.bits	ADC_Queue,32
 	.align	4
-||$C$CON12||:	.bits	Temp_Queue,32
+||$C$CON12||:	.bits	Heater_Queue,32
 	.align	4
-||$C$CON13||:	.bits	Inp_Queue,32
+||$C$CON13||:	.bits	Temp_Queue,32
+	.align	4
+||$C$CON14||:	.bits	Inp_Queue,32
 ;*****************************************************************************
 ;* UNDEFINED EXTERNAL REFERENCES                                             *
 ;*****************************************************************************
@@ -694,26 +723,26 @@ $C$DW$61	.dwtag  DW_TAG_TI_branch
 
 $C$DW$T$50	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$50, DW_AT_byte_size(0x01)
-$C$DW$62	.dwtag  DW_TAG_enumerator, DW_AT_name("eRunning"), DW_AT_const_value(0x00)
-	.dwattr $C$DW$62, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$62, DW_AT_decl_line(0x72)
-	.dwattr $C$DW$62, DW_AT_decl_column(0x02)
-$C$DW$63	.dwtag  DW_TAG_enumerator, DW_AT_name("eReady"), DW_AT_const_value(0x01)
-	.dwattr $C$DW$63, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$63, DW_AT_decl_line(0x73)
-	.dwattr $C$DW$63, DW_AT_decl_column(0x02)
-$C$DW$64	.dwtag  DW_TAG_enumerator, DW_AT_name("eBlocked"), DW_AT_const_value(0x02)
+$C$DW$64	.dwtag  DW_TAG_enumerator, DW_AT_name("eRunning"), DW_AT_const_value(0x00)
 	.dwattr $C$DW$64, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$64, DW_AT_decl_line(0x74)
+	.dwattr $C$DW$64, DW_AT_decl_line(0x72)
 	.dwattr $C$DW$64, DW_AT_decl_column(0x02)
-$C$DW$65	.dwtag  DW_TAG_enumerator, DW_AT_name("eSuspended"), DW_AT_const_value(0x03)
+$C$DW$65	.dwtag  DW_TAG_enumerator, DW_AT_name("eReady"), DW_AT_const_value(0x01)
 	.dwattr $C$DW$65, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$65, DW_AT_decl_line(0x75)
+	.dwattr $C$DW$65, DW_AT_decl_line(0x73)
 	.dwattr $C$DW$65, DW_AT_decl_column(0x02)
-$C$DW$66	.dwtag  DW_TAG_enumerator, DW_AT_name("eDeleted"), DW_AT_const_value(0x04)
+$C$DW$66	.dwtag  DW_TAG_enumerator, DW_AT_name("eBlocked"), DW_AT_const_value(0x02)
 	.dwattr $C$DW$66, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$66, DW_AT_decl_line(0x76)
+	.dwattr $C$DW$66, DW_AT_decl_line(0x74)
 	.dwattr $C$DW$66, DW_AT_decl_column(0x02)
+$C$DW$67	.dwtag  DW_TAG_enumerator, DW_AT_name("eSuspended"), DW_AT_const_value(0x03)
+	.dwattr $C$DW$67, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$67, DW_AT_decl_line(0x75)
+	.dwattr $C$DW$67, DW_AT_decl_column(0x02)
+$C$DW$68	.dwtag  DW_TAG_enumerator, DW_AT_name("eDeleted"), DW_AT_const_value(0x04)
+	.dwattr $C$DW$68, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$68, DW_AT_decl_line(0x76)
+	.dwattr $C$DW$68, DW_AT_decl_column(0x02)
 	.dwendtag $C$DW$T$50
 
 	.dwattr $C$DW$T$50, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -728,26 +757,26 @@ $C$DW$T$51	.dwtag  DW_TAG_typedef, DW_AT_name("eTaskState")
 
 $C$DW$T$56	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$56, DW_AT_byte_size(0x01)
-$C$DW$67	.dwtag  DW_TAG_enumerator, DW_AT_name("eNoAction"), DW_AT_const_value(0x00)
-	.dwattr $C$DW$67, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$67, DW_AT_decl_line(0x7c)
-	.dwattr $C$DW$67, DW_AT_decl_column(0x02)
-$C$DW$68	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetBits"), DW_AT_const_value(0x01)
-	.dwattr $C$DW$68, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$68, DW_AT_decl_line(0x7d)
-	.dwattr $C$DW$68, DW_AT_decl_column(0x02)
-$C$DW$69	.dwtag  DW_TAG_enumerator, DW_AT_name("eIncrement"), DW_AT_const_value(0x02)
+$C$DW$69	.dwtag  DW_TAG_enumerator, DW_AT_name("eNoAction"), DW_AT_const_value(0x00)
 	.dwattr $C$DW$69, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$69, DW_AT_decl_line(0x7e)
+	.dwattr $C$DW$69, DW_AT_decl_line(0x7c)
 	.dwattr $C$DW$69, DW_AT_decl_column(0x02)
-$C$DW$70	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetValueWithOverwrite"), DW_AT_const_value(0x03)
+$C$DW$70	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetBits"), DW_AT_const_value(0x01)
 	.dwattr $C$DW$70, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$70, DW_AT_decl_line(0x7f)
+	.dwattr $C$DW$70, DW_AT_decl_line(0x7d)
 	.dwattr $C$DW$70, DW_AT_decl_column(0x02)
-$C$DW$71	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetValueWithoutOverwrite"), DW_AT_const_value(0x04)
+$C$DW$71	.dwtag  DW_TAG_enumerator, DW_AT_name("eIncrement"), DW_AT_const_value(0x02)
 	.dwattr $C$DW$71, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$71, DW_AT_decl_line(0x80)
+	.dwattr $C$DW$71, DW_AT_decl_line(0x7e)
 	.dwattr $C$DW$71, DW_AT_decl_column(0x02)
+$C$DW$72	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetValueWithOverwrite"), DW_AT_const_value(0x03)
+	.dwattr $C$DW$72, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$72, DW_AT_decl_line(0x7f)
+	.dwattr $C$DW$72, DW_AT_decl_column(0x02)
+$C$DW$73	.dwtag  DW_TAG_enumerator, DW_AT_name("eSetValueWithoutOverwrite"), DW_AT_const_value(0x04)
+	.dwattr $C$DW$73, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$73, DW_AT_decl_line(0x80)
+	.dwattr $C$DW$73, DW_AT_decl_column(0x02)
 	.dwendtag $C$DW$T$56
 
 	.dwattr $C$DW$T$56, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -762,18 +791,18 @@ $C$DW$T$57	.dwtag  DW_TAG_typedef, DW_AT_name("eNotifyAction")
 
 $C$DW$T$58	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$58, DW_AT_byte_size(0x01)
-$C$DW$72	.dwtag  DW_TAG_enumerator, DW_AT_name("eAbortSleep"), DW_AT_const_value(0x00)
-	.dwattr $C$DW$72, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$72, DW_AT_decl_line(0xb5)
-	.dwattr $C$DW$72, DW_AT_decl_column(0x02)
-$C$DW$73	.dwtag  DW_TAG_enumerator, DW_AT_name("eStandardSleep"), DW_AT_const_value(0x01)
-	.dwattr $C$DW$73, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$73, DW_AT_decl_line(0xb6)
-	.dwattr $C$DW$73, DW_AT_decl_column(0x02)
-$C$DW$74	.dwtag  DW_TAG_enumerator, DW_AT_name("eNoTasksWaitingTimeout"), DW_AT_const_value(0x02)
+$C$DW$74	.dwtag  DW_TAG_enumerator, DW_AT_name("eAbortSleep"), DW_AT_const_value(0x00)
 	.dwattr $C$DW$74, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$74, DW_AT_decl_line(0xb7)
+	.dwattr $C$DW$74, DW_AT_decl_line(0xb5)
 	.dwattr $C$DW$74, DW_AT_decl_column(0x02)
+$C$DW$75	.dwtag  DW_TAG_enumerator, DW_AT_name("eStandardSleep"), DW_AT_const_value(0x01)
+	.dwattr $C$DW$75, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$75, DW_AT_decl_line(0xb6)
+	.dwattr $C$DW$75, DW_AT_decl_column(0x02)
+$C$DW$76	.dwtag  DW_TAG_enumerator, DW_AT_name("eNoTasksWaitingTimeout"), DW_AT_const_value(0x02)
+	.dwattr $C$DW$76, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$76, DW_AT_decl_line(0xb7)
+	.dwattr $C$DW$76, DW_AT_decl_column(0x02)
 	.dwendtag $C$DW$T$58
 
 	.dwattr $C$DW$T$58, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -789,24 +818,24 @@ $C$DW$T$59	.dwtag  DW_TAG_typedef, DW_AT_name("eSleepModeStatus")
 $C$DW$T$22	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$22, DW_AT_name("HeapRegion")
 	.dwattr $C$DW$T$22, DW_AT_byte_size(0x08)
-$C$DW$75	.dwtag  DW_TAG_member
-	.dwattr $C$DW$75, DW_AT_type(*$C$DW$T$20)
-	.dwattr $C$DW$75, DW_AT_name("pucStartAddress")
-	.dwattr $C$DW$75, DW_AT_TI_symbol_name("pucStartAddress")
-	.dwattr $C$DW$75, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$75, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$75, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\portable.h")
-	.dwattr $C$DW$75, DW_AT_decl_line(0x96)
-	.dwattr $C$DW$75, DW_AT_decl_column(0x0b)
-$C$DW$76	.dwtag  DW_TAG_member
-	.dwattr $C$DW$76, DW_AT_type(*$C$DW$T$21)
-	.dwattr $C$DW$76, DW_AT_name("xSizeInBytes")
-	.dwattr $C$DW$76, DW_AT_TI_symbol_name("xSizeInBytes")
-	.dwattr $C$DW$76, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$76, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$76, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\portable.h")
-	.dwattr $C$DW$76, DW_AT_decl_line(0x97)
-	.dwattr $C$DW$76, DW_AT_decl_column(0x09)
+$C$DW$77	.dwtag  DW_TAG_member
+	.dwattr $C$DW$77, DW_AT_type(*$C$DW$T$20)
+	.dwattr $C$DW$77, DW_AT_name("pucStartAddress")
+	.dwattr $C$DW$77, DW_AT_TI_symbol_name("pucStartAddress")
+	.dwattr $C$DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$77, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$77, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\portable.h")
+	.dwattr $C$DW$77, DW_AT_decl_line(0x96)
+	.dwattr $C$DW$77, DW_AT_decl_column(0x0b)
+$C$DW$78	.dwtag  DW_TAG_member
+	.dwattr $C$DW$78, DW_AT_type(*$C$DW$T$21)
+	.dwattr $C$DW$78, DW_AT_name("xSizeInBytes")
+	.dwattr $C$DW$78, DW_AT_TI_symbol_name("xSizeInBytes")
+	.dwattr $C$DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$78, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$78, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\portable.h")
+	.dwattr $C$DW$78, DW_AT_decl_line(0x97)
+	.dwattr $C$DW$78, DW_AT_decl_column(0x09)
 	.dwendtag $C$DW$T$22
 
 	.dwattr $C$DW$T$22, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\portable.h")
@@ -822,33 +851,33 @@ $C$DW$T$60	.dwtag  DW_TAG_typedef, DW_AT_name("HeapRegion_t")
 $C$DW$T$24	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$24, DW_AT_name("ReportData_Item")
 	.dwattr $C$DW$T$24, DW_AT_byte_size(0x0c)
-$C$DW$77	.dwtag  DW_TAG_member
-	.dwattr $C$DW$77, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$77, DW_AT_name("timestamp")
-	.dwattr $C$DW$77, DW_AT_TI_symbol_name("timestamp")
-	.dwattr $C$DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$77, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$77, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
-	.dwattr $C$DW$77, DW_AT_decl_line(0x1e)
-	.dwattr $C$DW$77, DW_AT_decl_column(0x0b)
-$C$DW$78	.dwtag  DW_TAG_member
-	.dwattr $C$DW$78, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$78, DW_AT_name("ID")
-	.dwattr $C$DW$78, DW_AT_TI_symbol_name("ID")
-	.dwattr $C$DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$78, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$78, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
-	.dwattr $C$DW$78, DW_AT_decl_line(0x1f)
-	.dwattr $C$DW$78, DW_AT_decl_column(0x0b)
 $C$DW$79	.dwtag  DW_TAG_member
 	.dwattr $C$DW$79, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$79, DW_AT_name("value")
-	.dwattr $C$DW$79, DW_AT_TI_symbol_name("value")
-	.dwattr $C$DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$79, DW_AT_name("timestamp")
+	.dwattr $C$DW$79, DW_AT_TI_symbol_name("timestamp")
+	.dwattr $C$DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$79, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$79, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
-	.dwattr $C$DW$79, DW_AT_decl_line(0x20)
+	.dwattr $C$DW$79, DW_AT_decl_line(0x1e)
 	.dwattr $C$DW$79, DW_AT_decl_column(0x0b)
+$C$DW$80	.dwtag  DW_TAG_member
+	.dwattr $C$DW$80, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$80, DW_AT_name("ID")
+	.dwattr $C$DW$80, DW_AT_TI_symbol_name("ID")
+	.dwattr $C$DW$80, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$80, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$80, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
+	.dwattr $C$DW$80, DW_AT_decl_line(0x1f)
+	.dwattr $C$DW$80, DW_AT_decl_column(0x0b)
+$C$DW$81	.dwtag  DW_TAG_member
+	.dwattr $C$DW$81, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$81, DW_AT_name("value")
+	.dwattr $C$DW$81, DW_AT_TI_symbol_name("value")
+	.dwattr $C$DW$81, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$81, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$81, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
+	.dwattr $C$DW$81, DW_AT_decl_line(0x20)
+	.dwattr $C$DW$81, DW_AT_decl_column(0x0b)
 	.dwendtag $C$DW$T$24
 
 	.dwattr $C$DW$T$24, DW_AT_decl_file("C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h")
@@ -892,8 +921,8 @@ $C$DW$T$49	.dwtag  DW_TAG_typedef, DW_AT_name("TaskHandle_t")
 
 $C$DW$T$36	.dwtag  DW_TAG_subroutine_type
 	.dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
-$C$DW$80	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$80, DW_AT_type(*$C$DW$T$3)
+$C$DW$82	.dwtag  DW_TAG_formal_parameter
+	.dwattr $C$DW$82, DW_AT_type(*$C$DW$T$3)
 	.dwendtag $C$DW$T$36
 
 $C$DW$T$37	.dwtag  DW_TAG_pointer_type
@@ -1038,8 +1067,8 @@ $C$DW$T$54	.dwtag  DW_TAG_typedef, DW_AT_name("BaseType_t")
 $C$DW$T$93	.dwtag  DW_TAG_subroutine_type
 	.dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$54)
 	.dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
-$C$DW$81	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$81, DW_AT_type(*$C$DW$T$3)
+$C$DW$83	.dwtag  DW_TAG_formal_parameter
+	.dwattr $C$DW$83, DW_AT_type(*$C$DW$T$3)
 	.dwendtag $C$DW$T$93
 
 $C$DW$T$94	.dwtag  DW_TAG_pointer_type
@@ -1312,21 +1341,21 @@ $C$DW$T$130	.dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
 	.dwattr $C$DW$T$130, DW_AT_type(*$C$DW$T$129)
 	.dwattr $C$DW$T$130, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$130, DW_AT_decl_file("../Drivers/Processor_Initialization_TM4C1294.c")
-	.dwattr $C$DW$T$130, DW_AT_decl_line(0x9c)
+	.dwattr $C$DW$T$130, DW_AT_decl_line(0x9e)
 	.dwattr $C$DW$T$130, DW_AT_decl_column(0x01)
 
 $C$DW$T$25	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$25, DW_AT_name("__va_list")
 	.dwattr $C$DW$T$25, DW_AT_byte_size(0x04)
-$C$DW$82	.dwtag  DW_TAG_member
-	.dwattr $C$DW$82, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$82, DW_AT_name("__ap")
-	.dwattr $C$DW$82, DW_AT_TI_symbol_name("__ap")
-	.dwattr $C$DW$82, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$82, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$82, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h")
-	.dwattr $C$DW$82, DW_AT_decl_line(0x36)
-	.dwattr $C$DW$82, DW_AT_decl_column(0x0c)
+$C$DW$84	.dwtag  DW_TAG_member
+	.dwattr $C$DW$84, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$84, DW_AT_name("__ap")
+	.dwattr $C$DW$84, DW_AT_TI_symbol_name("__ap")
+	.dwattr $C$DW$84, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$84, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$84, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h")
+	.dwattr $C$DW$84, DW_AT_decl_line(0x36)
+	.dwattr $C$DW$84, DW_AT_decl_column(0x0c)
 	.dwendtag $C$DW$T$25
 
 	.dwattr $C$DW$T$25, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h")
@@ -1348,33 +1377,33 @@ $C$DW$T$132	.dwtag  DW_TAG_typedef, DW_AT_name("_Va_list")
 $C$DW$T$30	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$30, DW_AT_name("xLIST")
 	.dwattr $C$DW$T$30, DW_AT_byte_size(0x14)
-$C$DW$83	.dwtag  DW_TAG_member
-	.dwattr $C$DW$83, DW_AT_type(*$C$DW$T$26)
-	.dwattr $C$DW$83, DW_AT_name("uxNumberOfItems")
-	.dwattr $C$DW$83, DW_AT_TI_symbol_name("uxNumberOfItems")
-	.dwattr $C$DW$83, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$83, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$83, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$83, DW_AT_decl_line(0xd0)
-	.dwattr $C$DW$83, DW_AT_decl_column(0x22)
-$C$DW$84	.dwtag  DW_TAG_member
-	.dwattr $C$DW$84, DW_AT_type(*$C$DW$T$28)
-	.dwattr $C$DW$84, DW_AT_name("pxIndex")
-	.dwattr $C$DW$84, DW_AT_TI_symbol_name("pxIndex")
-	.dwattr $C$DW$84, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$84, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$84, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$84, DW_AT_decl_line(0xd1)
-	.dwattr $C$DW$84, DW_AT_decl_column(0x23)
 $C$DW$85	.dwtag  DW_TAG_member
-	.dwattr $C$DW$85, DW_AT_type(*$C$DW$T$29)
-	.dwattr $C$DW$85, DW_AT_name("xListEnd")
-	.dwattr $C$DW$85, DW_AT_TI_symbol_name("xListEnd")
-	.dwattr $C$DW$85, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$85, DW_AT_type(*$C$DW$T$26)
+	.dwattr $C$DW$85, DW_AT_name("uxNumberOfItems")
+	.dwattr $C$DW$85, DW_AT_TI_symbol_name("uxNumberOfItems")
+	.dwattr $C$DW$85, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$85, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$85, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$85, DW_AT_decl_line(0xd2)
-	.dwattr $C$DW$85, DW_AT_decl_column(0x11)
+	.dwattr $C$DW$85, DW_AT_decl_line(0xd0)
+	.dwattr $C$DW$85, DW_AT_decl_column(0x22)
+$C$DW$86	.dwtag  DW_TAG_member
+	.dwattr $C$DW$86, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$86, DW_AT_name("pxIndex")
+	.dwattr $C$DW$86, DW_AT_TI_symbol_name("pxIndex")
+	.dwattr $C$DW$86, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$86, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$86, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$86, DW_AT_decl_line(0xd1)
+	.dwattr $C$DW$86, DW_AT_decl_column(0x23)
+$C$DW$87	.dwtag  DW_TAG_member
+	.dwattr $C$DW$87, DW_AT_type(*$C$DW$T$29)
+	.dwattr $C$DW$87, DW_AT_name("xListEnd")
+	.dwattr $C$DW$87, DW_AT_TI_symbol_name("xListEnd")
+	.dwattr $C$DW$87, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$87, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$87, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$87, DW_AT_decl_line(0xd2)
+	.dwattr $C$DW$87, DW_AT_decl_column(0x11)
 	.dwendtag $C$DW$T$30
 
 	.dwattr $C$DW$T$30, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
@@ -1390,51 +1419,51 @@ $C$DW$T$133	.dwtag  DW_TAG_typedef, DW_AT_name("List_t")
 $C$DW$T$33	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$33, DW_AT_name("xLIST_ITEM")
 	.dwattr $C$DW$T$33, DW_AT_byte_size(0x14)
-$C$DW$86	.dwtag  DW_TAG_member
-	.dwattr $C$DW$86, DW_AT_type(*$C$DW$T$31)
-	.dwattr $C$DW$86, DW_AT_name("xItemValue")
-	.dwattr $C$DW$86, DW_AT_TI_symbol_name("xItemValue")
-	.dwattr $C$DW$86, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$86, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$86, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$86, DW_AT_decl_line(0xb8)
-	.dwattr $C$DW$86, DW_AT_decl_column(0x21)
-$C$DW$87	.dwtag  DW_TAG_member
-	.dwattr $C$DW$87, DW_AT_type(*$C$DW$T$32)
-	.dwattr $C$DW$87, DW_AT_name("pxNext")
-	.dwattr $C$DW$87, DW_AT_TI_symbol_name("pxNext")
-	.dwattr $C$DW$87, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$87, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$87, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$87, DW_AT_decl_line(0xb9)
-	.dwattr $C$DW$87, DW_AT_decl_column(0x2a)
 $C$DW$88	.dwtag  DW_TAG_member
-	.dwattr $C$DW$88, DW_AT_type(*$C$DW$T$32)
-	.dwattr $C$DW$88, DW_AT_name("pxPrevious")
-	.dwattr $C$DW$88, DW_AT_TI_symbol_name("pxPrevious")
-	.dwattr $C$DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$88, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$88, DW_AT_name("xItemValue")
+	.dwattr $C$DW$88, DW_AT_TI_symbol_name("xItemValue")
+	.dwattr $C$DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$88, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$88, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$88, DW_AT_decl_line(0xba)
-	.dwattr $C$DW$88, DW_AT_decl_column(0x2a)
+	.dwattr $C$DW$88, DW_AT_decl_line(0xb8)
+	.dwattr $C$DW$88, DW_AT_decl_column(0x21)
 $C$DW$89	.dwtag  DW_TAG_member
-	.dwattr $C$DW$89, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$89, DW_AT_name("pvOwner")
-	.dwattr $C$DW$89, DW_AT_TI_symbol_name("pvOwner")
-	.dwattr $C$DW$89, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+	.dwattr $C$DW$89, DW_AT_type(*$C$DW$T$32)
+	.dwattr $C$DW$89, DW_AT_name("pxNext")
+	.dwattr $C$DW$89, DW_AT_TI_symbol_name("pxNext")
+	.dwattr $C$DW$89, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
 	.dwattr $C$DW$89, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$89, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$89, DW_AT_decl_line(0xbb)
-	.dwattr $C$DW$89, DW_AT_decl_column(0x09)
+	.dwattr $C$DW$89, DW_AT_decl_line(0xb9)
+	.dwattr $C$DW$89, DW_AT_decl_column(0x2a)
 $C$DW$90	.dwtag  DW_TAG_member
-	.dwattr $C$DW$90, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$90, DW_AT_name("pvContainer")
-	.dwattr $C$DW$90, DW_AT_TI_symbol_name("pvContainer")
-	.dwattr $C$DW$90, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+	.dwattr $C$DW$90, DW_AT_type(*$C$DW$T$32)
+	.dwattr $C$DW$90, DW_AT_name("pxPrevious")
+	.dwattr $C$DW$90, DW_AT_TI_symbol_name("pxPrevious")
+	.dwattr $C$DW$90, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
 	.dwattr $C$DW$90, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$90, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$90, DW_AT_decl_line(0xbc)
-	.dwattr $C$DW$90, DW_AT_decl_column(0x1d)
+	.dwattr $C$DW$90, DW_AT_decl_line(0xba)
+	.dwattr $C$DW$90, DW_AT_decl_column(0x2a)
+$C$DW$91	.dwtag  DW_TAG_member
+	.dwattr $C$DW$91, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$91, DW_AT_name("pvOwner")
+	.dwattr $C$DW$91, DW_AT_TI_symbol_name("pvOwner")
+	.dwattr $C$DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+	.dwattr $C$DW$91, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$91, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$91, DW_AT_decl_line(0xbb)
+	.dwattr $C$DW$91, DW_AT_decl_column(0x09)
+$C$DW$92	.dwtag  DW_TAG_member
+	.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$92, DW_AT_name("pvContainer")
+	.dwattr $C$DW$92, DW_AT_TI_symbol_name("pvContainer")
+	.dwattr $C$DW$92, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+	.dwattr $C$DW$92, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$92, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$92, DW_AT_decl_line(0xbc)
+	.dwattr $C$DW$92, DW_AT_decl_column(0x1d)
 	.dwendtag $C$DW$T$33
 
 	.dwattr $C$DW$T$33, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
@@ -1456,33 +1485,33 @@ $C$DW$T$32	.dwtag  DW_TAG_pointer_type
 $C$DW$T$34	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$34, DW_AT_name("xMEMORY_REGION")
 	.dwattr $C$DW$T$34, DW_AT_byte_size(0x0c)
-$C$DW$91	.dwtag  DW_TAG_member
-	.dwattr $C$DW$91, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$91, DW_AT_name("pvBaseAddress")
-	.dwattr $C$DW$91, DW_AT_TI_symbol_name("pvBaseAddress")
-	.dwattr $C$DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$91, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$91, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$91, DW_AT_decl_line(0x91)
-	.dwattr $C$DW$91, DW_AT_decl_column(0x08)
-$C$DW$92	.dwtag  DW_TAG_member
-	.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$92, DW_AT_name("ulLengthInBytes")
-	.dwattr $C$DW$92, DW_AT_TI_symbol_name("ulLengthInBytes")
-	.dwattr $C$DW$92, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$92, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$92, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$92, DW_AT_decl_line(0x92)
-	.dwattr $C$DW$92, DW_AT_decl_column(0x0b)
 $C$DW$93	.dwtag  DW_TAG_member
-	.dwattr $C$DW$93, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$93, DW_AT_name("ulParameters")
-	.dwattr $C$DW$93, DW_AT_TI_symbol_name("ulParameters")
-	.dwattr $C$DW$93, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$93, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$93, DW_AT_name("pvBaseAddress")
+	.dwattr $C$DW$93, DW_AT_TI_symbol_name("pvBaseAddress")
+	.dwattr $C$DW$93, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$93, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$93, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$93, DW_AT_decl_line(0x93)
-	.dwattr $C$DW$93, DW_AT_decl_column(0x0b)
+	.dwattr $C$DW$93, DW_AT_decl_line(0x91)
+	.dwattr $C$DW$93, DW_AT_decl_column(0x08)
+$C$DW$94	.dwtag  DW_TAG_member
+	.dwattr $C$DW$94, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$94, DW_AT_name("ulLengthInBytes")
+	.dwattr $C$DW$94, DW_AT_TI_symbol_name("ulLengthInBytes")
+	.dwattr $C$DW$94, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$94, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$94, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$94, DW_AT_decl_line(0x92)
+	.dwattr $C$DW$94, DW_AT_decl_column(0x0b)
+$C$DW$95	.dwtag  DW_TAG_member
+	.dwattr $C$DW$95, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$95, DW_AT_name("ulParameters")
+	.dwattr $C$DW$95, DW_AT_TI_symbol_name("ulParameters")
+	.dwattr $C$DW$95, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$95, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$95, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$95, DW_AT_decl_line(0x93)
+	.dwattr $C$DW$95, DW_AT_decl_column(0x0b)
 	.dwendtag $C$DW$T$34
 
 	.dwattr $C$DW$T$34, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -1499,41 +1528,41 @@ $C$DW$T$47	.dwtag  DW_TAG_array_type
 	.dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$46)
 	.dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$47, DW_AT_byte_size(0x0c)
-$C$DW$94	.dwtag  DW_TAG_subrange_type
-	.dwattr $C$DW$94, DW_AT_upper_bound(0x00)
+$C$DW$96	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$96, DW_AT_upper_bound(0x00)
 	.dwendtag $C$DW$T$47
 
 
 $C$DW$T$35	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$35, DW_AT_name("xMINI_LIST_ITEM")
 	.dwattr $C$DW$T$35, DW_AT_byte_size(0x0c)
-$C$DW$95	.dwtag  DW_TAG_member
-	.dwattr $C$DW$95, DW_AT_type(*$C$DW$T$31)
-	.dwattr $C$DW$95, DW_AT_name("xItemValue")
-	.dwattr $C$DW$95, DW_AT_TI_symbol_name("xItemValue")
-	.dwattr $C$DW$95, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$95, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$95, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$95, DW_AT_decl_line(0xc4)
-	.dwattr $C$DW$95, DW_AT_decl_column(0x21)
-$C$DW$96	.dwtag  DW_TAG_member
-	.dwattr $C$DW$96, DW_AT_type(*$C$DW$T$32)
-	.dwattr $C$DW$96, DW_AT_name("pxNext")
-	.dwattr $C$DW$96, DW_AT_TI_symbol_name("pxNext")
-	.dwattr $C$DW$96, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$96, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$96, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$96, DW_AT_decl_line(0xc5)
-	.dwattr $C$DW$96, DW_AT_decl_column(0x2a)
 $C$DW$97	.dwtag  DW_TAG_member
-	.dwattr $C$DW$97, DW_AT_type(*$C$DW$T$32)
-	.dwattr $C$DW$97, DW_AT_name("pxPrevious")
-	.dwattr $C$DW$97, DW_AT_TI_symbol_name("pxPrevious")
-	.dwattr $C$DW$97, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$97, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$97, DW_AT_name("xItemValue")
+	.dwattr $C$DW$97, DW_AT_TI_symbol_name("xItemValue")
+	.dwattr $C$DW$97, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$97, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$97, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
-	.dwattr $C$DW$97, DW_AT_decl_line(0xc6)
-	.dwattr $C$DW$97, DW_AT_decl_column(0x2a)
+	.dwattr $C$DW$97, DW_AT_decl_line(0xc4)
+	.dwattr $C$DW$97, DW_AT_decl_column(0x21)
+$C$DW$98	.dwtag  DW_TAG_member
+	.dwattr $C$DW$98, DW_AT_type(*$C$DW$T$32)
+	.dwattr $C$DW$98, DW_AT_name("pxNext")
+	.dwattr $C$DW$98, DW_AT_TI_symbol_name("pxNext")
+	.dwattr $C$DW$98, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$98, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$98, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$98, DW_AT_decl_line(0xc5)
+	.dwattr $C$DW$98, DW_AT_decl_column(0x2a)
+$C$DW$99	.dwtag  DW_TAG_member
+	.dwattr $C$DW$99, DW_AT_type(*$C$DW$T$32)
+	.dwattr $C$DW$99, DW_AT_name("pxPrevious")
+	.dwattr $C$DW$99, DW_AT_TI_symbol_name("pxPrevious")
+	.dwattr $C$DW$99, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$99, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$99, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
+	.dwattr $C$DW$99, DW_AT_decl_line(0xc6)
+	.dwattr $C$DW$99, DW_AT_decl_column(0x2a)
 	.dwendtag $C$DW$T$35
 
 	.dwattr $C$DW$T$35, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16\TI_ARM_Tiva_Projects_EECS_690_Sp16\Source\include\list.h")
@@ -1549,69 +1578,69 @@ $C$DW$T$29	.dwtag  DW_TAG_typedef, DW_AT_name("MiniListItem_t")
 $C$DW$T$48	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$48, DW_AT_name("xTASK_PARAMETERS")
 	.dwattr $C$DW$T$48, DW_AT_byte_size(0x24)
-$C$DW$98	.dwtag  DW_TAG_member
-	.dwattr $C$DW$98, DW_AT_type(*$C$DW$T$38)
-	.dwattr $C$DW$98, DW_AT_name("pvTaskCode")
-	.dwattr $C$DW$98, DW_AT_TI_symbol_name("pvTaskCode")
-	.dwattr $C$DW$98, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$98, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$98, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$98, DW_AT_decl_line(0x9b)
-	.dwattr $C$DW$98, DW_AT_decl_column(0x11)
-$C$DW$99	.dwtag  DW_TAG_member
-	.dwattr $C$DW$99, DW_AT_type(*$C$DW$T$42)
-	.dwattr $C$DW$99, DW_AT_name("pcName")
-	.dwattr $C$DW$99, DW_AT_TI_symbol_name("pcName")
-	.dwattr $C$DW$99, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$99, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$99, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$99, DW_AT_decl_line(0x9c)
-	.dwattr $C$DW$99, DW_AT_decl_column(0x15)
 $C$DW$100	.dwtag  DW_TAG_member
-	.dwattr $C$DW$100, DW_AT_type(*$C$DW$T$43)
-	.dwattr $C$DW$100, DW_AT_name("usStackDepth")
-	.dwattr $C$DW$100, DW_AT_TI_symbol_name("usStackDepth")
-	.dwattr $C$DW$100, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$100, DW_AT_type(*$C$DW$T$38)
+	.dwattr $C$DW$100, DW_AT_name("pvTaskCode")
+	.dwattr $C$DW$100, DW_AT_TI_symbol_name("pvTaskCode")
+	.dwattr $C$DW$100, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$100, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$100, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$100, DW_AT_decl_line(0x9d)
-	.dwattr $C$DW$100, DW_AT_decl_column(0x0b)
+	.dwattr $C$DW$100, DW_AT_decl_line(0x9b)
+	.dwattr $C$DW$100, DW_AT_decl_column(0x11)
 $C$DW$101	.dwtag  DW_TAG_member
-	.dwattr $C$DW$101, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$101, DW_AT_name("pvParameters")
-	.dwattr $C$DW$101, DW_AT_TI_symbol_name("pvParameters")
-	.dwattr $C$DW$101, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+	.dwattr $C$DW$101, DW_AT_type(*$C$DW$T$42)
+	.dwattr $C$DW$101, DW_AT_name("pcName")
+	.dwattr $C$DW$101, DW_AT_TI_symbol_name("pcName")
+	.dwattr $C$DW$101, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
 	.dwattr $C$DW$101, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$101, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$101, DW_AT_decl_line(0x9e)
-	.dwattr $C$DW$101, DW_AT_decl_column(0x08)
+	.dwattr $C$DW$101, DW_AT_decl_line(0x9c)
+	.dwattr $C$DW$101, DW_AT_decl_column(0x15)
 $C$DW$102	.dwtag  DW_TAG_member
-	.dwattr $C$DW$102, DW_AT_type(*$C$DW$T$26)
-	.dwattr $C$DW$102, DW_AT_name("uxPriority")
-	.dwattr $C$DW$102, DW_AT_TI_symbol_name("uxPriority")
-	.dwattr $C$DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+	.dwattr $C$DW$102, DW_AT_type(*$C$DW$T$43)
+	.dwattr $C$DW$102, DW_AT_name("usStackDepth")
+	.dwattr $C$DW$102, DW_AT_TI_symbol_name("usStackDepth")
+	.dwattr $C$DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
 	.dwattr $C$DW$102, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$102, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$102, DW_AT_decl_line(0x9f)
-	.dwattr $C$DW$102, DW_AT_decl_column(0x0e)
+	.dwattr $C$DW$102, DW_AT_decl_line(0x9d)
+	.dwattr $C$DW$102, DW_AT_decl_column(0x0b)
 $C$DW$103	.dwtag  DW_TAG_member
-	.dwattr $C$DW$103, DW_AT_type(*$C$DW$T$45)
-	.dwattr $C$DW$103, DW_AT_name("puxStackBuffer")
-	.dwattr $C$DW$103, DW_AT_TI_symbol_name("puxStackBuffer")
-	.dwattr $C$DW$103, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+	.dwattr $C$DW$103, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$103, DW_AT_name("pvParameters")
+	.dwattr $C$DW$103, DW_AT_TI_symbol_name("pvParameters")
+	.dwattr $C$DW$103, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
 	.dwattr $C$DW$103, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$103, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$103, DW_AT_decl_line(0xa0)
-	.dwattr $C$DW$103, DW_AT_decl_column(0x0f)
+	.dwattr $C$DW$103, DW_AT_decl_line(0x9e)
+	.dwattr $C$DW$103, DW_AT_decl_column(0x08)
 $C$DW$104	.dwtag  DW_TAG_member
-	.dwattr $C$DW$104, DW_AT_type(*$C$DW$T$47)
-	.dwattr $C$DW$104, DW_AT_name("xRegions")
-	.dwattr $C$DW$104, DW_AT_TI_symbol_name("xRegions")
-	.dwattr $C$DW$104, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+	.dwattr $C$DW$104, DW_AT_type(*$C$DW$T$26)
+	.dwattr $C$DW$104, DW_AT_name("uxPriority")
+	.dwattr $C$DW$104, DW_AT_TI_symbol_name("uxPriority")
+	.dwattr $C$DW$104, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
 	.dwattr $C$DW$104, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$104, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$104, DW_AT_decl_line(0xa1)
-	.dwattr $C$DW$104, DW_AT_decl_column(0x11)
+	.dwattr $C$DW$104, DW_AT_decl_line(0x9f)
+	.dwattr $C$DW$104, DW_AT_decl_column(0x0e)
+$C$DW$105	.dwtag  DW_TAG_member
+	.dwattr $C$DW$105, DW_AT_type(*$C$DW$T$45)
+	.dwattr $C$DW$105, DW_AT_name("puxStackBuffer")
+	.dwattr $C$DW$105, DW_AT_TI_symbol_name("puxStackBuffer")
+	.dwattr $C$DW$105, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+	.dwattr $C$DW$105, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$105, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$105, DW_AT_decl_line(0xa0)
+	.dwattr $C$DW$105, DW_AT_decl_column(0x0f)
+$C$DW$106	.dwtag  DW_TAG_member
+	.dwattr $C$DW$106, DW_AT_type(*$C$DW$T$47)
+	.dwattr $C$DW$106, DW_AT_name("xRegions")
+	.dwattr $C$DW$106, DW_AT_TI_symbol_name("xRegions")
+	.dwattr $C$DW$106, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+	.dwattr $C$DW$106, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$106, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$106, DW_AT_decl_line(0xa1)
+	.dwattr $C$DW$106, DW_AT_decl_column(0x11)
 	.dwendtag $C$DW$T$48
 
 	.dwattr $C$DW$T$48, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -1627,78 +1656,78 @@ $C$DW$T$134	.dwtag  DW_TAG_typedef, DW_AT_name("TaskParameters_t")
 $C$DW$T$52	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$52, DW_AT_name("xTASK_STATUS")
 	.dwattr $C$DW$T$52, DW_AT_byte_size(0x20)
-$C$DW$105	.dwtag  DW_TAG_member
-	.dwattr $C$DW$105, DW_AT_type(*$C$DW$T$49)
-	.dwattr $C$DW$105, DW_AT_name("xHandle")
-	.dwattr $C$DW$105, DW_AT_TI_symbol_name("xHandle")
-	.dwattr $C$DW$105, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$105, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$105, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$105, DW_AT_decl_line(0xa8)
-	.dwattr $C$DW$105, DW_AT_decl_column(0x0f)
-$C$DW$106	.dwtag  DW_TAG_member
-	.dwattr $C$DW$106, DW_AT_type(*$C$DW$T$41)
-	.dwattr $C$DW$106, DW_AT_name("pcTaskName")
-	.dwattr $C$DW$106, DW_AT_TI_symbol_name("pcTaskName")
-	.dwattr $C$DW$106, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$106, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$106, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$106, DW_AT_decl_line(0xa9)
-	.dwattr $C$DW$106, DW_AT_decl_column(0x0e)
 $C$DW$107	.dwtag  DW_TAG_member
-	.dwattr $C$DW$107, DW_AT_type(*$C$DW$T$26)
-	.dwattr $C$DW$107, DW_AT_name("xTaskNumber")
-	.dwattr $C$DW$107, DW_AT_TI_symbol_name("xTaskNumber")
-	.dwattr $C$DW$107, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+	.dwattr $C$DW$107, DW_AT_type(*$C$DW$T$49)
+	.dwattr $C$DW$107, DW_AT_name("xHandle")
+	.dwattr $C$DW$107, DW_AT_TI_symbol_name("xHandle")
+	.dwattr $C$DW$107, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
 	.dwattr $C$DW$107, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$107, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$107, DW_AT_decl_line(0xaa)
-	.dwattr $C$DW$107, DW_AT_decl_column(0x0e)
+	.dwattr $C$DW$107, DW_AT_decl_line(0xa8)
+	.dwattr $C$DW$107, DW_AT_decl_column(0x0f)
 $C$DW$108	.dwtag  DW_TAG_member
-	.dwattr $C$DW$108, DW_AT_type(*$C$DW$T$51)
-	.dwattr $C$DW$108, DW_AT_name("eCurrentState")
-	.dwattr $C$DW$108, DW_AT_TI_symbol_name("eCurrentState")
-	.dwattr $C$DW$108, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+	.dwattr $C$DW$108, DW_AT_type(*$C$DW$T$41)
+	.dwattr $C$DW$108, DW_AT_name("pcTaskName")
+	.dwattr $C$DW$108, DW_AT_TI_symbol_name("pcTaskName")
+	.dwattr $C$DW$108, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
 	.dwattr $C$DW$108, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$108, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$108, DW_AT_decl_line(0xab)
-	.dwattr $C$DW$108, DW_AT_decl_column(0x0d)
+	.dwattr $C$DW$108, DW_AT_decl_line(0xa9)
+	.dwattr $C$DW$108, DW_AT_decl_column(0x0e)
 $C$DW$109	.dwtag  DW_TAG_member
 	.dwattr $C$DW$109, DW_AT_type(*$C$DW$T$26)
-	.dwattr $C$DW$109, DW_AT_name("uxCurrentPriority")
-	.dwattr $C$DW$109, DW_AT_TI_symbol_name("uxCurrentPriority")
-	.dwattr $C$DW$109, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+	.dwattr $C$DW$109, DW_AT_name("xTaskNumber")
+	.dwattr $C$DW$109, DW_AT_TI_symbol_name("xTaskNumber")
+	.dwattr $C$DW$109, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
 	.dwattr $C$DW$109, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$109, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$109, DW_AT_decl_line(0xac)
+	.dwattr $C$DW$109, DW_AT_decl_line(0xaa)
 	.dwattr $C$DW$109, DW_AT_decl_column(0x0e)
 $C$DW$110	.dwtag  DW_TAG_member
-	.dwattr $C$DW$110, DW_AT_type(*$C$DW$T$26)
-	.dwattr $C$DW$110, DW_AT_name("uxBasePriority")
-	.dwattr $C$DW$110, DW_AT_TI_symbol_name("uxBasePriority")
-	.dwattr $C$DW$110, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+	.dwattr $C$DW$110, DW_AT_type(*$C$DW$T$51)
+	.dwattr $C$DW$110, DW_AT_name("eCurrentState")
+	.dwattr $C$DW$110, DW_AT_TI_symbol_name("eCurrentState")
+	.dwattr $C$DW$110, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
 	.dwattr $C$DW$110, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$110, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$110, DW_AT_decl_line(0xad)
-	.dwattr $C$DW$110, DW_AT_decl_column(0x0e)
+	.dwattr $C$DW$110, DW_AT_decl_line(0xab)
+	.dwattr $C$DW$110, DW_AT_decl_column(0x0d)
 $C$DW$111	.dwtag  DW_TAG_member
-	.dwattr $C$DW$111, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$111, DW_AT_name("ulRunTimeCounter")
-	.dwattr $C$DW$111, DW_AT_TI_symbol_name("ulRunTimeCounter")
-	.dwattr $C$DW$111, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+	.dwattr $C$DW$111, DW_AT_type(*$C$DW$T$26)
+	.dwattr $C$DW$111, DW_AT_name("uxCurrentPriority")
+	.dwattr $C$DW$111, DW_AT_TI_symbol_name("uxCurrentPriority")
+	.dwattr $C$DW$111, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
 	.dwattr $C$DW$111, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$111, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$111, DW_AT_decl_line(0xae)
-	.dwattr $C$DW$111, DW_AT_decl_column(0x0b)
+	.dwattr $C$DW$111, DW_AT_decl_line(0xac)
+	.dwattr $C$DW$111, DW_AT_decl_column(0x0e)
 $C$DW$112	.dwtag  DW_TAG_member
-	.dwattr $C$DW$112, DW_AT_type(*$C$DW$T$43)
-	.dwattr $C$DW$112, DW_AT_name("usStackHighWaterMark")
-	.dwattr $C$DW$112, DW_AT_TI_symbol_name("usStackHighWaterMark")
-	.dwattr $C$DW$112, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+	.dwattr $C$DW$112, DW_AT_type(*$C$DW$T$26)
+	.dwattr $C$DW$112, DW_AT_name("uxBasePriority")
+	.dwattr $C$DW$112, DW_AT_TI_symbol_name("uxBasePriority")
+	.dwattr $C$DW$112, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
 	.dwattr $C$DW$112, DW_AT_accessibility(DW_ACCESS_public)
 	.dwattr $C$DW$112, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$112, DW_AT_decl_line(0xaf)
-	.dwattr $C$DW$112, DW_AT_decl_column(0x0b)
+	.dwattr $C$DW$112, DW_AT_decl_line(0xad)
+	.dwattr $C$DW$112, DW_AT_decl_column(0x0e)
+$C$DW$113	.dwtag  DW_TAG_member
+	.dwattr $C$DW$113, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$113, DW_AT_name("ulRunTimeCounter")
+	.dwattr $C$DW$113, DW_AT_TI_symbol_name("ulRunTimeCounter")
+	.dwattr $C$DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+	.dwattr $C$DW$113, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$113, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$113, DW_AT_decl_line(0xae)
+	.dwattr $C$DW$113, DW_AT_decl_column(0x0b)
+$C$DW$114	.dwtag  DW_TAG_member
+	.dwattr $C$DW$114, DW_AT_type(*$C$DW$T$43)
+	.dwattr $C$DW$114, DW_AT_name("usStackHighWaterMark")
+	.dwattr $C$DW$114, DW_AT_TI_symbol_name("usStackHighWaterMark")
+	.dwattr $C$DW$114, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+	.dwattr $C$DW$114, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$114, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$114, DW_AT_decl_line(0xaf)
+	.dwattr $C$DW$114, DW_AT_decl_column(0x0b)
 	.dwendtag $C$DW$T$52
 
 	.dwattr $C$DW$T$52, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
@@ -1714,24 +1743,24 @@ $C$DW$T$135	.dwtag  DW_TAG_typedef, DW_AT_name("TaskStatus_t")
 $C$DW$T$55	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$55, DW_AT_name("xTIME_OUT")
 	.dwattr $C$DW$T$55, DW_AT_byte_size(0x08)
-$C$DW$113	.dwtag  DW_TAG_member
-	.dwattr $C$DW$113, DW_AT_type(*$C$DW$T$54)
-	.dwattr $C$DW$113, DW_AT_name("xOverflowCount")
-	.dwattr $C$DW$113, DW_AT_TI_symbol_name("xOverflowCount")
-	.dwattr $C$DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$113, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$113, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$113, DW_AT_decl_line(0x88)
-	.dwattr $C$DW$113, DW_AT_decl_column(0x0d)
-$C$DW$114	.dwtag  DW_TAG_member
-	.dwattr $C$DW$114, DW_AT_type(*$C$DW$T$31)
-	.dwattr $C$DW$114, DW_AT_name("xTimeOnEntering")
-	.dwattr $C$DW$114, DW_AT_TI_symbol_name("xTimeOnEntering")
-	.dwattr $C$DW$114, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-	.dwattr $C$DW$114, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$114, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
-	.dwattr $C$DW$114, DW_AT_decl_line(0x89)
-	.dwattr $C$DW$114, DW_AT_decl_column(0x0d)
+$C$DW$115	.dwtag  DW_TAG_member
+	.dwattr $C$DW$115, DW_AT_type(*$C$DW$T$54)
+	.dwattr $C$DW$115, DW_AT_name("xOverflowCount")
+	.dwattr $C$DW$115, DW_AT_TI_symbol_name("xOverflowCount")
+	.dwattr $C$DW$115, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$115, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$115, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$115, DW_AT_decl_line(0x88)
+	.dwattr $C$DW$115, DW_AT_decl_column(0x0d)
+$C$DW$116	.dwtag  DW_TAG_member
+	.dwattr $C$DW$116, DW_AT_type(*$C$DW$T$31)
+	.dwattr $C$DW$116, DW_AT_name("xTimeOnEntering")
+	.dwattr $C$DW$116, DW_AT_TI_symbol_name("xTimeOnEntering")
+	.dwattr $C$DW$116, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+	.dwattr $C$DW$116, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$116, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")
+	.dwattr $C$DW$116, DW_AT_decl_line(0x89)
+	.dwattr $C$DW$116, DW_AT_decl_column(0x0d)
 	.dwendtag $C$DW$T$55
 
 	.dwattr $C$DW$T$55, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h")

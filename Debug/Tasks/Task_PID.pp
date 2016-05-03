@@ -37,8 +37,12 @@ Tasks/Task_PID.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/
 Tasks/Task_PID.obj: ../Tasks/Task_Report.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Tasks/Task_PID.obj: ../Tasks/Task_HeaterOn.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h
 Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Tasks/Task_PID.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h
 
 ../Tasks/Task_PID.c: 
 C:/TI_CodeComposer/TivaWare/inc/hw_ints.h: 
@@ -77,5 +81,9 @@ C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects
 ../Tasks/Task_Report.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+../Tasks/Task_HeaterOn.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h: 

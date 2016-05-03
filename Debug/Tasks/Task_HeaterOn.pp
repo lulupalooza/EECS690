@@ -42,6 +42,10 @@ Tasks/Task_HeaterOn.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Ba
 Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
 Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h
 Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Tasks/Task_HeaterOn.obj: ../Tasks/Task_HeaterOn.h
+Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Tasks/Task_HeaterOn.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h
 
 ../Tasks/Task_HeaterOn.c: 
 C:/TI_CodeComposer/TivaWare/inc/hw_ints.h: 
@@ -85,3 +89,7 @@ C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Drivers/uartstdio
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+../Tasks/Task_HeaterOn.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio.h: 
