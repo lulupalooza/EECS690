@@ -38,10 +38,10 @@ extern void Task_Temp( void *pvParameters ) {
 	while ( 1 ) {
 		//printf("again??!");
 		ReportQueue_Status = xQueueReceive( ADC_Queue, &adc_val, 10*portTICK_PERIOD_MS );
-		int_t = (uint32_t) (adc_val*1000) - ((uint32_t)adc_val)*1000;
-		temp_val = (uint32_t) 91.93 - 30.45*adc_val;
+		//int_t = (uint32_t) (adc_val*1000) - ((uint32_t)adc_val)*1000;
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, int_t);
+			temp_val = (uint32_t) 91.93 - 30.45*adc_val;
+			//UARTprintf("Measured: %d.%d\n", (uint32_t) adc_val, int_t);
 		}
 		xQueueSend( Temp_Queue, &temp_val, 10*portTICK_PERIOD_MS );
 		vTaskDelay( 2 * configTICK_RATE_HZ );

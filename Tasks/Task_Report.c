@@ -52,13 +52,13 @@ extern void Task_Report( void *pvParameters ) {
 //		printf( "SysTickTime: %08X\n", xPortSysTickCount );
 		ReportQueue_Status = xQueueReceive( ReportData_Queue, &report, 10*portTICK_PERIOD_MS );
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", report.timestamp, report.ID, report.value );
+			UARTprintf( "%08d, %02d, %d, %d\n", report.timestamp, report.ID, report.value, report.value2 );
 			rqueue_count -= 1;
 		}
 		vTaskDelay( 2 * configTICK_RATE_HZ );
 		ReportQueue_Status = xQueueReceive( Heater_Queue, &report, 10*portTICK_PERIOD_MS );
 		if( ReportQueue_Status == pdTRUE ){
-			UARTprintf( "%08d, %02d, %d\n", report.timestamp, report.ID, report.value );
+			UARTprintf( "%08d, %02d, %d, %d\n", report.timestamp, report.ID, report.value, report.value2 );
 			hqueue_count -= 1;
 		}
 	}

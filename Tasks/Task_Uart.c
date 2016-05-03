@@ -85,6 +85,7 @@ extern void Task_UART_0( void *pvParameters ) {
 			xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);// Send new desired temp to heater control module.
 			iqueue_count += 1;
 		}
+		printf("%d\n", inp_temp);
 		vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );		// Delay.
 	}
 

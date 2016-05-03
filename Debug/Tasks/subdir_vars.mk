@@ -5,7 +5,6 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Tasks/Task_Blinky.c \
-../Tasks/Task_Control.c \
 ../Tasks/Task_HeaterOn.c \
 ../Tasks/Task_PID.c \
 ../Tasks/Task_Report.c \
@@ -15,7 +14,6 @@ C_SRCS += \
 
 OBJS += \
 ./Tasks/Task_Blinky.obj \
-./Tasks/Task_Control.obj \
 ./Tasks/Task_HeaterOn.obj \
 ./Tasks/Task_PID.obj \
 ./Tasks/Task_Report.obj \
@@ -25,7 +23,6 @@ OBJS += \
 
 C_DEPS += \
 ./Tasks/Task_Blinky.pp \
-./Tasks/Task_Control.pp \
 ./Tasks/Task_HeaterOn.pp \
 ./Tasks/Task_PID.pp \
 ./Tasks/Task_Report.pp \
@@ -35,7 +32,6 @@ C_DEPS += \
 
 C_DEPS__QUOTED += \
 "Tasks\Task_Blinky.pp" \
-"Tasks\Task_Control.pp" \
 "Tasks\Task_HeaterOn.pp" \
 "Tasks\Task_PID.pp" \
 "Tasks\Task_Report.pp" \
@@ -45,7 +41,6 @@ C_DEPS__QUOTED += \
 
 OBJS__QUOTED += \
 "Tasks\Task_Blinky.obj" \
-"Tasks\Task_Control.obj" \
 "Tasks\Task_HeaterOn.obj" \
 "Tasks\Task_PID.obj" \
 "Tasks\Task_Report.obj" \
@@ -55,7 +50,6 @@ OBJS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../Tasks/Task_Blinky.c" \
-"../Tasks/Task_Control.c" \
 "../Tasks/Task_HeaterOn.c" \
 "../Tasks/Task_PID.c" \
 "../Tasks/Task_Report.c" \

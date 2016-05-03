@@ -32,7 +32,7 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters );
 extern void Task_HeaterOn( void *pvParameters );
 extern void Task_UART_0( void *pvParameters );
 extern void Task_Temp( void *pvParameters );
-extern void Task_PID( void *pvParameters );
+//extern void Task_PID( void *pvParameters );
 
 
 int main( void ) {

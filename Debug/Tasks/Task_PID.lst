@@ -1,11 +1,11 @@
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    1
 
        1                    ;******************************************************************************
        2                    ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-       3                    ;* Date/Time created: Tue May 03 10:39:33 2016                                *
+       3                    ;* Date/Time created: Tue May 03 10:58:04 2016                                *
        4                    ;******************************************************************************
        5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
        6 00000000                   .thumb
@@ -58,7 +58,7 @@ Task_PID.asm                                                         PAGE    1
       53                    ;*   Regs Modified     : A1,A2,SP,SR                                         *
       54                    ;*   Regs Used         : A1,A2,SP,LR,SR                                      *
       55                    ;*   Local Frame Size  : 0 Args + 4 Auto + 0 Save = 4 byte                   *
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    2
@@ -118,7 +118,7 @@ Task_PID.asm                                                         PAGE    2
      107                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
      108                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
      109                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    3
@@ -178,7 +178,7 @@ Task_PID.asm                                                         PAGE    3
      162                    $C$DW$11        .dwtag  DW_TAG_enumerator, DW_AT_name("eSetBits"), DW_AT_const_value(0x01)
      163                            .dwattr $C$DW$11, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
      164                            .dwattr $C$DW$11, DW_AT_decl_line(0x7d)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    4
@@ -238,7 +238,7 @@ Task_PID.asm                                                         PAGE    4
      217                            .dwattr $C$DW$T$20, DW_AT_byte_size(0x18)
      218                    $C$DW$18        .dwtag  DW_TAG_member
      219                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$10)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    5
@@ -298,7 +298,7 @@ Task_PID.asm                                                         PAGE    5
      272                            .dwendtag $C$DW$T$20
      273                    
      274                            .dwattr $C$DW$T$20, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    6
@@ -347,7 +347,7 @@ Task_PID.asm                                                         PAGE    6
      316                    
      317                    $C$DW$T$26      .dwtag  DW_TAG_structure_type
      318                            .dwattr $C$DW$T$26, DW_AT_name("ReportData_Item")
-     319                            .dwattr $C$DW$T$26, DW_AT_byte_size(0x0c)
+     319                            .dwattr $C$DW$T$26, DW_AT_byte_size(0x10)
      320                    $C$DW$26        .dwtag  DW_TAG_member
      321                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$25)
      322                            .dwattr $C$DW$26, DW_AT_name("timestamp")
@@ -358,7 +358,7 @@ Task_PID.asm                                                         PAGE    6
      327                            .dwattr $C$DW$26, DW_AT_decl_line(0x1e)
      328                            .dwattr $C$DW$26, DW_AT_decl_column(0x0b)
      329                    $C$DW$27        .dwtag  DW_TAG_member
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    7
@@ -380,1051 +380,1060 @@ Task_PID.asm                                                         PAGE    7
      344                            .dwattr $C$DW$28, DW_AT_decl_file("..\Tasks\Task_Report.h")
      345                            .dwattr $C$DW$28, DW_AT_decl_line(0x20)
      346                            .dwattr $C$DW$28, DW_AT_decl_column(0x0b)
-     347                            .dwendtag $C$DW$T$26
-     348                    
-     349                            .dwattr $C$DW$T$26, DW_AT_decl_file("..\Tasks\Task_Report.h")
-     350                            .dwattr $C$DW$T$26, DW_AT_decl_line(0x1c)
-     351                            .dwattr $C$DW$T$26, DW_AT_decl_column(0x10)
-     352                    $C$DW$T$64      .dwtag  DW_TAG_typedef, DW_AT_name("ReportData_Item")
-     353                            .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$26)
-     354                            .dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
-     355                            .dwattr $C$DW$T$64, DW_AT_decl_file("..\Tasks\Task_Report.h")
-     356                            .dwattr $C$DW$T$64, DW_AT_decl_line(0x21)
-     357                            .dwattr $C$DW$T$64, DW_AT_decl_column(0x03)
-     358                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
-     359                            .dwattr $C$DW$T$2, DW_AT_name("void")
-     360                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
-     361                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
-     362                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
-     363                    $C$DW$T$65      .dwtag  DW_TAG_typedef, DW_AT_name("QueueHandle_t")
-     364                            .dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$3)
-     365                            .dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
-     366                            .dwattr $C$DW$T$65, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     367                            .dwattr $C$DW$T$65, DW_AT_decl_line(0x58)
-     368                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x10)
-     369                    $C$DW$T$66      .dwtag  DW_TAG_typedef, DW_AT_name("QueueSetHandle_t")
-     370                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$3)
-     371                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
-     372                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     373                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x5f)
-     374                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x10)
-     375                    $C$DW$T$67      .dwtag  DW_TAG_typedef, DW_AT_name("QueueSetMemberHandle_t")
-     376                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$3)
-     377                            .dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
-     378                            .dwattr $C$DW$T$67, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     379                            .dwattr $C$DW$T$67, DW_AT_decl_line(0x66)
-     380                            .dwattr $C$DW$T$67, DW_AT_decl_column(0x10)
-     381                    $C$DW$T$51      .dwtag  DW_TAG_typedef, DW_AT_name("TaskHandle_t")
-     382                            .dwattr $C$DW$T$51, DW_AT_type(*$C$DW$T$3)
-     383                            .dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
-     384                            .dwattr $C$DW$T$51, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     347                    $C$DW$29        .dwtag  DW_TAG_member
+     348                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$25)
+     349                            .dwattr $C$DW$29, DW_AT_name("value2")
+     350                            .dwattr $C$DW$29, DW_AT_TI_symbol_name("value2")
+     351                            .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+     352                            .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+     353                            .dwattr $C$DW$29, DW_AT_decl_file("..\Tasks\Task_Report.h")
+     354                            .dwattr $C$DW$29, DW_AT_decl_line(0x21)
+     355                            .dwattr $C$DW$29, DW_AT_decl_column(0x0b)
+     356                            .dwendtag $C$DW$T$26
+     357                    
+     358                            .dwattr $C$DW$T$26, DW_AT_decl_file("..\Tasks\Task_Report.h")
+     359                            .dwattr $C$DW$T$26, DW_AT_decl_line(0x1c)
+     360                            .dwattr $C$DW$T$26, DW_AT_decl_column(0x10)
+     361                    $C$DW$T$64      .dwtag  DW_TAG_typedef, DW_AT_name("ReportData_Item")
+     362                            .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$26)
+     363                            .dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
+     364                            .dwattr $C$DW$T$64, DW_AT_decl_file("..\Tasks\Task_Report.h")
+     365                            .dwattr $C$DW$T$64, DW_AT_decl_line(0x22)
+     366                            .dwattr $C$DW$T$64, DW_AT_decl_column(0x03)
+     367                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     368                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     369                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     370                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+     371                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     372                    $C$DW$T$65      .dwtag  DW_TAG_typedef, DW_AT_name("QueueHandle_t")
+     373                            .dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$3)
+     374                            .dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
+     375                            .dwattr $C$DW$T$65, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     376                            .dwattr $C$DW$T$65, DW_AT_decl_line(0x58)
+     377                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x10)
+     378                    $C$DW$T$66      .dwtag  DW_TAG_typedef, DW_AT_name("QueueSetHandle_t")
+     379                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$3)
+     380                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+     381                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     382                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x5f)
+     383                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x10)
+     384                    $C$DW$T$67      .dwtag  DW_TAG_typedef, DW_AT_name("QueueSetMemberHandle_t")
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    8
 
-     385                            .dwattr $C$DW$T$51, DW_AT_decl_line(0x67)
-     386                            .dwattr $C$DW$T$51, DW_AT_decl_column(0x10)
-     387                    
-     388                    $C$DW$T$38      .dwtag  DW_TAG_subroutine_type
-     389                            .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
-     390                    $C$DW$29        .dwtag  DW_TAG_formal_parameter
-     391                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$3)
-     392                            .dwendtag $C$DW$T$38
-     393                    
-     394                    $C$DW$T$39      .dwtag  DW_TAG_pointer_type
-     395                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
-     396                            .dwattr $C$DW$T$39, DW_AT_address_class(0x20)
-     397                    $C$DW$T$40      .dwtag  DW_TAG_typedef, DW_AT_name("TaskFunction_t")
-     398                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
-     399                            .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
-     400                            .dwattr $C$DW$T$40, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-     401                            .dwattr $C$DW$T$40, DW_AT_decl_line(0x4d)
-     402                            .dwattr $C$DW$T$40, DW_AT_decl_column(0x10)
-     403                    $C$DW$T$4       .dwtag  DW_TAG_base_type
-     404                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
-     405                            .dwattr $C$DW$T$4, DW_AT_name("bool")
-     406                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
-     407                    $C$DW$T$5       .dwtag  DW_TAG_base_type
-     408                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
-     409                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
-     410                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
-     411                    $C$DW$T$68      .dwtag  DW_TAG_typedef, DW_AT_name("int8_t")
-     412                            .dwattr $C$DW$T$68, DW_AT_type(*$C$DW$T$5)
-     413                            .dwattr $C$DW$T$68, DW_AT_language(DW_LANG_C)
-     414                            .dwattr $C$DW$T$68, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     415                            .dwattr $C$DW$T$68, DW_AT_decl_line(0x2a)
-     416                            .dwattr $C$DW$T$68, DW_AT_decl_column(0x1d)
-     417                    $C$DW$T$69      .dwtag  DW_TAG_typedef, DW_AT_name("int_least8_t")
-     418                            .dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$68)
-     419                            .dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
-     420                            .dwattr $C$DW$T$69, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     421                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x37)
-     422                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x17)
-     423                    $C$DW$T$6       .dwtag  DW_TAG_base_type
-     424                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
-     425                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
-     426                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
-     427                    $C$DW$T$19      .dwtag  DW_TAG_pointer_type
-     428                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$6)
-     429                            .dwattr $C$DW$T$19, DW_AT_address_class(0x20)
-     430                    $C$DW$T$21      .dwtag  DW_TAG_typedef, DW_AT_name("uint8_t")
-     431                            .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$6)
-     432                            .dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
-     433                            .dwattr $C$DW$T$21, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     434                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x2b)
-     435                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x1c)
-     436                    $C$DW$T$22      .dwtag  DW_TAG_pointer_type
-     437                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
-     438                            .dwattr $C$DW$T$22, DW_AT_address_class(0x20)
-     439                    $C$DW$T$70      .dwtag  DW_TAG_typedef, DW_AT_name("portCHAR")
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     385                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$3)
+     386                            .dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
+     387                            .dwattr $C$DW$T$67, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     388                            .dwattr $C$DW$T$67, DW_AT_decl_line(0x66)
+     389                            .dwattr $C$DW$T$67, DW_AT_decl_column(0x10)
+     390                    $C$DW$T$51      .dwtag  DW_TAG_typedef, DW_AT_name("TaskHandle_t")
+     391                            .dwattr $C$DW$T$51, DW_AT_type(*$C$DW$T$3)
+     392                            .dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
+     393                            .dwattr $C$DW$T$51, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     394                            .dwattr $C$DW$T$51, DW_AT_decl_line(0x67)
+     395                            .dwattr $C$DW$T$51, DW_AT_decl_column(0x10)
+     396                    
+     397                    $C$DW$T$38      .dwtag  DW_TAG_subroutine_type
+     398                            .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+     399                    $C$DW$30        .dwtag  DW_TAG_formal_parameter
+     400                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$3)
+     401                            .dwendtag $C$DW$T$38
+     402                    
+     403                    $C$DW$T$39      .dwtag  DW_TAG_pointer_type
+     404                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
+     405                            .dwattr $C$DW$T$39, DW_AT_address_class(0x20)
+     406                    $C$DW$T$40      .dwtag  DW_TAG_typedef, DW_AT_name("TaskFunction_t")
+     407                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+     408                            .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+     409                            .dwattr $C$DW$T$40, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+     410                            .dwattr $C$DW$T$40, DW_AT_decl_line(0x4d)
+     411                            .dwattr $C$DW$T$40, DW_AT_decl_column(0x10)
+     412                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     413                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     414                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     415                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     416                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     417                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     418                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     419                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     420                    $C$DW$T$68      .dwtag  DW_TAG_typedef, DW_AT_name("int8_t")
+     421                            .dwattr $C$DW$T$68, DW_AT_type(*$C$DW$T$5)
+     422                            .dwattr $C$DW$T$68, DW_AT_language(DW_LANG_C)
+     423                            .dwattr $C$DW$T$68, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     424                            .dwattr $C$DW$T$68, DW_AT_decl_line(0x2a)
+     425                            .dwattr $C$DW$T$68, DW_AT_decl_column(0x1d)
+     426                    $C$DW$T$69      .dwtag  DW_TAG_typedef, DW_AT_name("int_least8_t")
+     427                            .dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$68)
+     428                            .dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
+     429                            .dwattr $C$DW$T$69, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     430                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x37)
+     431                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x17)
+     432                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     433                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     434                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     435                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     436                    $C$DW$T$19      .dwtag  DW_TAG_pointer_type
+     437                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$6)
+     438                            .dwattr $C$DW$T$19, DW_AT_address_class(0x20)
+     439                    $C$DW$T$21      .dwtag  DW_TAG_typedef, DW_AT_name("uint8_t")
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE    9
 
-     440                            .dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$21)
-     441                            .dwattr $C$DW$T$70, DW_AT_language(DW_LANG_C)
-     442                            .dwattr $C$DW$T$70, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     443                            .dwattr $C$DW$T$70, DW_AT_decl_line(0x60)
-     444                            .dwattr $C$DW$T$70, DW_AT_decl_column(0x12)
-     445                    $C$DW$T$71      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least8_t")
-     446                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$21)
-     447                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
-     448                            .dwattr $C$DW$T$71, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     449                            .dwattr $C$DW$T$71, DW_AT_decl_line(0x38)
-     450                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x16)
-     451                    $C$DW$T$7       .dwtag  DW_TAG_base_type
-     452                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
-     453                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
-     454                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
-     455                    $C$DW$T$8       .dwtag  DW_TAG_base_type
-     456                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
-     457                            .dwattr $C$DW$T$8, DW_AT_name("short")
-     458                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
-     459                    $C$DW$T$72      .dwtag  DW_TAG_typedef, DW_AT_name("int16_t")
-     460                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$8)
-     461                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
-     462                            .dwattr $C$DW$T$72, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     463                            .dwattr $C$DW$T$72, DW_AT_decl_line(0x2c)
-     464                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x1d)
-     465                    $C$DW$T$73      .dwtag  DW_TAG_typedef, DW_AT_name("int_least16_t")
-     466                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$72)
-     467                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
-     468                            .dwattr $C$DW$T$73, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     469                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x3a)
-     470                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x17)
-     471                    $C$DW$T$74      .dwtag  DW_TAG_typedef, DW_AT_name("portSHORT")
-     472                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$72)
-     473                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
-     474                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     475                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x64)
-     476                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x12)
-     477                    $C$DW$T$9       .dwtag  DW_TAG_base_type
-     478                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
-     479                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
-     480                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
-     481                    $C$DW$T$75      .dwtag  DW_TAG_typedef, DW_AT_name("_Wchart")
-     482                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$9)
-     483                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
-     484                            .dwattr $C$DW$T$75, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-     485                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x1e5)
-     486                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x21)
-     487                    $C$DW$T$76      .dwtag  DW_TAG_typedef, DW_AT_name("_Wintt")
-     488                            .dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$9)
-     489                            .dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
-     490                            .dwattr $C$DW$T$76, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-     491                            .dwattr $C$DW$T$76, DW_AT_decl_line(0x1e6)
-     492                            .dwattr $C$DW$T$76, DW_AT_decl_column(0x21)
-     493                    $C$DW$T$45      .dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
-     494                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$9)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     440                            .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$6)
+     441                            .dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
+     442                            .dwattr $C$DW$T$21, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     443                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x2b)
+     444                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x1c)
+     445                    $C$DW$T$22      .dwtag  DW_TAG_pointer_type
+     446                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+     447                            .dwattr $C$DW$T$22, DW_AT_address_class(0x20)
+     448                    $C$DW$T$70      .dwtag  DW_TAG_typedef, DW_AT_name("portCHAR")
+     449                            .dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$21)
+     450                            .dwattr $C$DW$T$70, DW_AT_language(DW_LANG_C)
+     451                            .dwattr $C$DW$T$70, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     452                            .dwattr $C$DW$T$70, DW_AT_decl_line(0x60)
+     453                            .dwattr $C$DW$T$70, DW_AT_decl_column(0x12)
+     454                    $C$DW$T$71      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least8_t")
+     455                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$21)
+     456                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+     457                            .dwattr $C$DW$T$71, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     458                            .dwattr $C$DW$T$71, DW_AT_decl_line(0x38)
+     459                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x16)
+     460                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     461                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     462                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     463                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     464                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     465                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     466                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     467                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     468                    $C$DW$T$72      .dwtag  DW_TAG_typedef, DW_AT_name("int16_t")
+     469                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$8)
+     470                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+     471                            .dwattr $C$DW$T$72, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     472                            .dwattr $C$DW$T$72, DW_AT_decl_line(0x2c)
+     473                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x1d)
+     474                    $C$DW$T$73      .dwtag  DW_TAG_typedef, DW_AT_name("int_least16_t")
+     475                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$72)
+     476                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+     477                            .dwattr $C$DW$T$73, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     478                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x3a)
+     479                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x17)
+     480                    $C$DW$T$74      .dwtag  DW_TAG_typedef, DW_AT_name("portSHORT")
+     481                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$72)
+     482                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+     483                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     484                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x64)
+     485                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x12)
+     486                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     487                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     488                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     489                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     490                    $C$DW$T$75      .dwtag  DW_TAG_typedef, DW_AT_name("_Wchart")
+     491                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$9)
+     492                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+     493                            .dwattr $C$DW$T$75, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     494                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x1e5)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   10
 
-     495                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
-     496                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     497                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x2d)
-     498                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x1c)
-     499                    $C$DW$T$77      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least16_t")
-     500                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$45)
-     501                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
-     502                            .dwattr $C$DW$T$77, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     503                            .dwattr $C$DW$T$77, DW_AT_decl_line(0x3b)
-     504                            .dwattr $C$DW$T$77, DW_AT_decl_column(0x16)
-     505                    $C$DW$T$78      .dwtag  DW_TAG_typedef, DW_AT_name("wchar_t")
-     506                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$9)
-     507                            .dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
-     508                            .dwattr $C$DW$T$78, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
-     509                            .dwattr $C$DW$T$78, DW_AT_decl_line(0x41)
-     510                            .dwattr $C$DW$T$78, DW_AT_decl_column(0x1a)
-     511                    $C$DW$T$10      .dwtag  DW_TAG_base_type
-     512                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
-     513                            .dwattr $C$DW$T$10, DW_AT_name("int")
-     514                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
-     515                    $C$DW$T$79      .dwtag  DW_TAG_typedef, DW_AT_name("_Ptrdifft")
-     516                            .dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$10)
-     517                            .dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
-     518                            .dwattr $C$DW$T$79, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-     519                            .dwattr $C$DW$T$79, DW_AT_decl_line(0xa9)
-     520                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x1e)
-     521                    $C$DW$T$55      .dwtag  DW_TAG_typedef, DW_AT_name("int32_t")
-     522                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$10)
-     523                            .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
-     524                            .dwattr $C$DW$T$55, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     525                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x2e)
-     526                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x1d)
-     527                    $C$DW$T$56      .dwtag  DW_TAG_typedef, DW_AT_name("BaseType_t")
-     528                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
-     529                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
-     530                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     531                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x69)
-     532                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x12)
-     533                    
-     534                    $C$DW$T$80      .dwtag  DW_TAG_subroutine_type
-     535                            .dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$56)
-     536                            .dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
-     537                    $C$DW$30        .dwtag  DW_TAG_formal_parameter
-     538                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$3)
-     539                            .dwendtag $C$DW$T$80
-     540                    
-     541                    $C$DW$T$81      .dwtag  DW_TAG_pointer_type
-     542                            .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$80)
-     543                            .dwattr $C$DW$T$81, DW_AT_address_class(0x20)
-     544                    $C$DW$T$82      .dwtag  DW_TAG_typedef, DW_AT_name("TaskHookFunction_t")
-     545                            .dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$81)
-     546                            .dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
-     547                            .dwattr $C$DW$T$82, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     548                            .dwattr $C$DW$T$82, DW_AT_decl_line(0x6d)
-     549                            .dwattr $C$DW$T$82, DW_AT_decl_column(0x16)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     495                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x21)
+     496                    $C$DW$T$76      .dwtag  DW_TAG_typedef, DW_AT_name("_Wintt")
+     497                            .dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$9)
+     498                            .dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
+     499                            .dwattr $C$DW$T$76, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     500                            .dwattr $C$DW$T$76, DW_AT_decl_line(0x1e6)
+     501                            .dwattr $C$DW$T$76, DW_AT_decl_column(0x21)
+     502                    $C$DW$T$45      .dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
+     503                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$9)
+     504                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+     505                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     506                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x2d)
+     507                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x1c)
+     508                    $C$DW$T$77      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least16_t")
+     509                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$45)
+     510                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+     511                            .dwattr $C$DW$T$77, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     512                            .dwattr $C$DW$T$77, DW_AT_decl_line(0x3b)
+     513                            .dwattr $C$DW$T$77, DW_AT_decl_column(0x16)
+     514                    $C$DW$T$78      .dwtag  DW_TAG_typedef, DW_AT_name("wchar_t")
+     515                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$9)
+     516                            .dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
+     517                            .dwattr $C$DW$T$78, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+     518                            .dwattr $C$DW$T$78, DW_AT_decl_line(0x41)
+     519                            .dwattr $C$DW$T$78, DW_AT_decl_column(0x1a)
+     520                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     521                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     522                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     523                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     524                    $C$DW$T$79      .dwtag  DW_TAG_typedef, DW_AT_name("_Ptrdifft")
+     525                            .dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$10)
+     526                            .dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
+     527                            .dwattr $C$DW$T$79, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     528                            .dwattr $C$DW$T$79, DW_AT_decl_line(0xa9)
+     529                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x1e)
+     530                    $C$DW$T$55      .dwtag  DW_TAG_typedef, DW_AT_name("int32_t")
+     531                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$10)
+     532                            .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+     533                            .dwattr $C$DW$T$55, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     534                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x2e)
+     535                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x1d)
+     536                    $C$DW$T$56      .dwtag  DW_TAG_typedef, DW_AT_name("BaseType_t")
+     537                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+     538                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+     539                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     540                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x69)
+     541                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x12)
+     542                    
+     543                    $C$DW$T$80      .dwtag  DW_TAG_subroutine_type
+     544                            .dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$56)
+     545                            .dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
+     546                    $C$DW$31        .dwtag  DW_TAG_formal_parameter
+     547                            .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$3)
+     548                            .dwendtag $C$DW$T$80
+     549                    
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   11
 
-     550                    $C$DW$T$83      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast16_t")
-     551                            .dwattr $C$DW$T$83, DW_AT_type(*$C$DW$T$55)
-     552                            .dwattr $C$DW$T$83, DW_AT_language(DW_LANG_C)
-     553                            .dwattr $C$DW$T$83, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     554                            .dwattr $C$DW$T$83, DW_AT_decl_line(0x47)
-     555                            .dwattr $C$DW$T$83, DW_AT_decl_column(0x17)
-     556                    $C$DW$T$84      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast32_t")
-     557                            .dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$55)
-     558                            .dwattr $C$DW$T$84, DW_AT_language(DW_LANG_C)
-     559                            .dwattr $C$DW$T$84, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     560                            .dwattr $C$DW$T$84, DW_AT_decl_line(0x4a)
-     561                            .dwattr $C$DW$T$84, DW_AT_decl_column(0x17)
-     562                    $C$DW$T$85      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast8_t")
-     563                            .dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$55)
-     564                            .dwattr $C$DW$T$85, DW_AT_language(DW_LANG_C)
-     565                            .dwattr $C$DW$T$85, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     566                            .dwattr $C$DW$T$85, DW_AT_decl_line(0x45)
-     567                            .dwattr $C$DW$T$85, DW_AT_decl_column(0x17)
-     568                    $C$DW$T$86      .dwtag  DW_TAG_typedef, DW_AT_name("int_least32_t")
-     569                            .dwattr $C$DW$T$86, DW_AT_type(*$C$DW$T$55)
-     570                            .dwattr $C$DW$T$86, DW_AT_language(DW_LANG_C)
-     571                            .dwattr $C$DW$T$86, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     572                            .dwattr $C$DW$T$86, DW_AT_decl_line(0x3c)
-     573                            .dwattr $C$DW$T$86, DW_AT_decl_column(0x17)
-     574                    $C$DW$T$87      .dwtag  DW_TAG_typedef, DW_AT_name("portBASE_TYPE")
-     575                            .dwattr $C$DW$T$87, DW_AT_type(*$C$DW$T$55)
-     576                            .dwattr $C$DW$T$87, DW_AT_language(DW_LANG_C)
-     577                            .dwattr $C$DW$T$87, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     578                            .dwattr $C$DW$T$87, DW_AT_decl_line(0x66)
-     579                            .dwattr $C$DW$T$87, DW_AT_decl_column(0x12)
-     580                    $C$DW$T$88      .dwtag  DW_TAG_typedef, DW_AT_name("portLONG")
-     581                            .dwattr $C$DW$T$88, DW_AT_type(*$C$DW$T$55)
-     582                            .dwattr $C$DW$T$88, DW_AT_language(DW_LANG_C)
-     583                            .dwattr $C$DW$T$88, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     584                            .dwattr $C$DW$T$88, DW_AT_decl_line(0x63)
-     585                            .dwattr $C$DW$T$88, DW_AT_decl_column(0x12)
-     586                    $C$DW$T$89      .dwtag  DW_TAG_typedef, DW_AT_name("intptr_t")
-     587                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$10)
-     588                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
-     589                            .dwattr $C$DW$T$89, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     590                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x52)
-     591                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x1a)
-     592                    $C$DW$T$90      .dwtag  DW_TAG_typedef, DW_AT_name("ptrdiff_t")
-     593                            .dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$10)
-     594                            .dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
-     595                            .dwattr $C$DW$T$90, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
-     596                            .dwattr $C$DW$T$90, DW_AT_decl_line(0x36)
-     597                            .dwattr $C$DW$T$90, DW_AT_decl_column(0x1c)
-     598                    $C$DW$T$11      .dwtag  DW_TAG_base_type
-     599                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
-     600                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
-     601                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
-     602                    $C$DW$T$91      .dwtag  DW_TAG_typedef, DW_AT_name("_Sizet")
-     603                            .dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$11)
-     604                            .dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     550                    $C$DW$T$81      .dwtag  DW_TAG_pointer_type
+     551                            .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$80)
+     552                            .dwattr $C$DW$T$81, DW_AT_address_class(0x20)
+     553                    $C$DW$T$82      .dwtag  DW_TAG_typedef, DW_AT_name("TaskHookFunction_t")
+     554                            .dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$81)
+     555                            .dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
+     556                            .dwattr $C$DW$T$82, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     557                            .dwattr $C$DW$T$82, DW_AT_decl_line(0x6d)
+     558                            .dwattr $C$DW$T$82, DW_AT_decl_column(0x16)
+     559                    $C$DW$T$83      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast16_t")
+     560                            .dwattr $C$DW$T$83, DW_AT_type(*$C$DW$T$55)
+     561                            .dwattr $C$DW$T$83, DW_AT_language(DW_LANG_C)
+     562                            .dwattr $C$DW$T$83, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     563                            .dwattr $C$DW$T$83, DW_AT_decl_line(0x47)
+     564                            .dwattr $C$DW$T$83, DW_AT_decl_column(0x17)
+     565                    $C$DW$T$84      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast32_t")
+     566                            .dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$55)
+     567                            .dwattr $C$DW$T$84, DW_AT_language(DW_LANG_C)
+     568                            .dwattr $C$DW$T$84, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     569                            .dwattr $C$DW$T$84, DW_AT_decl_line(0x4a)
+     570                            .dwattr $C$DW$T$84, DW_AT_decl_column(0x17)
+     571                    $C$DW$T$85      .dwtag  DW_TAG_typedef, DW_AT_name("int_fast8_t")
+     572                            .dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$55)
+     573                            .dwattr $C$DW$T$85, DW_AT_language(DW_LANG_C)
+     574                            .dwattr $C$DW$T$85, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     575                            .dwattr $C$DW$T$85, DW_AT_decl_line(0x45)
+     576                            .dwattr $C$DW$T$85, DW_AT_decl_column(0x17)
+     577                    $C$DW$T$86      .dwtag  DW_TAG_typedef, DW_AT_name("int_least32_t")
+     578                            .dwattr $C$DW$T$86, DW_AT_type(*$C$DW$T$55)
+     579                            .dwattr $C$DW$T$86, DW_AT_language(DW_LANG_C)
+     580                            .dwattr $C$DW$T$86, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     581                            .dwattr $C$DW$T$86, DW_AT_decl_line(0x3c)
+     582                            .dwattr $C$DW$T$86, DW_AT_decl_column(0x17)
+     583                    $C$DW$T$87      .dwtag  DW_TAG_typedef, DW_AT_name("portBASE_TYPE")
+     584                            .dwattr $C$DW$T$87, DW_AT_type(*$C$DW$T$55)
+     585                            .dwattr $C$DW$T$87, DW_AT_language(DW_LANG_C)
+     586                            .dwattr $C$DW$T$87, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     587                            .dwattr $C$DW$T$87, DW_AT_decl_line(0x66)
+     588                            .dwattr $C$DW$T$87, DW_AT_decl_column(0x12)
+     589                    $C$DW$T$88      .dwtag  DW_TAG_typedef, DW_AT_name("portLONG")
+     590                            .dwattr $C$DW$T$88, DW_AT_type(*$C$DW$T$55)
+     591                            .dwattr $C$DW$T$88, DW_AT_language(DW_LANG_C)
+     592                            .dwattr $C$DW$T$88, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     593                            .dwattr $C$DW$T$88, DW_AT_decl_line(0x63)
+     594                            .dwattr $C$DW$T$88, DW_AT_decl_column(0x12)
+     595                    $C$DW$T$89      .dwtag  DW_TAG_typedef, DW_AT_name("intptr_t")
+     596                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$10)
+     597                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+     598                            .dwattr $C$DW$T$89, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     599                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x52)
+     600                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x1a)
+     601                    $C$DW$T$90      .dwtag  DW_TAG_typedef, DW_AT_name("ptrdiff_t")
+     602                            .dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$10)
+     603                            .dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
+     604                            .dwattr $C$DW$T$90, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   12
 
-     605                            .dwattr $C$DW$T$91, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-     606                            .dwattr $C$DW$T$91, DW_AT_decl_line(0xab)
-     607                            .dwattr $C$DW$T$91, DW_AT_decl_column(0x1a)
-     608                    $C$DW$T$23      .dwtag  DW_TAG_typedef, DW_AT_name("size_t")
-     609                            .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$11)
-     610                            .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
-     611                            .dwattr $C$DW$T$23, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
-     612                            .dwattr $C$DW$T$23, DW_AT_decl_line(0x3a)
-     613                            .dwattr $C$DW$T$23, DW_AT_decl_column(0x19)
-     614                    $C$DW$T$25      .dwtag  DW_TAG_typedef, DW_AT_name("uint32_t")
-     615                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$11)
-     616                            .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
-     617                            .dwattr $C$DW$T$25, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     618                            .dwattr $C$DW$T$25, DW_AT_decl_line(0x2f)
-     619                            .dwattr $C$DW$T$25, DW_AT_decl_column(0x1c)
-     620                    $C$DW$T$46      .dwtag  DW_TAG_typedef, DW_AT_name("StackType_t")
-     621                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$25)
-     622                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
-     623                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     624                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x68)
-     625                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x12)
-     626                    $C$DW$T$47      .dwtag  DW_TAG_pointer_type
-     627                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$46)
-     628                            .dwattr $C$DW$T$47, DW_AT_address_class(0x20)
-     629                    $C$DW$T$33      .dwtag  DW_TAG_typedef, DW_AT_name("TickType_t")
-     630                            .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$25)
-     631                            .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
-     632                            .dwattr $C$DW$T$33, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     633                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x70)
-     634                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x13)
-     635                    $C$DW$T$28      .dwtag  DW_TAG_typedef, DW_AT_name("UBaseType_t")
-     636                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$25)
-     637                            .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
-     638                            .dwattr $C$DW$T$28, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     639                            .dwattr $C$DW$T$28, DW_AT_decl_line(0x6a)
-     640                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x12)
-     641                    $C$DW$T$92      .dwtag  DW_TAG_typedef, DW_AT_name("portSTACK_TYPE")
-     642                            .dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$25)
-     643                            .dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
-     644                            .dwattr $C$DW$T$92, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     645                            .dwattr $C$DW$T$92, DW_AT_decl_line(0x65)
-     646                            .dwattr $C$DW$T$92, DW_AT_decl_column(0x12)
-     647                    $C$DW$T$93      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast16_t")
-     648                            .dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$25)
-     649                            .dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
-     650                            .dwattr $C$DW$T$93, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     651                            .dwattr $C$DW$T$93, DW_AT_decl_line(0x48)
-     652                            .dwattr $C$DW$T$93, DW_AT_decl_column(0x16)
-     653                    $C$DW$T$94      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast32_t")
-     654                            .dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$25)
-     655                            .dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
-     656                            .dwattr $C$DW$T$94, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     657                            .dwattr $C$DW$T$94, DW_AT_decl_line(0x4b)
-     658                            .dwattr $C$DW$T$94, DW_AT_decl_column(0x16)
-     659                    $C$DW$T$95      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast8_t")
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     605                            .dwattr $C$DW$T$90, DW_AT_decl_line(0x36)
+     606                            .dwattr $C$DW$T$90, DW_AT_decl_column(0x1c)
+     607                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     608                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     609                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     610                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     611                    $C$DW$T$91      .dwtag  DW_TAG_typedef, DW_AT_name("_Sizet")
+     612                            .dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$11)
+     613                            .dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
+     614                            .dwattr $C$DW$T$91, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     615                            .dwattr $C$DW$T$91, DW_AT_decl_line(0xab)
+     616                            .dwattr $C$DW$T$91, DW_AT_decl_column(0x1a)
+     617                    $C$DW$T$23      .dwtag  DW_TAG_typedef, DW_AT_name("size_t")
+     618                            .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$11)
+     619                            .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+     620                            .dwattr $C$DW$T$23, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdde
+     621                            .dwattr $C$DW$T$23, DW_AT_decl_line(0x3a)
+     622                            .dwattr $C$DW$T$23, DW_AT_decl_column(0x19)
+     623                    $C$DW$T$25      .dwtag  DW_TAG_typedef, DW_AT_name("uint32_t")
+     624                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$11)
+     625                            .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+     626                            .dwattr $C$DW$T$25, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     627                            .dwattr $C$DW$T$25, DW_AT_decl_line(0x2f)
+     628                            .dwattr $C$DW$T$25, DW_AT_decl_column(0x1c)
+     629                    $C$DW$T$46      .dwtag  DW_TAG_typedef, DW_AT_name("StackType_t")
+     630                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$25)
+     631                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+     632                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     633                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x68)
+     634                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x12)
+     635                    $C$DW$T$47      .dwtag  DW_TAG_pointer_type
+     636                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$46)
+     637                            .dwattr $C$DW$T$47, DW_AT_address_class(0x20)
+     638                    $C$DW$T$33      .dwtag  DW_TAG_typedef, DW_AT_name("TickType_t")
+     639                            .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$25)
+     640                            .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+     641                            .dwattr $C$DW$T$33, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     642                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x70)
+     643                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x13)
+     644                    $C$DW$T$28      .dwtag  DW_TAG_typedef, DW_AT_name("UBaseType_t")
+     645                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$25)
+     646                            .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+     647                            .dwattr $C$DW$T$28, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     648                            .dwattr $C$DW$T$28, DW_AT_decl_line(0x6a)
+     649                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x12)
+     650                    $C$DW$T$92      .dwtag  DW_TAG_typedef, DW_AT_name("portSTACK_TYPE")
+     651                            .dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$25)
+     652                            .dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
+     653                            .dwattr $C$DW$T$92, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     654                            .dwattr $C$DW$T$92, DW_AT_decl_line(0x65)
+     655                            .dwattr $C$DW$T$92, DW_AT_decl_column(0x12)
+     656                    $C$DW$T$93      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast16_t")
+     657                            .dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$25)
+     658                            .dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
+     659                            .dwattr $C$DW$T$93, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   13
 
-     660                            .dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$25)
-     661                            .dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
-     662                            .dwattr $C$DW$T$95, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     663                            .dwattr $C$DW$T$95, DW_AT_decl_line(0x46)
-     664                            .dwattr $C$DW$T$95, DW_AT_decl_column(0x16)
-     665                    $C$DW$T$96      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least32_t")
-     666                            .dwattr $C$DW$T$96, DW_AT_type(*$C$DW$T$25)
-     667                            .dwattr $C$DW$T$96, DW_AT_language(DW_LANG_C)
-     668                            .dwattr $C$DW$T$96, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     669                            .dwattr $C$DW$T$96, DW_AT_decl_line(0x3d)
-     670                            .dwattr $C$DW$T$96, DW_AT_decl_column(0x16)
-     671                    $C$DW$T$97      .dwtag  DW_TAG_typedef, DW_AT_name("uintptr_t")
-     672                            .dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$11)
-     673                            .dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
-     674                            .dwattr $C$DW$T$97, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
-     675                            .dwattr $C$DW$T$97, DW_AT_decl_line(0x53)
-     676                            .dwattr $C$DW$T$97, DW_AT_decl_column(0x1a)
-     677                    $C$DW$T$12      .dwtag  DW_TAG_base_type
-     678                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
-     679                            .dwattr $C$DW$T$12, DW_AT_name("long")
-     680                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
-     681                    $C$DW$T$98      .dwtag  DW_TAG_typedef, DW_AT_name("_Int32t")
-     682                            .dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$12)
-     683                            .dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
-     684                            .dwattr $C$DW$T$98, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
-     685                            .dwattr $C$DW$T$98, DW_AT_decl_line(0xa6)
-     686                            .dwattr $C$DW$T$98, DW_AT_decl_column(0x0e)
-     687                    $C$DW$T$99      .dwtag  DW_TAG_typedef, DW_AT_name("fpos_t")
-     688                            .dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$12)
-     689                            .dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
-     690                            .dwattr $C$DW$T$99, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio
-     691                            .dwattr $C$DW$T$99, DW_AT_decl_line(0x6e)
-     692                            .dwattr $C$DW$T$99, DW_AT_decl_column(0x0e)
-     693                    $C$DW$T$13      .dwtag  DW_TAG_base_type
-     694                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
-     695                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
-     696                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
-     697                    $C$DW$T$100     .dwtag  DW_TAG_typedef, DW_AT_name("_Uint32t")
-     698                            .dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$13)
-     699                            .dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
-     700                            .dwattr $C$DW$T$100, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
-     701                            .dwattr $C$DW$T$100, DW_AT_decl_line(0xa7)
-     702                            .dwattr $C$DW$T$100, DW_AT_decl_column(0x17)
-     703                    $C$DW$T$14      .dwtag  DW_TAG_base_type
-     704                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
-     705                            .dwattr $C$DW$T$14, DW_AT_name("long long")
-     706                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
-     707                    $C$DW$T$101     .dwtag  DW_TAG_typedef, DW_AT_name("_Longlong")
-     708                            .dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$14)
-     709                            .dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
-     710                            .dwattr $C$DW$T$101, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
-     711                            .dwattr $C$DW$T$101, DW_AT_decl_line(0x1b5)
-     712                            .dwattr $C$DW$T$101, DW_AT_decl_column(0x13)
-     713                    $C$DW$T$102     .dwtag  DW_TAG_typedef, DW_AT_name("int64_t")
-     714                            .dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$14)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     660                            .dwattr $C$DW$T$93, DW_AT_decl_line(0x48)
+     661                            .dwattr $C$DW$T$93, DW_AT_decl_column(0x16)
+     662                    $C$DW$T$94      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast32_t")
+     663                            .dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$25)
+     664                            .dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
+     665                            .dwattr $C$DW$T$94, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     666                            .dwattr $C$DW$T$94, DW_AT_decl_line(0x4b)
+     667                            .dwattr $C$DW$T$94, DW_AT_decl_column(0x16)
+     668                    $C$DW$T$95      .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast8_t")
+     669                            .dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$25)
+     670                            .dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
+     671                            .dwattr $C$DW$T$95, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     672                            .dwattr $C$DW$T$95, DW_AT_decl_line(0x46)
+     673                            .dwattr $C$DW$T$95, DW_AT_decl_column(0x16)
+     674                    $C$DW$T$96      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least32_t")
+     675                            .dwattr $C$DW$T$96, DW_AT_type(*$C$DW$T$25)
+     676                            .dwattr $C$DW$T$96, DW_AT_language(DW_LANG_C)
+     677                            .dwattr $C$DW$T$96, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     678                            .dwattr $C$DW$T$96, DW_AT_decl_line(0x3d)
+     679                            .dwattr $C$DW$T$96, DW_AT_decl_column(0x16)
+     680                    $C$DW$T$97      .dwtag  DW_TAG_typedef, DW_AT_name("uintptr_t")
+     681                            .dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$11)
+     682                            .dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
+     683                            .dwattr $C$DW$T$97, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdin
+     684                            .dwattr $C$DW$T$97, DW_AT_decl_line(0x53)
+     685                            .dwattr $C$DW$T$97, DW_AT_decl_column(0x1a)
+     686                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+     687                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     688                            .dwattr $C$DW$T$12, DW_AT_name("long")
+     689                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+     690                    $C$DW$T$98      .dwtag  DW_TAG_typedef, DW_AT_name("_Int32t")
+     691                            .dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$12)
+     692                            .dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
+     693                            .dwattr $C$DW$T$98, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yvals
+     694                            .dwattr $C$DW$T$98, DW_AT_decl_line(0xa6)
+     695                            .dwattr $C$DW$T$98, DW_AT_decl_column(0x0e)
+     696                    $C$DW$T$99      .dwtag  DW_TAG_typedef, DW_AT_name("fpos_t")
+     697                            .dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$12)
+     698                            .dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
+     699                            .dwattr $C$DW$T$99, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdio
+     700                            .dwattr $C$DW$T$99, DW_AT_decl_line(0x6e)
+     701                            .dwattr $C$DW$T$99, DW_AT_decl_column(0x0e)
+     702                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+     703                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     704                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     705                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+     706                    $C$DW$T$100     .dwtag  DW_TAG_typedef, DW_AT_name("_Uint32t")
+     707                            .dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$13)
+     708                            .dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
+     709                            .dwattr $C$DW$T$100, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
+     710                            .dwattr $C$DW$T$100, DW_AT_decl_line(0xa7)
+     711                            .dwattr $C$DW$T$100, DW_AT_decl_column(0x17)
+     712                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+     713                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     714                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   14
 
-     715                            .dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
-     716                            .dwattr $C$DW$T$102, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     717                            .dwattr $C$DW$T$102, DW_AT_decl_line(0x32)
-     718                            .dwattr $C$DW$T$102, DW_AT_decl_column(0x21)
-     719                    $C$DW$T$103     .dwtag  DW_TAG_typedef, DW_AT_name("int_fast64_t")
-     720                            .dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$102)
-     721                            .dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
-     722                            .dwattr $C$DW$T$103, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     723                            .dwattr $C$DW$T$103, DW_AT_decl_line(0x4e)
-     724                            .dwattr $C$DW$T$103, DW_AT_decl_column(0x17)
-     725                    $C$DW$T$104     .dwtag  DW_TAG_typedef, DW_AT_name("int_least64_t")
-     726                            .dwattr $C$DW$T$104, DW_AT_type(*$C$DW$T$102)
-     727                            .dwattr $C$DW$T$104, DW_AT_language(DW_LANG_C)
-     728                            .dwattr $C$DW$T$104, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     729                            .dwattr $C$DW$T$104, DW_AT_decl_line(0x40)
-     730                            .dwattr $C$DW$T$104, DW_AT_decl_column(0x17)
-     731                    $C$DW$T$105     .dwtag  DW_TAG_typedef, DW_AT_name("portDOUBLE")
-     732                            .dwattr $C$DW$T$105, DW_AT_type(*$C$DW$T$102)
-     733                            .dwattr $C$DW$T$105, DW_AT_language(DW_LANG_C)
-     734                            .dwattr $C$DW$T$105, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
-     735                            .dwattr $C$DW$T$105, DW_AT_decl_line(0x62)
-     736                            .dwattr $C$DW$T$105, DW_AT_decl_column(0x12)
-     737                    $C$DW$T$106     .dwtag  DW_TAG_typedef, DW_AT_name("intmax_t")
-     738                            .dwattr $C$DW$T$106, DW_AT_type(*$C$DW$T$14)
-     739                            .dwattr $C$DW$T$106, DW_AT_language(DW_LANG_C)
-     740                            .dwattr $C$DW$T$106, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     741                            .dwattr $C$DW$T$106, DW_AT_decl_line(0x56)
-     742                            .dwattr $C$DW$T$106, DW_AT_decl_column(0x20)
-     743                    $C$DW$T$15      .dwtag  DW_TAG_base_type
-     744                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
-     745                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
-     746                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
-     747                    $C$DW$T$107     .dwtag  DW_TAG_typedef, DW_AT_name("_ULonglong")
-     748                            .dwattr $C$DW$T$107, DW_AT_type(*$C$DW$T$15)
-     749                            .dwattr $C$DW$T$107, DW_AT_language(DW_LANG_C)
-     750                            .dwattr $C$DW$T$107, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
-     751                            .dwattr $C$DW$T$107, DW_AT_decl_line(0x1b6)
-     752                            .dwattr $C$DW$T$107, DW_AT_decl_column(0x14)
-     753                    $C$DW$T$108     .dwtag  DW_TAG_typedef, DW_AT_name("uint64_t")
-     754                            .dwattr $C$DW$T$108, DW_AT_type(*$C$DW$T$15)
-     755                            .dwattr $C$DW$T$108, DW_AT_language(DW_LANG_C)
-     756                            .dwattr $C$DW$T$108, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     757                            .dwattr $C$DW$T$108, DW_AT_decl_line(0x33)
-     758                            .dwattr $C$DW$T$108, DW_AT_decl_column(0x20)
-     759                    $C$DW$T$109     .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast64_t")
-     760                            .dwattr $C$DW$T$109, DW_AT_type(*$C$DW$T$108)
-     761                            .dwattr $C$DW$T$109, DW_AT_language(DW_LANG_C)
-     762                            .dwattr $C$DW$T$109, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     763                            .dwattr $C$DW$T$109, DW_AT_decl_line(0x4f)
-     764                            .dwattr $C$DW$T$109, DW_AT_decl_column(0x16)
-     765                    $C$DW$T$110     .dwtag  DW_TAG_typedef, DW_AT_name("uint_least64_t")
-     766                            .dwattr $C$DW$T$110, DW_AT_type(*$C$DW$T$108)
-     767                            .dwattr $C$DW$T$110, DW_AT_language(DW_LANG_C)
-     768                            .dwattr $C$DW$T$110, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     769                            .dwattr $C$DW$T$110, DW_AT_decl_line(0x41)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     715                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     716                    $C$DW$T$101     .dwtag  DW_TAG_typedef, DW_AT_name("_Longlong")
+     717                            .dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$14)
+     718                            .dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
+     719                            .dwattr $C$DW$T$101, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
+     720                            .dwattr $C$DW$T$101, DW_AT_decl_line(0x1b5)
+     721                            .dwattr $C$DW$T$101, DW_AT_decl_column(0x13)
+     722                    $C$DW$T$102     .dwtag  DW_TAG_typedef, DW_AT_name("int64_t")
+     723                            .dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$14)
+     724                            .dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
+     725                            .dwattr $C$DW$T$102, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     726                            .dwattr $C$DW$T$102, DW_AT_decl_line(0x32)
+     727                            .dwattr $C$DW$T$102, DW_AT_decl_column(0x21)
+     728                    $C$DW$T$103     .dwtag  DW_TAG_typedef, DW_AT_name("int_fast64_t")
+     729                            .dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$102)
+     730                            .dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
+     731                            .dwattr $C$DW$T$103, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     732                            .dwattr $C$DW$T$103, DW_AT_decl_line(0x4e)
+     733                            .dwattr $C$DW$T$103, DW_AT_decl_column(0x17)
+     734                    $C$DW$T$104     .dwtag  DW_TAG_typedef, DW_AT_name("int_least64_t")
+     735                            .dwattr $C$DW$T$104, DW_AT_type(*$C$DW$T$102)
+     736                            .dwattr $C$DW$T$104, DW_AT_language(DW_LANG_C)
+     737                            .dwattr $C$DW$T$104, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     738                            .dwattr $C$DW$T$104, DW_AT_decl_line(0x40)
+     739                            .dwattr $C$DW$T$104, DW_AT_decl_column(0x17)
+     740                    $C$DW$T$105     .dwtag  DW_TAG_typedef, DW_AT_name("portDOUBLE")
+     741                            .dwattr $C$DW$T$105, DW_AT_type(*$C$DW$T$102)
+     742                            .dwattr $C$DW$T$105, DW_AT_language(DW_LANG_C)
+     743                            .dwattr $C$DW$T$105, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
+     744                            .dwattr $C$DW$T$105, DW_AT_decl_line(0x62)
+     745                            .dwattr $C$DW$T$105, DW_AT_decl_column(0x12)
+     746                    $C$DW$T$106     .dwtag  DW_TAG_typedef, DW_AT_name("intmax_t")
+     747                            .dwattr $C$DW$T$106, DW_AT_type(*$C$DW$T$14)
+     748                            .dwattr $C$DW$T$106, DW_AT_language(DW_LANG_C)
+     749                            .dwattr $C$DW$T$106, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     750                            .dwattr $C$DW$T$106, DW_AT_decl_line(0x56)
+     751                            .dwattr $C$DW$T$106, DW_AT_decl_column(0x20)
+     752                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+     753                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     754                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     755                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+     756                    $C$DW$T$107     .dwtag  DW_TAG_typedef, DW_AT_name("_ULonglong")
+     757                            .dwattr $C$DW$T$107, DW_AT_type(*$C$DW$T$15)
+     758                            .dwattr $C$DW$T$107, DW_AT_language(DW_LANG_C)
+     759                            .dwattr $C$DW$T$107, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
+     760                            .dwattr $C$DW$T$107, DW_AT_decl_line(0x1b6)
+     761                            .dwattr $C$DW$T$107, DW_AT_decl_column(0x14)
+     762                    $C$DW$T$108     .dwtag  DW_TAG_typedef, DW_AT_name("uint64_t")
+     763                            .dwattr $C$DW$T$108, DW_AT_type(*$C$DW$T$15)
+     764                            .dwattr $C$DW$T$108, DW_AT_language(DW_LANG_C)
+     765                            .dwattr $C$DW$T$108, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     766                            .dwattr $C$DW$T$108, DW_AT_decl_line(0x33)
+     767                            .dwattr $C$DW$T$108, DW_AT_decl_column(0x20)
+     768                    $C$DW$T$109     .dwtag  DW_TAG_typedef, DW_AT_name("uint_fast64_t")
+     769                            .dwattr $C$DW$T$109, DW_AT_type(*$C$DW$T$108)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   15
 
-     770                            .dwattr $C$DW$T$110, DW_AT_decl_column(0x16)
-     771                    $C$DW$T$111     .dwtag  DW_TAG_typedef, DW_AT_name("uintmax_t")
-     772                            .dwattr $C$DW$T$111, DW_AT_type(*$C$DW$T$15)
-     773                            .dwattr $C$DW$T$111, DW_AT_language(DW_LANG_C)
-     774                            .dwattr $C$DW$T$111, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
-     775                            .dwattr $C$DW$T$111, DW_AT_decl_line(0x57)
-     776                            .dwattr $C$DW$T$111, DW_AT_decl_column(0x20)
-     777                    $C$DW$T$16      .dwtag  DW_TAG_base_type
-     778                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
-     779                            .dwattr $C$DW$T$16, DW_AT_name("float")
-     780                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
-     781                    $C$DW$T$112     .dwtag  DW_TAG_typedef, DW_AT_name("portFLOAT")
-     782                            .dwattr $C$DW$T$112, DW_AT_type(*$C$DW$T$16)
-     783                            .dwattr $C$DW$T$112, DW_AT_language(DW_LANG_C)
-     784                            .dwattr $C$DW$T$112, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
-     785                            .dwattr $C$DW$T$112, DW_AT_decl_line(0x61)
-     786                            .dwattr $C$DW$T$112, DW_AT_decl_column(0x10)
-     787                    $C$DW$T$17      .dwtag  DW_TAG_base_type
-     788                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
-     789                            .dwattr $C$DW$T$17, DW_AT_name("double")
-     790                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
-     791                    $C$DW$T$18      .dwtag  DW_TAG_base_type
-     792                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
-     793                            .dwattr $C$DW$T$18, DW_AT_name("long double")
-     794                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
-     795                    $C$DW$T$113     .dwtag  DW_TAG_typedef, DW_AT_name("_Sysch_t")
-     796                            .dwattr $C$DW$T$113, DW_AT_type(*$C$DW$T$6)
-     797                            .dwattr $C$DW$T$113, DW_AT_language(DW_LANG_C)
-     798                            .dwattr $C$DW$T$113, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
-     799                            .dwattr $C$DW$T$113, DW_AT_decl_line(0x218)
-     800                            .dwattr $C$DW$T$113, DW_AT_decl_column(0x0e)
-     801                    $C$DW$T$42      .dwtag  DW_TAG_const_type
-     802                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$6)
-     803                    $C$DW$T$43      .dwtag  DW_TAG_pointer_type
-     804                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$42)
-     805                            .dwattr $C$DW$T$43, DW_AT_address_class(0x20)
-     806                    $C$DW$T$44      .dwtag  DW_TAG_const_type
-     807                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
-     808                    $C$DW$T$114     .dwtag  DW_TAG_pointer_type
-     809                            .dwattr $C$DW$T$114, DW_AT_type(*$C$DW$T$6)
-     810                            .dwattr $C$DW$T$114, DW_AT_address_class(0x20)
-     811                    $C$DW$T$115     .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
-     812                            .dwattr $C$DW$T$115, DW_AT_type(*$C$DW$T$114)
-     813                            .dwattr $C$DW$T$115, DW_AT_language(DW_LANG_C)
-     814                            .dwattr $C$DW$T$115, DW_AT_decl_file("../Tasks/Task_PID.c")
-     815                            .dwattr $C$DW$T$115, DW_AT_decl_line(0x41)
-     816                            .dwattr $C$DW$T$115, DW_AT_decl_column(0x01)
-     817                    
-     818                    $C$DW$T$27      .dwtag  DW_TAG_structure_type
-     819                            .dwattr $C$DW$T$27, DW_AT_name("__va_list")
-     820                            .dwattr $C$DW$T$27, DW_AT_byte_size(0x04)
-     821                    $C$DW$31        .dwtag  DW_TAG_member
-     822                            .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$3)
-     823                            .dwattr $C$DW$31, DW_AT_name("__ap")
-     824                            .dwattr $C$DW$31, DW_AT_TI_symbol_name("__ap")
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     770                            .dwattr $C$DW$T$109, DW_AT_language(DW_LANG_C)
+     771                            .dwattr $C$DW$T$109, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     772                            .dwattr $C$DW$T$109, DW_AT_decl_line(0x4f)
+     773                            .dwattr $C$DW$T$109, DW_AT_decl_column(0x16)
+     774                    $C$DW$T$110     .dwtag  DW_TAG_typedef, DW_AT_name("uint_least64_t")
+     775                            .dwattr $C$DW$T$110, DW_AT_type(*$C$DW$T$108)
+     776                            .dwattr $C$DW$T$110, DW_AT_language(DW_LANG_C)
+     777                            .dwattr $C$DW$T$110, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     778                            .dwattr $C$DW$T$110, DW_AT_decl_line(0x41)
+     779                            .dwattr $C$DW$T$110, DW_AT_decl_column(0x16)
+     780                    $C$DW$T$111     .dwtag  DW_TAG_typedef, DW_AT_name("uintmax_t")
+     781                            .dwattr $C$DW$T$111, DW_AT_type(*$C$DW$T$15)
+     782                            .dwattr $C$DW$T$111, DW_AT_language(DW_LANG_C)
+     783                            .dwattr $C$DW$T$111, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdi
+     784                            .dwattr $C$DW$T$111, DW_AT_decl_line(0x57)
+     785                            .dwattr $C$DW$T$111, DW_AT_decl_column(0x20)
+     786                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+     787                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     788                            .dwattr $C$DW$T$16, DW_AT_name("float")
+     789                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+     790                    $C$DW$T$112     .dwtag  DW_TAG_typedef, DW_AT_name("portFLOAT")
+     791                            .dwattr $C$DW$T$112, DW_AT_type(*$C$DW$T$16)
+     792                            .dwattr $C$DW$T$112, DW_AT_language(DW_LANG_C)
+     793                            .dwattr $C$DW$T$112, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
+     794                            .dwattr $C$DW$T$112, DW_AT_decl_line(0x61)
+     795                            .dwattr $C$DW$T$112, DW_AT_decl_column(0x10)
+     796                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+     797                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     798                            .dwattr $C$DW$T$17, DW_AT_name("double")
+     799                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+     800                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+     801                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     802                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+     803                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+     804                    $C$DW$T$113     .dwtag  DW_TAG_typedef, DW_AT_name("_Sysch_t")
+     805                            .dwattr $C$DW$T$113, DW_AT_type(*$C$DW$T$6)
+     806                            .dwattr $C$DW$T$113, DW_AT_language(DW_LANG_C)
+     807                            .dwattr $C$DW$T$113, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
+     808                            .dwattr $C$DW$T$113, DW_AT_decl_line(0x218)
+     809                            .dwattr $C$DW$T$113, DW_AT_decl_column(0x0e)
+     810                    $C$DW$T$42      .dwtag  DW_TAG_const_type
+     811                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$6)
+     812                    $C$DW$T$43      .dwtag  DW_TAG_pointer_type
+     813                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$42)
+     814                            .dwattr $C$DW$T$43, DW_AT_address_class(0x20)
+     815                    $C$DW$T$44      .dwtag  DW_TAG_const_type
+     816                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+     817                    $C$DW$T$114     .dwtag  DW_TAG_pointer_type
+     818                            .dwattr $C$DW$T$114, DW_AT_type(*$C$DW$T$6)
+     819                            .dwattr $C$DW$T$114, DW_AT_address_class(0x20)
+     820                    $C$DW$T$115     .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
+     821                            .dwattr $C$DW$T$115, DW_AT_type(*$C$DW$T$114)
+     822                            .dwattr $C$DW$T$115, DW_AT_language(DW_LANG_C)
+     823                            .dwattr $C$DW$T$115, DW_AT_decl_file("../Tasks/Task_PID.c")
+     824                            .dwattr $C$DW$T$115, DW_AT_decl_line(0x41)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   16
 
-     825                            .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-     826                            .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
-     827                            .dwattr $C$DW$31, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.
-     828                            .dwattr $C$DW$31, DW_AT_decl_line(0x36)
-     829                            .dwattr $C$DW$31, DW_AT_decl_column(0x0c)
-     830                            .dwendtag $C$DW$T$27
-     831                    
-     832                            .dwattr $C$DW$T$27, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdar
-     833                            .dwattr $C$DW$T$27, DW_AT_decl_line(0x35)
-     834                            .dwattr $C$DW$T$27, DW_AT_decl_column(0x10)
-     835                    $C$DW$T$116     .dwtag  DW_TAG_typedef, DW_AT_name("va_list")
-     836                            .dwattr $C$DW$T$116, DW_AT_type(*$C$DW$T$27)
-     837                            .dwattr $C$DW$T$116, DW_AT_language(DW_LANG_C)
-     838                            .dwattr $C$DW$T$116, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stda
-     839                            .dwattr $C$DW$T$116, DW_AT_decl_line(0x37)
-     840                            .dwattr $C$DW$T$116, DW_AT_decl_column(0x03)
-     841                    $C$DW$T$117     .dwtag  DW_TAG_typedef, DW_AT_name("_Va_list")
-     842                            .dwattr $C$DW$T$117, DW_AT_type(*$C$DW$T$116)
-     843                            .dwattr $C$DW$T$117, DW_AT_language(DW_LANG_C)
-     844                            .dwattr $C$DW$T$117, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
-     845                            .dwattr $C$DW$T$117, DW_AT_decl_line(0x1f6)
-     846                            .dwattr $C$DW$T$117, DW_AT_decl_column(0x17)
-     847                    
-     848                    $C$DW$T$32      .dwtag  DW_TAG_structure_type
-     849                            .dwattr $C$DW$T$32, DW_AT_name("xLIST")
-     850                            .dwattr $C$DW$T$32, DW_AT_byte_size(0x14)
-     851                    $C$DW$32        .dwtag  DW_TAG_member
-     852                            .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$28)
-     853                            .dwattr $C$DW$32, DW_AT_name("uxNumberOfItems")
-     854                            .dwattr $C$DW$32, DW_AT_TI_symbol_name("uxNumberOfItems")
-     855                            .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-     856                            .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
-     857                            .dwattr $C$DW$32, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     858                            .dwattr $C$DW$32, DW_AT_decl_line(0xd0)
-     859                            .dwattr $C$DW$32, DW_AT_decl_column(0x22)
+     825                            .dwattr $C$DW$T$115, DW_AT_decl_column(0x01)
+     826                    
+     827                    $C$DW$T$27      .dwtag  DW_TAG_structure_type
+     828                            .dwattr $C$DW$T$27, DW_AT_name("__va_list")
+     829                            .dwattr $C$DW$T$27, DW_AT_byte_size(0x04)
+     830                    $C$DW$32        .dwtag  DW_TAG_member
+     831                            .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$3)
+     832                            .dwattr $C$DW$32, DW_AT_name("__ap")
+     833                            .dwattr $C$DW$32, DW_AT_TI_symbol_name("__ap")
+     834                            .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     835                            .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+     836                            .dwattr $C$DW$32, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.
+     837                            .dwattr $C$DW$32, DW_AT_decl_line(0x36)
+     838                            .dwattr $C$DW$32, DW_AT_decl_column(0x0c)
+     839                            .dwendtag $C$DW$T$27
+     840                    
+     841                            .dwattr $C$DW$T$27, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdar
+     842                            .dwattr $C$DW$T$27, DW_AT_decl_line(0x35)
+     843                            .dwattr $C$DW$T$27, DW_AT_decl_column(0x10)
+     844                    $C$DW$T$116     .dwtag  DW_TAG_typedef, DW_AT_name("va_list")
+     845                            .dwattr $C$DW$T$116, DW_AT_type(*$C$DW$T$27)
+     846                            .dwattr $C$DW$T$116, DW_AT_language(DW_LANG_C)
+     847                            .dwattr $C$DW$T$116, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stda
+     848                            .dwattr $C$DW$T$116, DW_AT_decl_line(0x37)
+     849                            .dwattr $C$DW$T$116, DW_AT_decl_column(0x03)
+     850                    $C$DW$T$117     .dwtag  DW_TAG_typedef, DW_AT_name("_Va_list")
+     851                            .dwattr $C$DW$T$117, DW_AT_type(*$C$DW$T$116)
+     852                            .dwattr $C$DW$T$117, DW_AT_language(DW_LANG_C)
+     853                            .dwattr $C$DW$T$117, DW_AT_decl_file("C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/yval
+     854                            .dwattr $C$DW$T$117, DW_AT_decl_line(0x1f6)
+     855                            .dwattr $C$DW$T$117, DW_AT_decl_column(0x17)
+     856                    
+     857                    $C$DW$T$32      .dwtag  DW_TAG_structure_type
+     858                            .dwattr $C$DW$T$32, DW_AT_name("xLIST")
+     859                            .dwattr $C$DW$T$32, DW_AT_byte_size(0x14)
      860                    $C$DW$33        .dwtag  DW_TAG_member
-     861                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$30)
-     862                            .dwattr $C$DW$33, DW_AT_name("pxIndex")
-     863                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("pxIndex")
-     864                            .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     861                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$28)
+     862                            .dwattr $C$DW$33, DW_AT_name("uxNumberOfItems")
+     863                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("uxNumberOfItems")
+     864                            .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
      865                            .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
      866                            .dwattr $C$DW$33, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     867                            .dwattr $C$DW$33, DW_AT_decl_line(0xd1)
-     868                            .dwattr $C$DW$33, DW_AT_decl_column(0x23)
+     867                            .dwattr $C$DW$33, DW_AT_decl_line(0xd0)
+     868                            .dwattr $C$DW$33, DW_AT_decl_column(0x22)
      869                    $C$DW$34        .dwtag  DW_TAG_member
-     870                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$31)
-     871                            .dwattr $C$DW$34, DW_AT_name("xListEnd")
-     872                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("xListEnd")
-     873                            .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     870                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$30)
+     871                            .dwattr $C$DW$34, DW_AT_name("pxIndex")
+     872                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("pxIndex")
+     873                            .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
      874                            .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
      875                            .dwattr $C$DW$34, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     876                            .dwattr $C$DW$34, DW_AT_decl_line(0xd2)
-     877                            .dwattr $C$DW$34, DW_AT_decl_column(0x11)
-     878                            .dwendtag $C$DW$T$32
-     879                    
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     876                            .dwattr $C$DW$34, DW_AT_decl_line(0xd1)
+     877                            .dwattr $C$DW$34, DW_AT_decl_column(0x23)
+     878                    $C$DW$35        .dwtag  DW_TAG_member
+     879                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$31)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   17
 
-     880                            .dwattr $C$DW$T$32, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-     881                            .dwattr $C$DW$T$32, DW_AT_decl_line(0xcd)
-     882                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x10)
-     883                    $C$DW$T$118     .dwtag  DW_TAG_typedef, DW_AT_name("List_t")
-     884                            .dwattr $C$DW$T$118, DW_AT_type(*$C$DW$T$32)
-     885                            .dwattr $C$DW$T$118, DW_AT_language(DW_LANG_C)
-     886                            .dwattr $C$DW$T$118, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_S
-     887                            .dwattr $C$DW$T$118, DW_AT_decl_line(0xd4)
-     888                            .dwattr $C$DW$T$118, DW_AT_decl_column(0x03)
-     889                    
-     890                    $C$DW$T$35      .dwtag  DW_TAG_structure_type
-     891                            .dwattr $C$DW$T$35, DW_AT_name("xLIST_ITEM")
-     892                            .dwattr $C$DW$T$35, DW_AT_byte_size(0x14)
-     893                    $C$DW$35        .dwtag  DW_TAG_member
-     894                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$33)
-     895                            .dwattr $C$DW$35, DW_AT_name("xItemValue")
-     896                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("xItemValue")
-     897                            .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-     898                            .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
-     899                            .dwattr $C$DW$35, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     900                            .dwattr $C$DW$35, DW_AT_decl_line(0xb8)
-     901                            .dwattr $C$DW$35, DW_AT_decl_column(0x21)
+     880                            .dwattr $C$DW$35, DW_AT_name("xListEnd")
+     881                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("xListEnd")
+     882                            .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     883                            .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
+     884                            .dwattr $C$DW$35, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
+     885                            .dwattr $C$DW$35, DW_AT_decl_line(0xd2)
+     886                            .dwattr $C$DW$35, DW_AT_decl_column(0x11)
+     887                            .dwendtag $C$DW$T$32
+     888                    
+     889                            .dwattr $C$DW$T$32, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+     890                            .dwattr $C$DW$T$32, DW_AT_decl_line(0xcd)
+     891                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x10)
+     892                    $C$DW$T$118     .dwtag  DW_TAG_typedef, DW_AT_name("List_t")
+     893                            .dwattr $C$DW$T$118, DW_AT_type(*$C$DW$T$32)
+     894                            .dwattr $C$DW$T$118, DW_AT_language(DW_LANG_C)
+     895                            .dwattr $C$DW$T$118, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_S
+     896                            .dwattr $C$DW$T$118, DW_AT_decl_line(0xd4)
+     897                            .dwattr $C$DW$T$118, DW_AT_decl_column(0x03)
+     898                    
+     899                    $C$DW$T$35      .dwtag  DW_TAG_structure_type
+     900                            .dwattr $C$DW$T$35, DW_AT_name("xLIST_ITEM")
+     901                            .dwattr $C$DW$T$35, DW_AT_byte_size(0x14)
      902                    $C$DW$36        .dwtag  DW_TAG_member
-     903                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$34)
-     904                            .dwattr $C$DW$36, DW_AT_name("pxNext")
-     905                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("pxNext")
-     906                            .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     903                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$33)
+     904                            .dwattr $C$DW$36, DW_AT_name("xItemValue")
+     905                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("xItemValue")
+     906                            .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
      907                            .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
      908                            .dwattr $C$DW$36, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     909                            .dwattr $C$DW$36, DW_AT_decl_line(0xb9)
-     910                            .dwattr $C$DW$36, DW_AT_decl_column(0x2a)
+     909                            .dwattr $C$DW$36, DW_AT_decl_line(0xb8)
+     910                            .dwattr $C$DW$36, DW_AT_decl_column(0x21)
      911                    $C$DW$37        .dwtag  DW_TAG_member
      912                            .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$34)
-     913                            .dwattr $C$DW$37, DW_AT_name("pxPrevious")
-     914                            .dwattr $C$DW$37, DW_AT_TI_symbol_name("pxPrevious")
-     915                            .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     913                            .dwattr $C$DW$37, DW_AT_name("pxNext")
+     914                            .dwattr $C$DW$37, DW_AT_TI_symbol_name("pxNext")
+     915                            .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
      916                            .dwattr $C$DW$37, DW_AT_accessibility(DW_ACCESS_public)
      917                            .dwattr $C$DW$37, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     918                            .dwattr $C$DW$37, DW_AT_decl_line(0xba)
+     918                            .dwattr $C$DW$37, DW_AT_decl_line(0xb9)
      919                            .dwattr $C$DW$37, DW_AT_decl_column(0x2a)
      920                    $C$DW$38        .dwtag  DW_TAG_member
-     921                            .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$3)
-     922                            .dwattr $C$DW$38, DW_AT_name("pvOwner")
-     923                            .dwattr $C$DW$38, DW_AT_TI_symbol_name("pvOwner")
-     924                            .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+     921                            .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$34)
+     922                            .dwattr $C$DW$38, DW_AT_name("pxPrevious")
+     923                            .dwattr $C$DW$38, DW_AT_TI_symbol_name("pxPrevious")
+     924                            .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
      925                            .dwattr $C$DW$38, DW_AT_accessibility(DW_ACCESS_public)
      926                            .dwattr $C$DW$38, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     927                            .dwattr $C$DW$38, DW_AT_decl_line(0xbb)
-     928                            .dwattr $C$DW$38, DW_AT_decl_column(0x09)
+     927                            .dwattr $C$DW$38, DW_AT_decl_line(0xba)
+     928                            .dwattr $C$DW$38, DW_AT_decl_column(0x2a)
      929                    $C$DW$39        .dwtag  DW_TAG_member
      930                            .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$3)
-     931                            .dwattr $C$DW$39, DW_AT_name("pvContainer")
-     932                            .dwattr $C$DW$39, DW_AT_TI_symbol_name("pvContainer")
-     933                            .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     931                            .dwattr $C$DW$39, DW_AT_name("pvOwner")
+     932                            .dwattr $C$DW$39, DW_AT_TI_symbol_name("pvOwner")
+     933                            .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
      934                            .dwattr $C$DW$39, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   18
 
      935                            .dwattr $C$DW$39, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-     936                            .dwattr $C$DW$39, DW_AT_decl_line(0xbc)
-     937                            .dwattr $C$DW$39, DW_AT_decl_column(0x1d)
-     938                            .dwendtag $C$DW$T$35
-     939                    
-     940                            .dwattr $C$DW$T$35, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-     941                            .dwattr $C$DW$T$35, DW_AT_decl_line(0xb5)
-     942                            .dwattr $C$DW$T$35, DW_AT_decl_column(0x08)
-     943                    $C$DW$T$29      .dwtag  DW_TAG_typedef, DW_AT_name("ListItem_t")
-     944                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$35)
-     945                            .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
-     946                            .dwattr $C$DW$T$29, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-     947                            .dwattr $C$DW$T$29, DW_AT_decl_line(0xbf)
-     948                            .dwattr $C$DW$T$29, DW_AT_decl_column(0x1b)
-     949                    $C$DW$T$30      .dwtag  DW_TAG_pointer_type
-     950                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
-     951                            .dwattr $C$DW$T$30, DW_AT_address_class(0x20)
-     952                    $C$DW$T$34      .dwtag  DW_TAG_pointer_type
-     953                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$35)
-     954                            .dwattr $C$DW$T$34, DW_AT_address_class(0x20)
-     955                    
-     956                    $C$DW$T$36      .dwtag  DW_TAG_structure_type
-     957                            .dwattr $C$DW$T$36, DW_AT_name("xMEMORY_REGION")
-     958                            .dwattr $C$DW$T$36, DW_AT_byte_size(0x0c)
-     959                    $C$DW$40        .dwtag  DW_TAG_member
-     960                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$3)
-     961                            .dwattr $C$DW$40, DW_AT_name("pvBaseAddress")
-     962                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("pvBaseAddress")
-     963                            .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-     964                            .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
-     965                            .dwattr $C$DW$40, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-     966                            .dwattr $C$DW$40, DW_AT_decl_line(0x91)
-     967                            .dwattr $C$DW$40, DW_AT_decl_column(0x08)
+     936                            .dwattr $C$DW$39, DW_AT_decl_line(0xbb)
+     937                            .dwattr $C$DW$39, DW_AT_decl_column(0x09)
+     938                    $C$DW$40        .dwtag  DW_TAG_member
+     939                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$3)
+     940                            .dwattr $C$DW$40, DW_AT_name("pvContainer")
+     941                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("pvContainer")
+     942                            .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     943                            .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+     944                            .dwattr $C$DW$40, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
+     945                            .dwattr $C$DW$40, DW_AT_decl_line(0xbc)
+     946                            .dwattr $C$DW$40, DW_AT_decl_column(0x1d)
+     947                            .dwendtag $C$DW$T$35
+     948                    
+     949                            .dwattr $C$DW$T$35, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+     950                            .dwattr $C$DW$T$35, DW_AT_decl_line(0xb5)
+     951                            .dwattr $C$DW$T$35, DW_AT_decl_column(0x08)
+     952                    $C$DW$T$29      .dwtag  DW_TAG_typedef, DW_AT_name("ListItem_t")
+     953                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$35)
+     954                            .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+     955                            .dwattr $C$DW$T$29, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+     956                            .dwattr $C$DW$T$29, DW_AT_decl_line(0xbf)
+     957                            .dwattr $C$DW$T$29, DW_AT_decl_column(0x1b)
+     958                    $C$DW$T$30      .dwtag  DW_TAG_pointer_type
+     959                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
+     960                            .dwattr $C$DW$T$30, DW_AT_address_class(0x20)
+     961                    $C$DW$T$34      .dwtag  DW_TAG_pointer_type
+     962                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$35)
+     963                            .dwattr $C$DW$T$34, DW_AT_address_class(0x20)
+     964                    
+     965                    $C$DW$T$36      .dwtag  DW_TAG_structure_type
+     966                            .dwattr $C$DW$T$36, DW_AT_name("xMEMORY_REGION")
+     967                            .dwattr $C$DW$T$36, DW_AT_byte_size(0x0c)
      968                    $C$DW$41        .dwtag  DW_TAG_member
-     969                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$25)
-     970                            .dwattr $C$DW$41, DW_AT_name("ulLengthInBytes")
-     971                            .dwattr $C$DW$41, DW_AT_TI_symbol_name("ulLengthInBytes")
-     972                            .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     969                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$3)
+     970                            .dwattr $C$DW$41, DW_AT_name("pvBaseAddress")
+     971                            .dwattr $C$DW$41, DW_AT_TI_symbol_name("pvBaseAddress")
+     972                            .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
      973                            .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
      974                            .dwattr $C$DW$41, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-     975                            .dwattr $C$DW$41, DW_AT_decl_line(0x92)
-     976                            .dwattr $C$DW$41, DW_AT_decl_column(0x0b)
+     975                            .dwattr $C$DW$41, DW_AT_decl_line(0x91)
+     976                            .dwattr $C$DW$41, DW_AT_decl_column(0x08)
      977                    $C$DW$42        .dwtag  DW_TAG_member
      978                            .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$25)
-     979                            .dwattr $C$DW$42, DW_AT_name("ulParameters")
-     980                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("ulParameters")
-     981                            .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     979                            .dwattr $C$DW$42, DW_AT_name("ulLengthInBytes")
+     980                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("ulLengthInBytes")
+     981                            .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
      982                            .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
      983                            .dwattr $C$DW$42, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-     984                            .dwattr $C$DW$42, DW_AT_decl_line(0x93)
+     984                            .dwattr $C$DW$42, DW_AT_decl_line(0x92)
      985                            .dwattr $C$DW$42, DW_AT_decl_column(0x0b)
-     986                            .dwendtag $C$DW$T$36
-     987                    
-     988                            .dwattr $C$DW$T$36, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     989                            .dwattr $C$DW$T$36, DW_AT_decl_line(0x8f)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+     986                    $C$DW$43        .dwtag  DW_TAG_member
+     987                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$25)
+     988                            .dwattr $C$DW$43, DW_AT_name("ulParameters")
+     989                            .dwattr $C$DW$43, DW_AT_TI_symbol_name("ulParameters")
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   19
 
-     990                            .dwattr $C$DW$T$36, DW_AT_decl_column(0x10)
-     991                    $C$DW$T$48      .dwtag  DW_TAG_typedef, DW_AT_name("MemoryRegion_t")
-     992                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$36)
-     993                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
-     994                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-     995                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x94)
-     996                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x03)
-     997                    
-     998                    $C$DW$T$49      .dwtag  DW_TAG_array_type
-     999                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$48)
-    1000                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
-    1001                            .dwattr $C$DW$T$49, DW_AT_byte_size(0x0c)
-    1002                    $C$DW$43        .dwtag  DW_TAG_subrange_type
-    1003                            .dwattr $C$DW$43, DW_AT_upper_bound(0x00)
-    1004                            .dwendtag $C$DW$T$49
-    1005                    
+     990                            .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     991                            .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+     992                            .dwattr $C$DW$43, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
+     993                            .dwattr $C$DW$43, DW_AT_decl_line(0x93)
+     994                            .dwattr $C$DW$43, DW_AT_decl_column(0x0b)
+     995                            .dwendtag $C$DW$T$36
+     996                    
+     997                            .dwattr $C$DW$T$36, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+     998                            .dwattr $C$DW$T$36, DW_AT_decl_line(0x8f)
+     999                            .dwattr $C$DW$T$36, DW_AT_decl_column(0x10)
+    1000                    $C$DW$T$48      .dwtag  DW_TAG_typedef, DW_AT_name("MemoryRegion_t")
+    1001                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$36)
+    1002                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+    1003                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+    1004                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x94)
+    1005                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x03)
     1006                    
-    1007                    $C$DW$T$37      .dwtag  DW_TAG_structure_type
-    1008                            .dwattr $C$DW$T$37, DW_AT_name("xMINI_LIST_ITEM")
-    1009                            .dwattr $C$DW$T$37, DW_AT_byte_size(0x0c)
-    1010                    $C$DW$44        .dwtag  DW_TAG_member
-    1011                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$33)
-    1012                            .dwattr $C$DW$44, DW_AT_name("xItemValue")
-    1013                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("xItemValue")
-    1014                            .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-    1015                            .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
-    1016                            .dwattr $C$DW$44, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1017                            .dwattr $C$DW$44, DW_AT_decl_line(0xc4)
-    1018                            .dwattr $C$DW$44, DW_AT_decl_column(0x21)
+    1007                    $C$DW$T$49      .dwtag  DW_TAG_array_type
+    1008                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$48)
+    1009                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+    1010                            .dwattr $C$DW$T$49, DW_AT_byte_size(0x0c)
+    1011                    $C$DW$44        .dwtag  DW_TAG_subrange_type
+    1012                            .dwattr $C$DW$44, DW_AT_upper_bound(0x00)
+    1013                            .dwendtag $C$DW$T$49
+    1014                    
+    1015                    
+    1016                    $C$DW$T$37      .dwtag  DW_TAG_structure_type
+    1017                            .dwattr $C$DW$T$37, DW_AT_name("xMINI_LIST_ITEM")
+    1018                            .dwattr $C$DW$T$37, DW_AT_byte_size(0x0c)
     1019                    $C$DW$45        .dwtag  DW_TAG_member
-    1020                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$34)
-    1021                            .dwattr $C$DW$45, DW_AT_name("pxNext")
-    1022                            .dwattr $C$DW$45, DW_AT_TI_symbol_name("pxNext")
-    1023                            .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1020                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$33)
+    1021                            .dwattr $C$DW$45, DW_AT_name("xItemValue")
+    1022                            .dwattr $C$DW$45, DW_AT_TI_symbol_name("xItemValue")
+    1023                            .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     1024                            .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
     1025                            .dwattr $C$DW$45, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1026                            .dwattr $C$DW$45, DW_AT_decl_line(0xc5)
-    1027                            .dwattr $C$DW$45, DW_AT_decl_column(0x2a)
+    1026                            .dwattr $C$DW$45, DW_AT_decl_line(0xc4)
+    1027                            .dwattr $C$DW$45, DW_AT_decl_column(0x21)
     1028                    $C$DW$46        .dwtag  DW_TAG_member
     1029                            .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$34)
-    1030                            .dwattr $C$DW$46, DW_AT_name("pxPrevious")
-    1031                            .dwattr $C$DW$46, DW_AT_TI_symbol_name("pxPrevious")
-    1032                            .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1030                            .dwattr $C$DW$46, DW_AT_name("pxNext")
+    1031                            .dwattr $C$DW$46, DW_AT_TI_symbol_name("pxNext")
+    1032                            .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
     1033                            .dwattr $C$DW$46, DW_AT_accessibility(DW_ACCESS_public)
     1034                            .dwattr $C$DW$46, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1035                            .dwattr $C$DW$46, DW_AT_decl_line(0xc6)
+    1035                            .dwattr $C$DW$46, DW_AT_decl_line(0xc5)
     1036                            .dwattr $C$DW$46, DW_AT_decl_column(0x2a)
-    1037                            .dwendtag $C$DW$T$37
-    1038                    
-    1039                            .dwattr $C$DW$T$37, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-    1040                            .dwattr $C$DW$T$37, DW_AT_decl_line(0xc1)
-    1041                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x08)
-    1042                    $C$DW$T$31      .dwtag  DW_TAG_typedef, DW_AT_name("MiniListItem_t")
-    1043                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$37)
-    1044                            .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+    1037                    $C$DW$47        .dwtag  DW_TAG_member
+    1038                            .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$34)
+    1039                            .dwattr $C$DW$47, DW_AT_name("pxPrevious")
+    1040                            .dwattr $C$DW$47, DW_AT_TI_symbol_name("pxPrevious")
+    1041                            .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1042                            .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
+    1043                            .dwattr $C$DW$47, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp16
+    1044                            .dwattr $C$DW$47, DW_AT_decl_line(0xc6)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   20
 
-    1045                            .dwattr $C$DW$T$31, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
-    1046                            .dwattr $C$DW$T$31, DW_AT_decl_line(0xc8)
-    1047                            .dwattr $C$DW$T$31, DW_AT_decl_column(0x20)
-    1048                    
-    1049                    $C$DW$T$50      .dwtag  DW_TAG_structure_type
-    1050                            .dwattr $C$DW$T$50, DW_AT_name("xTASK_PARAMETERS")
-    1051                            .dwattr $C$DW$T$50, DW_AT_byte_size(0x24)
-    1052                    $C$DW$47        .dwtag  DW_TAG_member
-    1053                            .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$40)
-    1054                            .dwattr $C$DW$47, DW_AT_name("pvTaskCode")
-    1055                            .dwattr $C$DW$47, DW_AT_TI_symbol_name("pvTaskCode")
-    1056                            .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-    1057                            .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
-    1058                            .dwattr $C$DW$47, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1059                            .dwattr $C$DW$47, DW_AT_decl_line(0x9b)
-    1060                            .dwattr $C$DW$47, DW_AT_decl_column(0x11)
+    1045                            .dwattr $C$DW$47, DW_AT_decl_column(0x2a)
+    1046                            .dwendtag $C$DW$T$37
+    1047                    
+    1048                            .dwattr $C$DW$T$37, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+    1049                            .dwattr $C$DW$T$37, DW_AT_decl_line(0xc1)
+    1050                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x08)
+    1051                    $C$DW$T$31      .dwtag  DW_TAG_typedef, DW_AT_name("MiniListItem_t")
+    1052                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$37)
+    1053                            .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+    1054                            .dwattr $C$DW$T$31, DW_AT_decl_file("C:\Users\trilu\Downloads\TI_ARM_Tiva_Projects_EECS_690_Sp
+    1055                            .dwattr $C$DW$T$31, DW_AT_decl_line(0xc8)
+    1056                            .dwattr $C$DW$T$31, DW_AT_decl_column(0x20)
+    1057                    
+    1058                    $C$DW$T$50      .dwtag  DW_TAG_structure_type
+    1059                            .dwattr $C$DW$T$50, DW_AT_name("xTASK_PARAMETERS")
+    1060                            .dwattr $C$DW$T$50, DW_AT_byte_size(0x24)
     1061                    $C$DW$48        .dwtag  DW_TAG_member
-    1062                            .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$44)
-    1063                            .dwattr $C$DW$48, DW_AT_name("pcName")
-    1064                            .dwattr $C$DW$48, DW_AT_TI_symbol_name("pcName")
-    1065                            .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1062                            .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$40)
+    1063                            .dwattr $C$DW$48, DW_AT_name("pvTaskCode")
+    1064                            .dwattr $C$DW$48, DW_AT_TI_symbol_name("pvTaskCode")
+    1065                            .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     1066                            .dwattr $C$DW$48, DW_AT_accessibility(DW_ACCESS_public)
     1067                            .dwattr $C$DW$48, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1068                            .dwattr $C$DW$48, DW_AT_decl_line(0x9c)
-    1069                            .dwattr $C$DW$48, DW_AT_decl_column(0x15)
+    1068                            .dwattr $C$DW$48, DW_AT_decl_line(0x9b)
+    1069                            .dwattr $C$DW$48, DW_AT_decl_column(0x11)
     1070                    $C$DW$49        .dwtag  DW_TAG_member
-    1071                            .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$45)
-    1072                            .dwattr $C$DW$49, DW_AT_name("usStackDepth")
-    1073                            .dwattr $C$DW$49, DW_AT_TI_symbol_name("usStackDepth")
-    1074                            .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1071                            .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$44)
+    1072                            .dwattr $C$DW$49, DW_AT_name("pcName")
+    1073                            .dwattr $C$DW$49, DW_AT_TI_symbol_name("pcName")
+    1074                            .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
     1075                            .dwattr $C$DW$49, DW_AT_accessibility(DW_ACCESS_public)
     1076                            .dwattr $C$DW$49, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1077                            .dwattr $C$DW$49, DW_AT_decl_line(0x9d)
-    1078                            .dwattr $C$DW$49, DW_AT_decl_column(0x0b)
+    1077                            .dwattr $C$DW$49, DW_AT_decl_line(0x9c)
+    1078                            .dwattr $C$DW$49, DW_AT_decl_column(0x15)
     1079                    $C$DW$50        .dwtag  DW_TAG_member
-    1080                            .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$3)
-    1081                            .dwattr $C$DW$50, DW_AT_name("pvParameters")
-    1082                            .dwattr $C$DW$50, DW_AT_TI_symbol_name("pvParameters")
-    1083                            .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1080                            .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$45)
+    1081                            .dwattr $C$DW$50, DW_AT_name("usStackDepth")
+    1082                            .dwattr $C$DW$50, DW_AT_TI_symbol_name("usStackDepth")
+    1083                            .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     1084                            .dwattr $C$DW$50, DW_AT_accessibility(DW_ACCESS_public)
     1085                            .dwattr $C$DW$50, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1086                            .dwattr $C$DW$50, DW_AT_decl_line(0x9e)
-    1087                            .dwattr $C$DW$50, DW_AT_decl_column(0x08)
+    1086                            .dwattr $C$DW$50, DW_AT_decl_line(0x9d)
+    1087                            .dwattr $C$DW$50, DW_AT_decl_column(0x0b)
     1088                    $C$DW$51        .dwtag  DW_TAG_member
-    1089                            .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$28)
-    1090                            .dwattr $C$DW$51, DW_AT_name("uxPriority")
-    1091                            .dwattr $C$DW$51, DW_AT_TI_symbol_name("uxPriority")
-    1092                            .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1089                            .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$3)
+    1090                            .dwattr $C$DW$51, DW_AT_name("pvParameters")
+    1091                            .dwattr $C$DW$51, DW_AT_TI_symbol_name("pvParameters")
+    1092                            .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
     1093                            .dwattr $C$DW$51, DW_AT_accessibility(DW_ACCESS_public)
     1094                            .dwattr $C$DW$51, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1095                            .dwattr $C$DW$51, DW_AT_decl_line(0x9f)
-    1096                            .dwattr $C$DW$51, DW_AT_decl_column(0x0e)
+    1095                            .dwattr $C$DW$51, DW_AT_decl_line(0x9e)
+    1096                            .dwattr $C$DW$51, DW_AT_decl_column(0x08)
     1097                    $C$DW$52        .dwtag  DW_TAG_member
-    1098                            .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$47)
-    1099                            .dwattr $C$DW$52, DW_AT_name("puxStackBuffer")
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+    1098                            .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$28)
+    1099                            .dwattr $C$DW$52, DW_AT_name("uxPriority")
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   21
 
-    1100                            .dwattr $C$DW$52, DW_AT_TI_symbol_name("puxStackBuffer")
-    1101                            .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1100                            .dwattr $C$DW$52, DW_AT_TI_symbol_name("uxPriority")
+    1101                            .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
     1102                            .dwattr $C$DW$52, DW_AT_accessibility(DW_ACCESS_public)
     1103                            .dwattr $C$DW$52, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1104                            .dwattr $C$DW$52, DW_AT_decl_line(0xa0)
-    1105                            .dwattr $C$DW$52, DW_AT_decl_column(0x0f)
+    1104                            .dwattr $C$DW$52, DW_AT_decl_line(0x9f)
+    1105                            .dwattr $C$DW$52, DW_AT_decl_column(0x0e)
     1106                    $C$DW$53        .dwtag  DW_TAG_member
-    1107                            .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$49)
-    1108                            .dwattr $C$DW$53, DW_AT_name("xRegions")
-    1109                            .dwattr $C$DW$53, DW_AT_TI_symbol_name("xRegions")
-    1110                            .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1107                            .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$47)
+    1108                            .dwattr $C$DW$53, DW_AT_name("puxStackBuffer")
+    1109                            .dwattr $C$DW$53, DW_AT_TI_symbol_name("puxStackBuffer")
+    1110                            .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
     1111                            .dwattr $C$DW$53, DW_AT_accessibility(DW_ACCESS_public)
     1112                            .dwattr $C$DW$53, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1113                            .dwattr $C$DW$53, DW_AT_decl_line(0xa1)
-    1114                            .dwattr $C$DW$53, DW_AT_decl_column(0x11)
-    1115                            .dwendtag $C$DW$T$50
-    1116                    
-    1117                            .dwattr $C$DW$T$50, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-    1118                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x99)
-    1119                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x10)
-    1120                    $C$DW$T$119     .dwtag  DW_TAG_typedef, DW_AT_name("TaskParameters_t")
-    1121                            .dwattr $C$DW$T$119, DW_AT_type(*$C$DW$T$50)
-    1122                            .dwattr $C$DW$T$119, DW_AT_language(DW_LANG_C)
-    1123                            .dwattr $C$DW$T$119, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
-    1124                            .dwattr $C$DW$T$119, DW_AT_decl_line(0xa2)
-    1125                            .dwattr $C$DW$T$119, DW_AT_decl_column(0x03)
-    1126                    
-    1127                    $C$DW$T$54      .dwtag  DW_TAG_structure_type
-    1128                            .dwattr $C$DW$T$54, DW_AT_name("xTASK_STATUS")
-    1129                            .dwattr $C$DW$T$54, DW_AT_byte_size(0x20)
-    1130                    $C$DW$54        .dwtag  DW_TAG_member
-    1131                            .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$51)
-    1132                            .dwattr $C$DW$54, DW_AT_name("xHandle")
-    1133                            .dwattr $C$DW$54, DW_AT_TI_symbol_name("xHandle")
-    1134                            .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-    1135                            .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
-    1136                            .dwattr $C$DW$54, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1137                            .dwattr $C$DW$54, DW_AT_decl_line(0xa8)
-    1138                            .dwattr $C$DW$54, DW_AT_decl_column(0x0f)
+    1113                            .dwattr $C$DW$53, DW_AT_decl_line(0xa0)
+    1114                            .dwattr $C$DW$53, DW_AT_decl_column(0x0f)
+    1115                    $C$DW$54        .dwtag  DW_TAG_member
+    1116                            .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$49)
+    1117                            .dwattr $C$DW$54, DW_AT_name("xRegions")
+    1118                            .dwattr $C$DW$54, DW_AT_TI_symbol_name("xRegions")
+    1119                            .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1120                            .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
+    1121                            .dwattr $C$DW$54, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
+    1122                            .dwattr $C$DW$54, DW_AT_decl_line(0xa1)
+    1123                            .dwattr $C$DW$54, DW_AT_decl_column(0x11)
+    1124                            .dwendtag $C$DW$T$50
+    1125                    
+    1126                            .dwattr $C$DW$T$50, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+    1127                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x99)
+    1128                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x10)
+    1129                    $C$DW$T$119     .dwtag  DW_TAG_typedef, DW_AT_name("TaskParameters_t")
+    1130                            .dwattr $C$DW$T$119, DW_AT_type(*$C$DW$T$50)
+    1131                            .dwattr $C$DW$T$119, DW_AT_language(DW_LANG_C)
+    1132                            .dwattr $C$DW$T$119, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
+    1133                            .dwattr $C$DW$T$119, DW_AT_decl_line(0xa2)
+    1134                            .dwattr $C$DW$T$119, DW_AT_decl_column(0x03)
+    1135                    
+    1136                    $C$DW$T$54      .dwtag  DW_TAG_structure_type
+    1137                            .dwattr $C$DW$T$54, DW_AT_name("xTASK_STATUS")
+    1138                            .dwattr $C$DW$T$54, DW_AT_byte_size(0x20)
     1139                    $C$DW$55        .dwtag  DW_TAG_member
-    1140                            .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$43)
-    1141                            .dwattr $C$DW$55, DW_AT_name("pcTaskName")
-    1142                            .dwattr $C$DW$55, DW_AT_TI_symbol_name("pcTaskName")
-    1143                            .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1140                            .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$51)
+    1141                            .dwattr $C$DW$55, DW_AT_name("xHandle")
+    1142                            .dwattr $C$DW$55, DW_AT_TI_symbol_name("xHandle")
+    1143                            .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     1144                            .dwattr $C$DW$55, DW_AT_accessibility(DW_ACCESS_public)
     1145                            .dwattr $C$DW$55, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1146                            .dwattr $C$DW$55, DW_AT_decl_line(0xa9)
-    1147                            .dwattr $C$DW$55, DW_AT_decl_column(0x0e)
+    1146                            .dwattr $C$DW$55, DW_AT_decl_line(0xa8)
+    1147                            .dwattr $C$DW$55, DW_AT_decl_column(0x0f)
     1148                    $C$DW$56        .dwtag  DW_TAG_member
-    1149                            .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$28)
-    1150                            .dwattr $C$DW$56, DW_AT_name("xTaskNumber")
-    1151                            .dwattr $C$DW$56, DW_AT_TI_symbol_name("xTaskNumber")
-    1152                            .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1149                            .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$43)
+    1150                            .dwattr $C$DW$56, DW_AT_name("pcTaskName")
+    1151                            .dwattr $C$DW$56, DW_AT_TI_symbol_name("pcTaskName")
+    1152                            .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
     1153                            .dwattr $C$DW$56, DW_AT_accessibility(DW_ACCESS_public)
     1154                            .dwattr $C$DW$56, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   22
 
-    1155                            .dwattr $C$DW$56, DW_AT_decl_line(0xaa)
+    1155                            .dwattr $C$DW$56, DW_AT_decl_line(0xa9)
     1156                            .dwattr $C$DW$56, DW_AT_decl_column(0x0e)
     1157                    $C$DW$57        .dwtag  DW_TAG_member
-    1158                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$53)
-    1159                            .dwattr $C$DW$57, DW_AT_name("eCurrentState")
-    1160                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("eCurrentState")
-    1161                            .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1158                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$28)
+    1159                            .dwattr $C$DW$57, DW_AT_name("xTaskNumber")
+    1160                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("xTaskNumber")
+    1161                            .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     1162                            .dwattr $C$DW$57, DW_AT_accessibility(DW_ACCESS_public)
     1163                            .dwattr $C$DW$57, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1164                            .dwattr $C$DW$57, DW_AT_decl_line(0xab)
-    1165                            .dwattr $C$DW$57, DW_AT_decl_column(0x0d)
+    1164                            .dwattr $C$DW$57, DW_AT_decl_line(0xaa)
+    1165                            .dwattr $C$DW$57, DW_AT_decl_column(0x0e)
     1166                    $C$DW$58        .dwtag  DW_TAG_member
-    1167                            .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$28)
-    1168                            .dwattr $C$DW$58, DW_AT_name("uxCurrentPriority")
-    1169                            .dwattr $C$DW$58, DW_AT_TI_symbol_name("uxCurrentPriority")
-    1170                            .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1167                            .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$53)
+    1168                            .dwattr $C$DW$58, DW_AT_name("eCurrentState")
+    1169                            .dwattr $C$DW$58, DW_AT_TI_symbol_name("eCurrentState")
+    1170                            .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
     1171                            .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
     1172                            .dwattr $C$DW$58, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1173                            .dwattr $C$DW$58, DW_AT_decl_line(0xac)
-    1174                            .dwattr $C$DW$58, DW_AT_decl_column(0x0e)
+    1173                            .dwattr $C$DW$58, DW_AT_decl_line(0xab)
+    1174                            .dwattr $C$DW$58, DW_AT_decl_column(0x0d)
     1175                    $C$DW$59        .dwtag  DW_TAG_member
     1176                            .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$28)
-    1177                            .dwattr $C$DW$59, DW_AT_name("uxBasePriority")
-    1178                            .dwattr $C$DW$59, DW_AT_TI_symbol_name("uxBasePriority")
-    1179                            .dwattr $C$DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1177                            .dwattr $C$DW$59, DW_AT_name("uxCurrentPriority")
+    1178                            .dwattr $C$DW$59, DW_AT_TI_symbol_name("uxCurrentPriority")
+    1179                            .dwattr $C$DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
     1180                            .dwattr $C$DW$59, DW_AT_accessibility(DW_ACCESS_public)
     1181                            .dwattr $C$DW$59, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1182                            .dwattr $C$DW$59, DW_AT_decl_line(0xad)
+    1182                            .dwattr $C$DW$59, DW_AT_decl_line(0xac)
     1183                            .dwattr $C$DW$59, DW_AT_decl_column(0x0e)
     1184                    $C$DW$60        .dwtag  DW_TAG_member
-    1185                            .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$25)
-    1186                            .dwattr $C$DW$60, DW_AT_name("ulRunTimeCounter")
-    1187                            .dwattr $C$DW$60, DW_AT_TI_symbol_name("ulRunTimeCounter")
-    1188                            .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1185                            .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$28)
+    1186                            .dwattr $C$DW$60, DW_AT_name("uxBasePriority")
+    1187                            .dwattr $C$DW$60, DW_AT_TI_symbol_name("uxBasePriority")
+    1188                            .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
     1189                            .dwattr $C$DW$60, DW_AT_accessibility(DW_ACCESS_public)
     1190                            .dwattr $C$DW$60, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1191                            .dwattr $C$DW$60, DW_AT_decl_line(0xae)
-    1192                            .dwattr $C$DW$60, DW_AT_decl_column(0x0b)
+    1191                            .dwattr $C$DW$60, DW_AT_decl_line(0xad)
+    1192                            .dwattr $C$DW$60, DW_AT_decl_column(0x0e)
     1193                    $C$DW$61        .dwtag  DW_TAG_member
-    1194                            .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$45)
-    1195                            .dwattr $C$DW$61, DW_AT_name("usStackHighWaterMark")
-    1196                            .dwattr $C$DW$61, DW_AT_TI_symbol_name("usStackHighWaterMark")
-    1197                            .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    1194                            .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$25)
+    1195                            .dwattr $C$DW$61, DW_AT_name("ulRunTimeCounter")
+    1196                            .dwattr $C$DW$61, DW_AT_TI_symbol_name("ulRunTimeCounter")
+    1197                            .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
     1198                            .dwattr $C$DW$61, DW_AT_accessibility(DW_ACCESS_public)
     1199                            .dwattr $C$DW$61, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1200                            .dwattr $C$DW$61, DW_AT_decl_line(0xaf)
+    1200                            .dwattr $C$DW$61, DW_AT_decl_line(0xae)
     1201                            .dwattr $C$DW$61, DW_AT_decl_column(0x0b)
-    1202                            .dwendtag $C$DW$T$54
-    1203                    
-    1204                            .dwattr $C$DW$T$54, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-    1205                            .dwattr $C$DW$T$54, DW_AT_decl_line(0xa6)
-    1206                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x10)
-    1207                    $C$DW$T$120     .dwtag  DW_TAG_typedef, DW_AT_name("TaskStatus_t")
-    1208                            .dwattr $C$DW$T$120, DW_AT_type(*$C$DW$T$54)
-    1209                            .dwattr $C$DW$T$120, DW_AT_language(DW_LANG_C)
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+    1202                    $C$DW$62        .dwtag  DW_TAG_member
+    1203                            .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$45)
+    1204                            .dwattr $C$DW$62, DW_AT_name("usStackHighWaterMark")
+    1205                            .dwattr $C$DW$62, DW_AT_TI_symbol_name("usStackHighWaterMark")
+    1206                            .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    1207                            .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
+    1208                            .dwattr $C$DW$62, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
+    1209                            .dwattr $C$DW$62, DW_AT_decl_line(0xaf)
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   23
 
-    1210                            .dwattr $C$DW$T$120, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
-    1211                            .dwattr $C$DW$T$120, DW_AT_decl_line(0xb0)
-    1212                            .dwattr $C$DW$T$120, DW_AT_decl_column(0x03)
-    1213                    
-    1214                    $C$DW$T$57      .dwtag  DW_TAG_structure_type
-    1215                            .dwattr $C$DW$T$57, DW_AT_name("xTIME_OUT")
-    1216                            .dwattr $C$DW$T$57, DW_AT_byte_size(0x08)
-    1217                    $C$DW$62        .dwtag  DW_TAG_member
-    1218                            .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$56)
-    1219                            .dwattr $C$DW$62, DW_AT_name("xOverflowCount")
-    1220                            .dwattr $C$DW$62, DW_AT_TI_symbol_name("xOverflowCount")
-    1221                            .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-    1222                            .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
-    1223                            .dwattr $C$DW$62, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1224                            .dwattr $C$DW$62, DW_AT_decl_line(0x88)
-    1225                            .dwattr $C$DW$62, DW_AT_decl_column(0x0d)
+    1210                            .dwattr $C$DW$62, DW_AT_decl_column(0x0b)
+    1211                            .dwendtag $C$DW$T$54
+    1212                    
+    1213                            .dwattr $C$DW$T$54, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+    1214                            .dwattr $C$DW$T$54, DW_AT_decl_line(0xa6)
+    1215                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x10)
+    1216                    $C$DW$T$120     .dwtag  DW_TAG_typedef, DW_AT_name("TaskStatus_t")
+    1217                            .dwattr $C$DW$T$120, DW_AT_type(*$C$DW$T$54)
+    1218                            .dwattr $C$DW$T$120, DW_AT_language(DW_LANG_C)
+    1219                            .dwattr $C$DW$T$120, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
+    1220                            .dwattr $C$DW$T$120, DW_AT_decl_line(0xb0)
+    1221                            .dwattr $C$DW$T$120, DW_AT_decl_column(0x03)
+    1222                    
+    1223                    $C$DW$T$57      .dwtag  DW_TAG_structure_type
+    1224                            .dwattr $C$DW$T$57, DW_AT_name("xTIME_OUT")
+    1225                            .dwattr $C$DW$T$57, DW_AT_byte_size(0x08)
     1226                    $C$DW$63        .dwtag  DW_TAG_member
-    1227                            .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$33)
-    1228                            .dwattr $C$DW$63, DW_AT_name("xTimeOnEntering")
-    1229                            .dwattr $C$DW$63, DW_AT_TI_symbol_name("xTimeOnEntering")
-    1230                            .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1227                            .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$56)
+    1228                            .dwattr $C$DW$63, DW_AT_name("xOverflowCount")
+    1229                            .dwattr $C$DW$63, DW_AT_TI_symbol_name("xOverflowCount")
+    1230                            .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     1231                            .dwattr $C$DW$63, DW_AT_accessibility(DW_ACCESS_public)
     1232                            .dwattr $C$DW$63, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
-    1233                            .dwattr $C$DW$63, DW_AT_decl_line(0x89)
+    1233                            .dwattr $C$DW$63, DW_AT_decl_line(0x88)
     1234                            .dwattr $C$DW$63, DW_AT_decl_column(0x0d)
-    1235                            .dwendtag $C$DW$T$57
-    1236                    
-    1237                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
-    1238                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x86)
-    1239                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x10)
-    1240                    $C$DW$T$121     .dwtag  DW_TAG_typedef, DW_AT_name("TimeOut_t")
-    1241                            .dwattr $C$DW$T$121, DW_AT_type(*$C$DW$T$57)
-    1242                            .dwattr $C$DW$T$121, DW_AT_language(DW_LANG_C)
-    1243                            .dwattr $C$DW$T$121, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
-    1244                            .dwattr $C$DW$T$121, DW_AT_decl_line(0x8a)
-    1245                            .dwattr $C$DW$T$121, DW_AT_decl_column(0x03)
-    1246                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
-    1247                    
-    1248                    ;***************************************************************
-    1249                    ;* DWARF CIE ENTRIES                                           *
-    1250                    ;***************************************************************
-    1251                    
-    1252                    $C$DW$CIE       .dwcie 14
-    1253                            .dwcfi  cfa_register, 13
-    1254                            .dwcfi  cfa_offset, 0
-    1255                            .dwcfi  undefined, 0
-    1256                            .dwcfi  undefined, 1
-    1257                            .dwcfi  undefined, 2
-    1258                            .dwcfi  undefined, 3
-    1259                            .dwcfi  same_value, 4
-    1260                            .dwcfi  same_value, 5
-    1261                            .dwcfi  same_value, 6
-    1262                            .dwcfi  same_value, 7
-    1263                            .dwcfi  same_value, 8
-    1264                            .dwcfi  same_value, 9
-TI ARM Assembler PC v5.2.5 Tue May 03 10:39:33 2016
+    1235                    $C$DW$64        .dwtag  DW_TAG_member
+    1236                            .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$33)
+    1237                            .dwattr $C$DW$64, DW_AT_name("xTimeOnEntering")
+    1238                            .dwattr $C$DW$64, DW_AT_TI_symbol_name("xTimeOnEntering")
+    1239                            .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1240                            .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
+    1241                            .dwattr $C$DW$64, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16
+    1242                            .dwattr $C$DW$64, DW_AT_decl_line(0x89)
+    1243                            .dwattr $C$DW$64, DW_AT_decl_column(0x0d)
+    1244                            .dwendtag $C$DW$T$57
+    1245                    
+    1246                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp
+    1247                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x86)
+    1248                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x10)
+    1249                    $C$DW$T$121     .dwtag  DW_TAG_typedef, DW_AT_name("TimeOut_t")
+    1250                            .dwattr $C$DW$T$121, DW_AT_type(*$C$DW$T$57)
+    1251                            .dwattr $C$DW$T$121, DW_AT_language(DW_LANG_C)
+    1252                            .dwattr $C$DW$T$121, DW_AT_decl_file("C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_S
+    1253                            .dwattr $C$DW$T$121, DW_AT_decl_line(0x8a)
+    1254                            .dwattr $C$DW$T$121, DW_AT_decl_column(0x03)
+    1255                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1256                    
+    1257                    ;***************************************************************
+    1258                    ;* DWARF CIE ENTRIES                                           *
+    1259                    ;***************************************************************
+    1260                    
+    1261                    $C$DW$CIE       .dwcie 14
+    1262                            .dwcfi  cfa_register, 13
+    1263                            .dwcfi  cfa_offset, 0
+    1264                            .dwcfi  undefined, 0
+TI ARM Assembler PC v5.2.5 Tue May 03 10:58:04 2016
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 Task_PID.asm                                                         PAGE   24
 
-    1265                            .dwcfi  same_value, 10
-    1266                            .dwcfi  same_value, 11
-    1267                            .dwcfi  undefined, 12
-    1268                            .dwcfi  undefined, 13
-    1269                            .dwcfi  undefined, 14
-    1270                            .dwcfi  undefined, 14
-    1271                            .dwcfi  undefined, 7
-    1272                            .dwcfi  undefined, 64
-    1273                            .dwcfi  undefined, 65
-    1274                            .dwcfi  undefined, 66
-    1275                            .dwcfi  undefined, 67
-    1276                            .dwcfi  undefined, 68
-    1277                            .dwcfi  undefined, 69
-    1278                            .dwcfi  undefined, 70
-    1279                            .dwcfi  undefined, 71
-    1280                            .dwcfi  undefined, 72
-    1281                            .dwcfi  undefined, 73
-    1282                            .dwcfi  undefined, 74
-    1283                            .dwcfi  undefined, 75
-    1284                            .dwcfi  undefined, 76
-    1285                            .dwcfi  undefined, 77
-    1286                            .dwcfi  undefined, 78
-    1287                            .dwcfi  undefined, 79
-    1288                            .dwcfi  same_value, 80
-    1289                            .dwcfi  same_value, 81
-    1290                            .dwcfi  same_value, 82
-    1291                            .dwcfi  same_value, 83
-    1292                            .dwcfi  same_value, 84
-    1293                            .dwcfi  same_value, 85
-    1294                            .dwcfi  same_value, 86
-    1295                            .dwcfi  same_value, 87
-    1296                            .dwcfi  same_value, 88
-    1297                            .dwcfi  same_value, 89
-    1298                            .dwcfi  same_value, 90
-    1299                            .dwcfi  same_value, 91
-    1300                            .dwcfi  same_value, 92
-    1301                            .dwcfi  same_value, 93
-    1302                            .dwcfi  same_value, 94
-    1303                            .dwcfi  same_value, 95
-    1304                            .dwendentry
-    1305                            .dwendtag $C$DW$CU
-    1306                    
+    1265                            .dwcfi  undefined, 1
+    1266                            .dwcfi  undefined, 2
+    1267                            .dwcfi  undefined, 3
+    1268                            .dwcfi  same_value, 4
+    1269                            .dwcfi  same_value, 5
+    1270                            .dwcfi  same_value, 6
+    1271                            .dwcfi  same_value, 7
+    1272                            .dwcfi  same_value, 8
+    1273                            .dwcfi  same_value, 9
+    1274                            .dwcfi  same_value, 10
+    1275                            .dwcfi  same_value, 11
+    1276                            .dwcfi  undefined, 12
+    1277                            .dwcfi  undefined, 13
+    1278                            .dwcfi  undefined, 14
+    1279                            .dwcfi  undefined, 14
+    1280                            .dwcfi  undefined, 7
+    1281                            .dwcfi  undefined, 64
+    1282                            .dwcfi  undefined, 65
+    1283                            .dwcfi  undefined, 66
+    1284                            .dwcfi  undefined, 67
+    1285                            .dwcfi  undefined, 68
+    1286                            .dwcfi  undefined, 69
+    1287                            .dwcfi  undefined, 70
+    1288                            .dwcfi  undefined, 71
+    1289                            .dwcfi  undefined, 72
+    1290                            .dwcfi  undefined, 73
+    1291                            .dwcfi  undefined, 74
+    1292                            .dwcfi  undefined, 75
+    1293                            .dwcfi  undefined, 76
+    1294                            .dwcfi  undefined, 77
+    1295                            .dwcfi  undefined, 78
+    1296                            .dwcfi  undefined, 79
+    1297                            .dwcfi  same_value, 80
+    1298                            .dwcfi  same_value, 81
+    1299                            .dwcfi  same_value, 82
+    1300                            .dwcfi  same_value, 83
+    1301                            .dwcfi  same_value, 84
+    1302                            .dwcfi  same_value, 85
+    1303                            .dwcfi  same_value, 86
+    1304                            .dwcfi  same_value, 87
+    1305                            .dwcfi  same_value, 88
+    1306                            .dwcfi  same_value, 89
+    1307                            .dwcfi  same_value, 90
+    1308                            .dwcfi  same_value, 91
+    1309                            .dwcfi  same_value, 92
+    1310                            .dwcfi  same_value, 93
+    1311                            .dwcfi  same_value, 94
+    1312                            .dwcfi  same_value, 95
+    1313                            .dwendentry
+    1314                            .dwendtag $C$DW$CU
+    1315                    
 
 --------------------------
 Thumb2 Statistics

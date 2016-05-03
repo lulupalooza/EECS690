@@ -88,18 +88,15 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		//
 		ADCSequenceDataGet(ADC0_BASE, 0, &ADC_Value);
 		ADCIntClear( ADC0_BASE, 0 );
+		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
+		xQueueSend(ADC_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
 		adc_report.timestamp = xPortSysTickCount;
 		adc_report.ID = 0;
 		adc_report.value = ADC_Value;
+		adc_report.value2 = (uint32_t) Vtemp;
 		printf( ">>ADC %d", ADC_Value);
 		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
 		rqueue_count += 1;
-		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
-		xQueueSend(ADC_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
-		//
-		//	Print ADC_Value
-		//
-//		printf( ">>ADC_Value: %d\n", ADC_Value );
 
 		//
 		//	Delay one (1) second.

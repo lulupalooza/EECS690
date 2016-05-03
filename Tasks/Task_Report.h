@@ -30,6 +30,7 @@ typedef struct ReportData_Item
 	uint32_t	timestamp;
 	uint32_t	ID;
 	uint32_t	value;
+	uint32_t	value2;
 } ReportData_Item;
 
 #endif /* TASKS_TASK_REPORT_H_ */
