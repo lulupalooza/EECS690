@@ -40,31 +40,31 @@
 
 
 extern QueueHandle_t Heater_Queue;
+extern QueueHandle_t Temp_Queue;
 uint32_t hqueue_count = 0;
 
 extern void Task_HeaterOn( void *pvParameters ) {
+	// Instantiate report and queue items.
+	ReportData_Item heater_report;
+	BaseType_t		TempQueue_Status;
+	double			temp = 0;
 
 	//
 	//	Enable (power-on) PortG
 	//
-	//printf("something wrong...");
-
-	ReportData_Item heater_report;
-
 	SysCtlPWMClockSet(SYSCTL_PWMDIV_1);
 	SysCtlPeripheralEnable( SYSCTL_PERIPH_PWM0 );
 	SysCtlPeripheralEnable( SYSCTL_PERIPH_GPIOG );
-	//ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
-	//				SYSCTL_OSC_MAIN | SYSCTL_USE_PLL |
-	//				SYSCTL_CFG_VCO_480), 120000000);
 
+	//
+    // Configure GPIO_G to PWM mode to drive the HeaterOn_H.
+    //
 	GPIOPinConfigure( GPIO_PG0_M0PWM4 );
 	GPIOPinTypePWM( GPIO_PORTG_BASE, GPIO_PIN_0 );
 	PWMGenConfigure(PWM0_BASE, PWM_GEN_2, PWM_GEN_MODE_DOWN );
 	PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2, 480000);
 	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4,
-						 PWMGenPeriodGet(PWM0_BASE, PWM_GEN_2)/2);
-
+						 PWMGenPeriodGet(PWM0_BASE, PWM_GEN_2));
 	PWMOutputState(PWM0_BASE, PWM_OUT_4_BIT, true);
 
 	//
@@ -78,26 +78,21 @@ extern void Task_HeaterOn( void *pvParameters ) {
 	SysCtlPeripheralEnable( SYSCTL_PERIPH_GPION );
 
 	//
-    // Configure GPIO_G to drive the HeaterOn_H.
-    //
-    // GPIOPinTypeGPIOOutput( GPIO_PORTG_BASE, GPIO_PIN_0 );
-    //GPIOPadConfigSet( GPIO_PORTG_BASE,
-    //					GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD );
-
-	//
 	// Configure GPIO_N to drive the Status LED.
 	//
 	GPIOPinTypeGPIOOutput( GPIO_PORTN_BASE, GPIO_PIN_0 );
 	GPIOPadConfigSet( GPIO_PORTN_BASE,
 						GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD );
 
-	Heater_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
 	while ( 1 ) {
 
         //
         // Set HeaterOn_H and D2 for OnTime_mS.
-        //
-        //GPIOPinWrite( GPIO_PORTG_BASE, GPIO_PIN_0, 0x01 );
+		//
+		TempQueue_Status = xQueueReceive( Temp_Queue, &temp, 10*portTICK_PERIOD_MS );
+		if( TempQueue_Status == pdTRUE ){
+			UARTprintf( "%08d, %02d, %d\n", heater_report.timestamp, heater_report.ID, heater_report.value );
+		}
         GPIOPinWrite( GPIO_PORTN_BASE, GPIO_PIN_0, 0x01 );
 		heater_report.timestamp = xPortSysTickCount;
 		heater_report.ID = 1;

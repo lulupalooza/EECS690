@@ -80,8 +80,7 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		//
 		// Wait until the sample sequence has completed.
 		//
-		while( !ADCIntStatus( ADC0_BASE, 0, false )) {
-		}
+		while( !ADCIntStatus( ADC0_BASE, 0, false ));
 
 		//
 		// Read the value from the ADC.

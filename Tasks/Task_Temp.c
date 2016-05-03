@@ -18,13 +18,12 @@
 #include	"stdio.h"
 
 
-extern QueueHandle_t Temp_Queue = NULL;
+extern QueueHandle_t Temp_Queue;
 
 extern void Task_Temp( void *pvParameters ) {
 	double			adc_val;
 	BaseType_t		ReportQueue_Status;
 
-	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
 	uint32_t int_t;
 
 	//

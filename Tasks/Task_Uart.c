@@ -2,24 +2,11 @@
  * Task_Uart.c
  *
  *  Created on: Mar 14, 2016
- *      Author: trilu
+ *      Author: Group 15
+ *
+ * Description: Set up UART to rx input for heater control.
+ *
  */
-
-//*****************************************************************************
-//
-//	Set up UART to tx and rx.
-//
-//		Author:
-//		Organization:	KU/EECS/EECS 388
-//		Date:			2016-02-29 (B60229)
-//		Version:		1.0
-//
-//		Description:	Receive and transmit UART messages
-//
-//		Notes:
-//
-//*****************************************************************************
-//
 
 #include "inc/hw_ints.h"
 #include "inc/hw_memmap.h"
@@ -38,7 +25,7 @@
 
 #include "FreeRTOS.h"
 #include "task.h"
-
+#include "queue.h"
 #include "stdio.h"
 #include "statuses.h"
 #include "semphr.h"
@@ -46,11 +33,10 @@
 //
 //	Gloabal subroutines and variables
 //
-extern volatile uint32_t xPortSysTickCount;
 
-void UARTMessagePut(uint32_t ui32Base, status_message Data);
+extern QueueHandle_t Inp_Queue;
+extern volatile uint32_t xPortSysTickCount;
 xSemaphoreHandle mutex;
-extern QueueHandle_t Inp_Queue = NULL;
 extern uint32_t iqueue_count;
 
 extern void Task_UART_0( void *pvParameters ) {
@@ -59,9 +45,9 @@ extern void Task_UART_0( void *pvParameters ) {
 	//	Measured voltage value
 	//
 	int32_t 	inp_temp;
-	uint32_t ui32SysClkFreq;
+	int32_t		inp_count = 0;
+	uint32_t 	ui32SysClkFreq;
 
-	Inp_Queue = xQueueCreate( 10, sizeof( uint32_t ) );
 	ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
 				SYSCTL_OSC_MAIN | SYSCTL_USE_PLL |
 				SYSCTL_CFG_VCO_480), 120000000);
@@ -83,27 +69,25 @@ extern void Task_UART_0( void *pvParameters ) {
 	//UARTEnable( UART0_BASE );
 	//UARTFIFOEnable( UART0_BASE );
 	printf( ">>>>UART Initialized.\n");
+
 	while ( 1 ) {
-		while(!UARTCharsAvail(UART0_BASE));
-		inp_temp = UARTCharGet( UART0_BASE );
-		inp_temp = inp_temp - '0';
-		UARTprintf( "\nInput temp now %d\n", inp_temp);
-		xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);
-		iqueue_count += 1;
-		vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );
+		while(!UARTCharsAvail(UART0_BASE));							// Wait until input reveived.
+		if(inp_count == 0)
+		{
+			inp_temp = (UARTCharGet( UART0_BASE ) - '0') * 10;		// Get first input (10s place) and convert to integer value.
+			inp_count++;
+		}
+		else
+		{
+			inp_temp = inp_temp + (UARTCharGet( UART0_BASE ) - '0');// Add ones place value to inp_temp
+			UARTprintf( "\nInput temp now %d\n", inp_temp);			// Print the updated temp value via UART to PC.
+			inp_count = 0;
+			xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);// Send new desired temp to heater control module.
+			iqueue_count += 1;
+		}
+		vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );		// Delay.
 	}
 
 }
-
-void UARTMessagePut(uint32_t ui32Base, status_message Data)
-{
-	UARTCharPut(ui32Base, Data.ID);
-	UARTCharPut(ui32Base, (char) Data.val);
-	UARTCharPut(ui32Base, (char) xPortSysTickCount & 0xFF);
-	UARTCharPut(ui32Base, (char) xPortSysTickCount<<8 & 0xFF);
-	UARTCharPut(ui32Base, (char) xPortSysTickCount<<16 & 0xFF);
-	UARTCharPut(ui32Base, (char) xPortSysTickCount<<24 & 0xFF);
-}
-
 
 

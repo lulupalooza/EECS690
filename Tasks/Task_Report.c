@@ -27,8 +27,6 @@
 //
 extern volatile uint32_t xPortSysTickCount;
 
-extern QueueHandle_t ReportData_Queue = NULL;
-extern QueueHandle_t Heater_Queue = NULL;
 extern uint32_t UART_Initialization();
 extern uint32_t rqueue_count;
 extern uint32_t hqueue_count;
@@ -38,8 +36,6 @@ extern void Task_Report( void *pvParameters ) {
 	BaseType_t		ReportQueue_Status;
 
 	UART_Initialization();
-
-	ReportData_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
 
 	//
 	//	No set-up necessary

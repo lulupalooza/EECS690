@@ -39,6 +39,7 @@ extern 	uint32_t 	g_ulSystemClock;
 //
 extern	uint32_t	Processor_Initialization();
 extern	uint32_t	UART_Initialization();
+extern	uint32_t	Queue_Initialization();
 
 // System clock rate, 120 MHz
 #define SYSTEM_CLOCK    120000000

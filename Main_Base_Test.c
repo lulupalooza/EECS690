@@ -11,6 +11,7 @@
 #include	<stdbool.h>
 #include	<stdint.h>
 #include	<stdarg.h>
+#include	<stdio.h>
 
 #include	"driverlib/sysctl.h"
 #include	"driverlib/pin_map.h"
@@ -18,10 +19,13 @@
 
 #include	"FreeRTOS.h"
 #include	"task.h"
+#include 	"queue.h"
 
-#include	<stdio.h>
-
+//
+// Initialization functions and tasks.
+//
 extern uint32_t Processor_Initialization();
+extern uint32_t Queue_Initialization();
 extern void Task_Blink_LED_D1( void *pvParameters );
 extern void Task_Report( void *pvParameters );
 extern void Task_Simple_ADC0_Ch0( void *pvParameters );
@@ -29,6 +33,7 @@ extern void Task_HeaterOn( void *pvParameters );
 extern void Task_UART_0( void *pvParameters );
 extern void Task_Temp( void *pvParameters );
 extern void Task_PID( void *pvParameters );
+
 
 int main( void ) {
 

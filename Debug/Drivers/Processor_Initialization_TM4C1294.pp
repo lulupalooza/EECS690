@@ -17,9 +17,28 @@ Drivers/Processor_Initialization_TM4C1294.obj: C:/TI_CodeComposer/TivaWare/drive
 Drivers/Processor_Initialization_TM4C1294.obj: C:/TI_CodeComposer/TivaWare/driverlib/sysctl.h
 Drivers/Processor_Initialization_TM4C1294.obj: C:/TI_CodeComposer/TivaWare/driverlib/uart.h
 Drivers/Processor_Initialization_TM4C1294.obj: C:/TI_CodeComposer/TivaWare/driverlib/FPU.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/FreeRTOS.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/portable/CCS/ARM_CM4F/portmacro.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/FreeRTOSConfig.h
 Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Drivers/Processor_Initialization.h
 Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
 Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/projdefs.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/portable.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/deprecated_definitions.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/mpu_wrappers.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Drivers/uartstdio.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/list.h
+Drivers/Processor_Initialization_TM4C1294.obj: C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/queue.h
 
 ../Drivers/Processor_Initialization_TM4C1294.c: 
 C:/TI_CodeComposer/TivaWare/inc/hw_ints.h: 
@@ -38,6 +57,25 @@ C:/TI_CodeComposer/TivaWare/driverlib/gpio.h:
 C:/TI_CodeComposer/TivaWare/driverlib/sysctl.h: 
 C:/TI_CodeComposer/TivaWare/driverlib/uart.h: 
 C:/TI_CodeComposer/TivaWare/driverlib/FPU.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/FreeRTOS.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/portable/CCS/ARM_CM4F/portmacro.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/FreeRTOSConfig.h: 
 C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Drivers/Processor_Initialization.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/projdefs.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/portable.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/deprecated_definitions.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/mpu_wrappers.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Tasks/Task_Report.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stddef.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/workspace_eecs/FreeRTOS823_3_TM4C1294_Base_Test/Drivers/uartstdio.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include/stdarg.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/task.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/list.h: 
+C:/Users/trilu/Downloads/TI_ARM_Tiva_Projects_EECS_690_Sp16/TI_ARM_Tiva_Projects_EECS_690_Sp16/Source/include/queue.h: 

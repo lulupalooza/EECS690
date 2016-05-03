@@ -24,9 +24,22 @@
 #include	"driverlib/uart.h"
 #include	"driverlib/FPU.h"
 
+
+#include	"FreeRTOS.h"
 //#include	"Drivers/uartstdio.h"
 #include	"Drivers/Processor_Initialization.h"
- 
+#include	"Tasks/Task_Report.h"
+#include	"queue.h"
+
+//
+// Queues used throughout program
+//
+
+QueueHandle_t ReportData_Queue = NULL; 	// queue used for reporting via UART to PC
+QueueHandle_t Heater_Queue = NULL;		// queue used to pass calculated temp to control module
+QueueHandle_t Temp_Queue = NULL;		// queue used to pass ADC converted voltage value to temp calc module
+QueueHandle_t Inp_Queue = NULL;			// queue used to pass input temp value to control module
+
 //*****************************************************************************
 //
 // The speed of the processor clock in Hertz, which is therefore the speed of the
@@ -125,3 +138,19 @@ extern uint32_t UART_Initialization() {
     return( 1 );
 
  }
+
+//*****************************************************************************
+//
+//	Define the processor initization subroutine.
+//
+//*****************************************************************************
+extern uint32_t Queue_Initialization() {
+	//
+	// Initialize the queues.
+	//
+	ReportData_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
+	Heater_Queue = xQueueCreate( 10, sizeof( ReportData_Item ) );
+	Temp_Queue = xQueueCreate( 10, sizeof( double ) );
+	Inp_Queue = xQueueCreate( 10, sizeof( uint32_t ) );
+	return( 1 );
+}
