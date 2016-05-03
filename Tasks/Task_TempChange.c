@@ -24,7 +24,7 @@
 //
 extern volatile uint32_t xPortSysTickCount;
 
-extern volatile int tempChange = 0;
+extern volatile int temperature = 21;//room temperature @ 21C
 
 extern void Task_TempChange( void *pvParameters ) {
 
@@ -39,8 +39,6 @@ extern void Task_TempChange( void *pvParameters ) {
 	//	Enter task loop
 	//
 
-	int temperature = 70;
-
 	while ( 1 ) {
 
 		printf( "SysTickTime: %08X\n", xPortSysTickCount );
@@ -51,14 +49,12 @@ extern void Task_TempChange( void *pvParameters ) {
 		char changeChar = UARTgetc();
 
 		if(changeChar == '+')
-			tempChange = 1;
+			temperature++;
 		else if(changeChar == '-')
-			tempChange = -1;
-		else
-			tempChange = 0;
+			temperature--;
 
 		printf("Custom Char: %c ", changeChar);
-		printf("New Temperature: %c \n", changeChar);
+		printf("New Temperature: %c \n", temperature);
 
 		vTaskDelay( 1 );
 	}
