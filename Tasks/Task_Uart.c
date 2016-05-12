@@ -37,7 +37,6 @@
 extern QueueHandle_t Inp_Queue;
 extern volatile uint32_t xPortSysTickCount;
 xSemaphoreHandle mutex;
-extern uint32_t iqueue_count;
 
 extern void Task_UART_0( void *pvParameters ) {
 
@@ -45,7 +44,7 @@ extern void Task_UART_0( void *pvParameters ) {
 	//	Measured voltage value
 	//
 	int32_t 	inp_temp;
-	int32_t		inp_count = 0;
+	uint8_t		inp_count = 0;
 	uint32_t 	ui32SysClkFreq;
 
 	ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
@@ -81,12 +80,11 @@ extern void Task_UART_0( void *pvParameters ) {
 		{
 			inp_temp = inp_temp + (UARTCharGet( UART0_BASE ) - '0');// Add ones place value to inp_temp
 			UARTprintf( "\nInput temp now %d\n", inp_temp);			// Print the updated temp value via UART to PC.
-			inp_count = 0;
 			xQueueSend(Inp_Queue, &inp_temp, 10*portTICK_PERIOD_MS);// Send new desired temp to heater control module.
-			iqueue_count += 1;
+			inp_count = 0;
 		}
-		printf("%d\n", inp_temp);
-		vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );		// Delay.
+
+		vTaskDelay( 2 * configTICK_RATE_HZ );		// Delay.
 	}
 
 }

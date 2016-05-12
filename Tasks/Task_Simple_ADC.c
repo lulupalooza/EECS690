@@ -1,18 +1,18 @@
 //*****************************************************************************
 //
-//	Set up ADC_0 Channel_0 to sample voltage and report.
 //
-//		Author: 		Gary J. Minden
-//		Organization:	KU/EECS/EECS 388
-//		Date:			2016-02-29 (B60229)
-//		Version:		1.0
-//
-//		Description:	Sample ADC_0_Channel_0 every 0.5 seconds
 //
 //		Notes:
 //
 //*****************************************************************************
 //
+
+//*****************************************************************************
+//
+//! \addtogroup ADC_to_voltage
+//! @{
+//
+//*****************************************************************************
 
 #include "inc/hw_ints.h"
 #include "inc/hw_memmap.h"
@@ -38,20 +38,24 @@
 //
 //	Gloabal subroutines and variables
 //
-extern volatile uint32_t xPortSysTickCount;
-extern QueueHandle_t ReportData_Queue;
-extern QueueHandle_t Temp_Queue;
-extern QueueHandle_t ADC_Queue;
+extern volatile uint32_t xPortSysTickCount;	//!< System clock used for reporting time
+extern QueueHandle_t ReportData_Queue;		//!< Queue used for sending \e adc_report to Task_Report()
+extern QueueHandle_t ADC_Queue;				//!< Queue used for sending voltage value to Task_Temp()
 uint32_t	rqueue_count;
 
+
+//*****************************************************************************
+//
+//! Set up ADC_0 Channel_0 to sample voltage and report. Samples ADC_0_Channel_0 every second.
+//!
+//!	\return None.
+//
+//*****************************************************************************
+
 extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
-	ReportData_Item adc_report;
-	//
-	//	Measured voltage value
-	//
-	uint32_t	ADC_Value;
-	double		Vtemp;
-	rqueue_count = 0;
+	ReportData_Item adc_report;	// report containing timestamp, ID 0, adc count value and calculated voltage
+	uint32_t	ADC_Value;		// input ADC count value
+	double		Vtemp;			// calculated voltage from inp ADC counts
 
 	//
 	//	Enable (power-on) ADC0
@@ -63,14 +67,13 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 	// the processor trigger occurs.
 	//
 	ADCSequenceConfigure(ADC0_BASE, 0, ADC_TRIGGER_PROCESSOR, 0);
-
 	ADCSequenceStepConfigure( ADC0_BASE, 0, 0,
 								ADC_CTL_IE | ADC_CTL_END | ADC_CTL_CH0 );
-
 	ADCSequenceEnable( ADC0_BASE, 0 );
 
-//	printf( ">>>>ADC Initialized.\n");
-
+	//
+	//	Enter task loop
+	//
 	while ( 1 ) {
 
 		//
@@ -88,19 +91,29 @@ extern void Task_Simple_ADC0_Ch0( void *pvParameters ) {
 		//
 		ADCSequenceDataGet(ADC0_BASE, 0, &ADC_Value);
 		ADCIntClear( ADC0_BASE, 0 );
+
+		//
+		// Caculate corresponding voltage value and send via ADC_Queue to Task_Temp().
+		// Update and send ADC report via ReportData_Queue to Task_Report()
+		//
 		Vtemp = (double) ( ADC_Value * 3.3) / 4096;
 		xQueueSend(ADC_Queue, &Vtemp, 10*portTICK_PERIOD_MS);
 		adc_report.timestamp = xPortSysTickCount;
 		adc_report.ID = 0;
 		adc_report.value = ADC_Value;
 		adc_report.value2 = (uint32_t) Vtemp;
-		printf( ">>ADC %d", ADC_Value);
 		xQueueSend(ReportData_Queue, &adc_report, 10*portTICK_PERIOD_MS);
-		rqueue_count += 1;
 
 		//
 		//	Delay one (1) second.
 		//
-		vTaskDelay( (2000 * configTICK_RATE_HZ) / 1000 );
+		vTaskDelay( 2 * configTICK_RATE_HZ );
 	}
 }
+
+//*****************************************************************************
+//
+// Close the Doxygen group.
+//! @}
+//
+//*****************************************************************************

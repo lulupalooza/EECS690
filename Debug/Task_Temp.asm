@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* TI ARM C/C++ Codegen                                             PC v5.2.5 *
-;* Date/Time created: Tue May 03 10:59:18 2016                                *
+;* Date/Time created: Thu May 12 13:29:19 2016                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disable_dual_state --embedded_constants=on --endian=little --float_support=FPv4SPD16 --hll_source=on --object_format=elf --quiet --silicon_version=7M4 --symdebug:dwarf --symdebug:dwarf_version=3 --unaligned_access=on 
 	.thumb
@@ -66,7 +66,7 @@ $C$DW$13	.dwtag  DW_TAG_variable, DW_AT_name("ADC_Queue")
 	.dwattr $C$DW$13, DW_AT_declaration
 	.dwattr $C$DW$13, DW_AT_external
 	.dwattr $C$DW$13, DW_AT_decl_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$13, DW_AT_decl_line(0x15)
+	.dwattr $C$DW$13, DW_AT_decl_line(0x1b)
 	.dwattr $C$DW$13, DW_AT_decl_column(0x16)
 $C$DW$14	.dwtag  DW_TAG_variable, DW_AT_name("Temp_Queue")
 	.dwattr $C$DW$14, DW_AT_TI_symbol_name("Temp_Queue")
@@ -74,9 +74,9 @@ $C$DW$14	.dwtag  DW_TAG_variable, DW_AT_name("Temp_Queue")
 	.dwattr $C$DW$14, DW_AT_declaration
 	.dwattr $C$DW$14, DW_AT_external
 	.dwattr $C$DW$14, DW_AT_decl_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$14, DW_AT_decl_line(0x16)
+	.dwattr $C$DW$14, DW_AT_decl_line(0x1d)
 	.dwattr $C$DW$14, DW_AT_decl_column(0x16)
-;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\1230812 
+;	C:\ti\ccsv6\tools\compiler\ti-cgt-arm_5.2.5\bin\armacpia.exe -@C:\\Users\\trilu\\AppData\\Local\\Temp\\1026812 
 	.sect	".text"
 	.clink
 	.thumbfunc Task_Temp
@@ -89,13 +89,13 @@ $C$DW$15	.dwtag  DW_TAG_subprogram, DW_AT_name("Task_Temp")
 	.dwattr $C$DW$15, DW_AT_TI_symbol_name("Task_Temp")
 	.dwattr $C$DW$15, DW_AT_external
 	.dwattr $C$DW$15, DW_AT_TI_begin_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$15, DW_AT_TI_begin_line(0x19)
+	.dwattr $C$DW$15, DW_AT_TI_begin_line(0x29)
 	.dwattr $C$DW$15, DW_AT_TI_begin_column(0x0d)
 	.dwattr $C$DW$15, DW_AT_decl_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$15, DW_AT_decl_line(0x19)
+	.dwattr $C$DW$15, DW_AT_decl_line(0x29)
 	.dwattr $C$DW$15, DW_AT_decl_column(0x0d)
 	.dwattr $C$DW$15, DW_AT_TI_max_frame_size(0x20)
-	.dwpsn	file "../Tasks/Task_Temp.c",line 25,column 45,is_stmt,address Task_Temp,isa 1
+	.dwpsn	file "../Tasks/Task_Temp.c",line 41,column 45,is_stmt,address Task_Temp,isa 1
 
 	.dwfde $C$DW$CIE, Task_Temp
 $C$DW$16	.dwtag  DW_TAG_formal_parameter, DW_AT_name("pvParameters")
@@ -138,93 +138,93 @@ $C$DW$20	.dwtag  DW_TAG_variable, DW_AT_name("temp_val")
 	.dwattr $C$DW$20, DW_AT_TI_symbol_name("temp_val")
 	.dwattr $C$DW$20, DW_AT_type(*$C$DW$T$26)
 	.dwattr $C$DW$20, DW_AT_location[DW_OP_breg13 20]
-        STR       A1, [SP, #0]          ; [DPU_3_PIPE] |25| 
-	.dwpsn	file "../Tasks/Task_Temp.c",line 38,column 10,is_stmt,isa 1
+        STR       A1, [SP, #0]          ; [DPU_3_PIPE] |41| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 53,column 10,is_stmt,isa 1
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L1||
 ;*
-;*   Loop source line                : 38
-;*   Loop closing brace source line  : 48
+;*   Loop source line                : 53
+;*   Loop closing brace source line  : 69
 ;*   Known Minimum Trip Count        : 1
 ;*   Known Maximum Trip Count        : 4294967295
 ;*   Known Max Trip Count Factor     : 1
 ;* --------------------------------------------------------------------------*
 ||$C$L1||:    
-	.dwpsn	file "../Tasks/Task_Temp.c",line 40,column 3,is_stmt,isa 1
-        LDR       A1, $C$CON1           ; [DPU_3_PIPE] |40| 
-        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |40| 
-        ADD       A2, SP, #8            ; [DPU_3_PIPE] |40| 
-        MOVS      A3, #10               ; [DPU_3_PIPE] |40| 
-        MOVS      A4, #0                ; [DPU_3_PIPE] |40| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 59,column 3,is_stmt,isa 1
+        LDR       A1, $C$CON1           ; [DPU_3_PIPE] |59| 
+        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |59| 
+        ADD       A2, SP, #8            ; [DPU_3_PIPE] |59| 
+        MOVS      A3, #10               ; [DPU_3_PIPE] |59| 
+        MOVS      A4, #0                ; [DPU_3_PIPE] |59| 
 $C$DW$21	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$21, DW_AT_name("xQueueGenericReceive")
 	.dwattr $C$DW$21, DW_AT_TI_call
-        BL        xQueueGenericReceive  ; [DPU_3_PIPE] |40| 
-        ; CALL OCCURS {xQueueGenericReceive }  ; [] |40| 
-        STR       A1, [SP, #16]         ; [DPU_3_PIPE] |40| 
-	.dwpsn	file "../Tasks/Task_Temp.c",line 42,column 3,is_stmt,isa 1
-        LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |42| 
-        CMP       A1, #1                ; [DPU_3_PIPE] |42| 
-        BNE       ||$C$L2||             ; [DPU_3_PIPE] |42| 
-        ; BRANCHCC OCCURS {||$C$L2||}    ; [] |42| 
+        BL        xQueueGenericReceive  ; [DPU_3_PIPE] |59| 
+        ; CALL OCCURS {xQueueGenericReceive }  ; [] |59| 
+        STR       A1, [SP, #16]         ; [DPU_3_PIPE] |59| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 60,column 3,is_stmt,isa 1
+        LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |60| 
+        CMP       A1, #1                ; [DPU_3_PIPE] |60| 
+        BNE       ||$C$L2||             ; [DPU_3_PIPE] |60| 
+        ; BRANCHCC OCCURS {||$C$L2||}    ; [] |60| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "../Tasks/Task_Temp.c",line 43,column 4,is_stmt,isa 1
-        ADD       A1, SP, #8            ; [DPU_3_PIPE] |43| 
-        LDMIA     A1, {A3,A4}           ; [DPU_3_PIPE] |43| 
-        ADR       A1, $C$FL1            ; [DPU_3_PIPE] |43| 
-        LDMIA     A1, {A1,A2}           ; [DPU_3_PIPE] |43| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 61,column 4,is_stmt,isa 1
+        ADD       A1, SP, #8            ; [DPU_3_PIPE] |61| 
+        LDMIA     A1, {A3,A4}           ; [DPU_3_PIPE] |61| 
+        ADR       A1, $C$FL1            ; [DPU_3_PIPE] |61| 
+        LDMIA     A1, {A1,A2}           ; [DPU_3_PIPE] |61| 
 $C$DW$22	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$22, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$22, DW_AT_name("__aeabi_dmul")
 	.dwattr $C$DW$22, DW_AT_TI_call
-        BL        __aeabi_dmul          ; [DPU_3_PIPE] |43| 
-        ; CALL OCCURS {__aeabi_dmul }    ; [] |43| 
-        MOV       A3, A1                ; [DPU_3_PIPE] |43| 
-        MOV       A4, A2                ; [DPU_3_PIPE] |43| 
-        ADR       A1, $C$FL2            ; [DPU_3_PIPE] |43| 
-        LDMIA     A1, {A1,A2}           ; [DPU_3_PIPE] |43| 
+        BL        __aeabi_dmul          ; [DPU_3_PIPE] |61| 
+        ; CALL OCCURS {__aeabi_dmul }    ; [] |61| 
+        MOV       A3, A1                ; [DPU_3_PIPE] |61| 
+        MOV       A4, A2                ; [DPU_3_PIPE] |61| 
+        ADR       A1, $C$FL2            ; [DPU_3_PIPE] |61| 
+        LDMIA     A1, {A1,A2}           ; [DPU_3_PIPE] |61| 
 $C$DW$23	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$23, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$23, DW_AT_name("__aeabi_dsub")
 	.dwattr $C$DW$23, DW_AT_TI_call
-        BL        __aeabi_dsub          ; [DPU_3_PIPE] |43| 
-        ; CALL OCCURS {__aeabi_dsub }    ; [] |43| 
+        BL        __aeabi_dsub          ; [DPU_3_PIPE] |61| 
+        ; CALL OCCURS {__aeabi_dsub }    ; [] |61| 
 $C$DW$24	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$24, DW_AT_name("__aeabi_d2uiz")
 	.dwattr $C$DW$24, DW_AT_TI_call
-        BL        __aeabi_d2uiz         ; [DPU_3_PIPE] |43| 
-        ; CALL OCCURS {__aeabi_d2uiz }   ; [] |43| 
-        STR       A1, [SP, #20]         ; [DPU_3_PIPE] |43| 
+        BL        __aeabi_d2uiz         ; [DPU_3_PIPE] |61| 
+        ; CALL OCCURS {__aeabi_d2uiz }   ; [] |61| 
+        STR       A1, [SP, #20]         ; [DPU_3_PIPE] |61| 
 ;* --------------------------------------------------------------------------*
 ||$C$L2||:    
-	.dwpsn	file "../Tasks/Task_Temp.c",line 46,column 3,is_stmt,isa 1
-        LDR       A1, $C$CON2           ; [DPU_3_PIPE] |46| 
-        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |46| 
-        ADD       A2, SP, #20           ; [DPU_3_PIPE] |46| 
-        MOVS      A3, #10               ; [DPU_3_PIPE] |46| 
-        MOVS      A4, #0                ; [DPU_3_PIPE] |46| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 63,column 3,is_stmt,isa 1
+        LDR       A1, $C$CON2           ; [DPU_3_PIPE] |63| 
+        LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |63| 
+        ADD       A2, SP, #20           ; [DPU_3_PIPE] |63| 
+        MOVS      A3, #10               ; [DPU_3_PIPE] |63| 
+        MOVS      A4, #0                ; [DPU_3_PIPE] |63| 
 $C$DW$25	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$25, DW_AT_name("xQueueGenericSend")
 	.dwattr $C$DW$25, DW_AT_TI_call
-        BL        xQueueGenericSend     ; [DPU_3_PIPE] |46| 
-        ; CALL OCCURS {xQueueGenericSend }  ; [] |46| 
-	.dwpsn	file "../Tasks/Task_Temp.c",line 47,column 3,is_stmt,isa 1
-        MOV       A1, #2000             ; [DPU_3_PIPE] |47| 
+        BL        xQueueGenericSend     ; [DPU_3_PIPE] |63| 
+        ; CALL OCCURS {xQueueGenericSend }  ; [] |63| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 68,column 3,is_stmt,isa 1
+        MOV       A1, #2000             ; [DPU_3_PIPE] |68| 
 $C$DW$26	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$26, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$26, DW_AT_name("vTaskDelay")
 	.dwattr $C$DW$26, DW_AT_TI_call
-        BL        vTaskDelay            ; [DPU_3_PIPE] |47| 
-        ; CALL OCCURS {vTaskDelay }      ; [] |47| 
-	.dwpsn	file "../Tasks/Task_Temp.c",line 38,column 10,is_stmt,isa 1
-        B         ||$C$L1||             ; [DPU_3_PIPE] |38| 
-        ; BRANCH OCCURS {||$C$L1||}      ; [] |38| 
+        BL        vTaskDelay            ; [DPU_3_PIPE] |68| 
+        ; CALL OCCURS {vTaskDelay }      ; [] |68| 
+	.dwpsn	file "../Tasks/Task_Temp.c",line 53,column 10,is_stmt,isa 1
+        B         ||$C$L1||             ; [DPU_3_PIPE] |53| 
+        ; BRANCH OCCURS {||$C$L1||}      ; [] |53| 
 ;* --------------------------------------------------------------------------*
 	.dwattr $C$DW$15, DW_AT_TI_end_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$15, DW_AT_TI_end_line(0x31)
+	.dwattr $C$DW$15, DW_AT_TI_end_line(0x46)
 	.dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$15
@@ -941,7 +941,7 @@ $C$DW$T$127	.dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
 	.dwattr $C$DW$T$127, DW_AT_type(*$C$DW$T$126)
 	.dwattr $C$DW$T$127, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$127, DW_AT_decl_file("../Tasks/Task_Temp.c")
-	.dwattr $C$DW$T$127, DW_AT_decl_line(0x31)
+	.dwattr $C$DW$T$127, DW_AT_decl_line(0x46)
 	.dwattr $C$DW$T$127, DW_AT_decl_column(0x01)
 
 $C$DW$T$25	.dwtag  DW_TAG_structure_type
